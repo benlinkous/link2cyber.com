@@ -1,0 +1,185 @@
+title: Link2Cyber
+remote_theme: pmarsceill/just-the-docs
+color_scheme: dark
+search_enabled: true
+nav:
+- title: Home
+  url: /
+- title: About
+  url: /about
+- title: 80 Days of Projects
+  url: /80-days
+  children:
+  - title: Fundamentals
+    url: /80-days/fundamentals
+    children:
+    - title: Day 1
+      url: /80-days/LinkOS_Bootcamp_Day1
+    - title: Day 2
+      url: /80-days/LinkOS_Bootcamp_Day2
+    - title: Day 3
+      url: /80-days/LinkOS_Bootcamp_Day3
+    - title: Day 4
+      url: /80-days/LinkOS_Bootcamp_Day4
+    - title: Day 5
+      url: /80-days/LinkOS_Bootcamp_Day5
+    - title: Day 6
+      url: /80-days/LinkOS_Bootcamp_Day6
+    - title: Day 7
+      url: /80-days/LinkOS_Bootcamp_Day7
+    - title: Day 8
+      url: /80-days/LinkOS_Bootcamp_Day8
+    - title: Day 9
+      url: /80-days/LinkOS_Bootcamp_Day9
+    - title: Day 10
+      url: /80-days/LinkOS_Bootcamp_Day10
+    - title: Day 11
+      url: /80-days/LinkOS_Bootcamp_Day11
+    - title: Day 12
+      url: /80-days/LinkOS_Bootcamp_Day12
+    - title: Day 13
+      url: /80-days/LinkOS_Bootcamp_Day13
+    - title: Day 14
+      url: /80-days/LinkOS_Bootcamp_Day14
+    - title: Day 15
+      url: /80-days/LinkOS_Bootcamp_Day15
+    - title: Day 16
+      url: /80-days/LinkOS_Bootcamp_Day16
+    - title: Day 17
+      url: /80-days/LinkOS_Bootcamp_Day17
+    - title: Day 18
+      url: /80-days/LinkOS_Bootcamp_Day18
+    - title: Day 19
+      url: /80-days/LinkOS_Bootcamp_Day19
+    - title: Day 20
+      url: /80-days/LinkOS_Bootcamp_Day20
+    - title: Day 21
+      url: /80-days/LinkOS_Bootcamp_Day21
+    - title: Day 22
+      url: /80-days/LinkOS_Bootcamp_Day22
+    - title: Day 23
+      url: /80-days/LinkOS_Bootcamp_Day23
+    - title: Day 24
+      url: /80-days/LinkOS_Bootcamp_Day24
+    - title: Day 25
+      url: /80-days/LinkOS_Bootcamp_Day25
+    - title: Day 26
+      url: /80-days/LinkOS_Bootcamp_Day26
+    - title: Day 27
+      url: /80-days/LinkOS_Bootcamp_Day27
+    - title: Day 28
+      url: /80-days/LinkOS_Bootcamp_Day28
+    - title: Day 29
+      url: /80-days/LinkOS_Bootcamp_Day29
+    - title: Day 30
+      url: /80-days/LinkOS_Bootcamp_Day30
+  - title: Basic Security
+    url: /80-days/basic-security
+    children:
+    - title: Day 31
+      url: /80-days/LinkOS_Bootcamp_Day31
+    - title: Day 32
+      url: /80-days/LinkOS_Bootcamp_Day32
+    - title: Day 33
+      url: /80-days/LinkOS_Bootcamp_Day33
+    - title: Day 34
+      url: /80-days/LinkOS_Bootcamp_Day34
+    - title: Day 35
+      url: /80-days/LinkOS_Bootcamp_Day35
+    - title: Day 36
+      url: /80-days/LinkOS_Bootcamp_Day36
+    - title: Day 37
+      url: /80-days/LinkOS_Bootcamp_Day37
+    - title: Day 38
+      url: /80-days/LinkOS_Bootcamp_Day38
+    - title: Day 39
+      url: /80-days/LinkOS_Bootcamp_Day39
+    - title: Day 40
+      url: /80-days/LinkOS_Bootcamp_Day40
+    - title: Day 41
+      url: /80-days/LinkOS_Bootcamp_Day41
+    - title: Day 42
+      url: /80-days/LinkOS_Bootcamp_Day42
+    - title: Day 43
+      url: /80-days/LinkOS_Bootcamp_Day43
+    - title: Day 44
+      url: /80-days/LinkOS_Bootcamp_Day44
+    - title: Day 45
+      url: /80-days/LinkOS_Bootcamp_Day45
+    - title: Day 46
+      url: /80-days/LinkOS_Bootcamp_Day46
+    - title: Day 47
+      url: /80-days/LinkOS_Bootcamp_Day47
+    - title: Day 48
+      url: /80-days/LinkOS_Bootcamp_Day48
+    - title: Day 49
+      url: /80-days/LinkOS_Bootcamp_Day49
+    - title: Day 50
+      url: /80-days/LinkOS_Bootcamp_Day50
+    - title: Day 51
+      url: /80-days/LinkOS_Bootcamp_Day51
+    - title: Day 52
+      url: /80-days/LinkOS_Bootcamp_Day52
+    - title: Day 53
+      url: /80-days/LinkOS_Bootcamp_Day53
+    - title: Day 54
+      url: /80-days/LinkOS_Bootcamp_Day54
+    - title: Day 55
+      url: /80-days/LinkOS_Bootcamp_Day55
+    - title: Day 56
+      url: /80-days/LinkOS_Bootcamp_Day56
+    - title: Day 57
+      url: /80-days/LinkOS_Bootcamp_Day57
+    - title: Day 58
+      url: /80-days/LinkOS_Bootcamp_Day58
+    - title: Day 59
+      url: /80-days/LinkOS_Bootcamp_Day59
+    - title: Day 60
+      url: /80-days/LinkOS_Bootcamp_Day60
+  - title: Advanced Security
+    url: /80-days/advanced-security
+    children:
+    - title: Day 61
+      url: /80-days/LinkOS_Bootcamp_Day61
+    - title: Day 62
+      url: /80-days/LinkOS_Bootcamp_Day62
+    - title: Day 63
+      url: /80-days/LinkOS_Bootcamp_Day63
+    - title: Day 64
+      url: /80-days/LinkOS_Bootcamp_Day64
+    - title: Day 65
+      url: /80-days/LinkOS_Bootcamp_Day65
+    - title: Day 66
+      url: /80-days/LinkOS_Bootcamp_Day66
+    - title: Day 67
+      url: /80-days/LinkOS_Bootcamp_Day67
+    - title: Day 68
+      url: /80-days/LinkOS_Bootcamp_Day68
+    - title: Day 69
+      url: /80-days/LinkOS_Bootcamp_Day69
+    - title: Day 70
+      url: /80-days/LinkOS_Bootcamp_Day70
+    - title: Day 71
+      url: /80-days/LinkOS_Bootcamp_Day71
+    - title: Day 72
+      url: /80-days/LinkOS_Bootcamp_Day72
+    - title: Day 73
+      url: /80-days/LinkOS_Bootcamp_Day73
+    - title: Day 74
+      url: /80-days/LinkOS_Bootcamp_Day74
+    - title: Day 75
+      url: /80-days/LinkOS_Bootcamp_Day75
+    - title: Day 76
+      url: /80-days/LinkOS_Bootcamp_Day76
+    - title: Day 77
+      url: /80-days/LinkOS_Bootcamp_Day77
+    - title: Day 78
+      url: /80-days/LinkOS_Bootcamp_Day78
+    - title: Day 79
+      url: /80-days/LinkOS_Bootcamp_Day79
+    - title: Day 80
+      url: /80-days/LinkOS_Bootcamp_Day80
+- title: Contact
+  url: /contact
+- title: Lab Template
+  url: /lab-template
