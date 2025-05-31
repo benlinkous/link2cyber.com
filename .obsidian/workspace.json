@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b001aff68139db59",
+        "id": "dbbc466fb41cdeb7",
         "type": "tabs",
         "children": [
           {
-            "id": "96d963beb1ec0872",
+            "id": "20f02312fbf14a69",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "lab-template.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "lab-template"
             }
           }
         ]
@@ -161,6 +165,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "96d963beb1ec0872",
-  "lastOpenFiles": []
+  "active": "20f02312fbf14a69",
+  "lastOpenFiles": [
+    "index.md",
+    "contact.md",
+    "about.md",
+    "80-days.md",
+    "assets/logo-metallic-silver.png",
+    "assets/logos/logo-links-default.png",
+    "assets/images/backgrounds/background-linksos-default.png",
+    "80-days/80-days-with-frontmatter/LinksOS_Bootcamp_Day1.md",
+    "80-days/80-days-final-consolidated/LinksOS_Bootcamp_Day1.md",
+    "80-days/80-days-final-consolidated/LinkOS_Bootcamp_Day2.md",
+    "5409225870.md"
+  ]
 }

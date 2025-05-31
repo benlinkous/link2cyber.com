@@ -1,11 +1,4 @@
----
-layout: default
-title: Day 1
-parent: 80 Days of Projects
-nav_order: 1
----
-
-# LinkOS Bootcamp Day 1 – Expanded
+# LinksOS Bootcamp Day 1 
 
 ## 📘 Modules & Activities
 
