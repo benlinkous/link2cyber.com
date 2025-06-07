@@ -1,6 +1,6 @@
 title: Link2Cyber Bootcamp
 description: Learn cybersecurity through a structured 80-day journey using the LinksOS framework.
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 
 url: https://benlinkous.github.io/link2cyber.com
 
