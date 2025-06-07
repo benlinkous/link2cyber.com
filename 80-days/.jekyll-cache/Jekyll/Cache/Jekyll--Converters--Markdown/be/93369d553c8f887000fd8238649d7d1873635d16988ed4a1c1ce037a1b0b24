@@ -1,0 +1,90 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 67
+parent: Advanced Security
+nav_order: 67</p>
+
+<h1 id="-link2cyber-bootcamp--day-67">✅ Link2Cyber Bootcamp — Day 67</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> SecurityX (CAS-005)<br />
+<strong>Focus:</strong> Digital forensics, log preservation, evidence handling, and integrity assurance<br />
+<strong>Tools:</strong> HTB Academy, forensic utilities (hashing, metadata, logs), real-world forensics project</p>
+<h2 id="-task-1-digital-forensics-fundamentals">🔍 Task 1: Digital Forensics Fundamentals</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>CAS-005 Domain 3 – Incident Response and Forensics</li>
+  <li>CAS-005 Domain 4 – Integration and Operations
+<strong>Actions:</strong></li>
+  <li>Define and apply:
+    <ul>
+      <li>Chain of custody</li>
+      <li>File hashing (MD5, SHA256)</li>
+      <li>Imaging vs acquisition vs volatile memory collection</li>
+    </ul>
+  </li>
+  <li>Explore metadata and timestamps with Linux tools
+<strong>Commands:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">md5sum</code>, <code class="language-plaintext highlighter-rouge">sha256sum</code>, <code class="language-plaintext highlighter-rouge">stat</code>, <code class="language-plaintext highlighter-rouge">strings</code>, <code class="language-plaintext highlighter-rouge">ls -lt</code>, <code class="language-plaintext highlighter-rouge">file</code>
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-forensics-basics.md</code></li>
+  <li>Table: Step | Tool Used | Purpose | Notes
+    <h2 id="-task-2-log-collection-and-evidence-preservation">📂 Task 2: Log Collection and Evidence Preservation</h2>
+  </li>
+  <li>Simulate log collection from:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">/var/log/syslog</code>, <code class="language-plaintext highlighter-rouge">/auth.log</code>, <code class="language-plaintext highlighter-rouge">/secure</code>, <code class="language-plaintext highlighter-rouge">/audit/audit.log</code></li>
+    </ul>
+  </li>
+  <li>Export logs to <code class="language-plaintext highlighter-rouge">/evidence/</code> and hash files</li>
+  <li>Describe evidence labeling, isolation, storage practices</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-log-collection.md</code></li>
+  <li>Screenshot: Log path, hash value, and folder structure
+    <h2 id="-task-3-htb-academy--optional-thm-lab">🧪 Task 3: HTB Academy + Optional THM Lab</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/114">Digital Forensics Fundamentals</a>
+    <h3 id="optional-tryhackme">Optional TryHackMe:</h3>
+  </li>
+  <li><a href="https://tryhackme.com/room/digitalforensics">Digital Forensics</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-forensics-lab-notes.md</code></li>
+  <li>Screenshot: File carving, metadata, or image analysis
+    <h2 id="️-project-of-the-day-linux-evidence-preservation-script">🛠️ Project of the Day: “Linux Evidence Preservation Script”</h2>
+    <p><strong>Scenario:</strong><br />
+You’re asked to create a script that copies key logs, collects hashes, and exports a timestamped evidence archive.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Identify key log paths and files</li>
+      <li>Copy them to <code class="language-plaintext highlighter-rouge">/opt/evidence/YYYYMMDD/</code></li>
+      <li>Hash each log and save hashes to a <code class="language-plaintext highlighter-rouge">.txt</code></li>
+      <li>Archive all evidence with <code class="language-plaintext highlighter-rouge">tar</code> and timestamp filename</li>
+      <li>Secure with <code class="language-plaintext highlighter-rouge">chmod 600</code> and log actions
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-evidence-collection-script.md</code></li>
+  <li>Script: <code class="language-plaintext highlighter-rouge">collect_evidence.sh</code></li>
+  <li>Screenshot: Archive + hash + log
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Concept      | Purpose                                        |
+|———————|————————————————|
+| <code class="language-plaintext highlighter-rouge">md5sum</code>, <code class="language-plaintext highlighter-rouge">stat</code>, <code class="language-plaintext highlighter-rouge">tar</code> | Preserve evidence and verify integrity    |
+| <code class="language-plaintext highlighter-rouge">auth.log</code>, <code class="language-plaintext highlighter-rouge">audit.log</code> | Monitor and collect OS forensic artifacts |
+| HTB/THM Forensics Labs | Practice analysis and metadata recovery    |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-forensics-basics.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-log-collection.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-forensics-lab-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-evidence-collection-script.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">collect_evidence.sh</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 67 – SecurityX Forensics and Evidence Collection"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 67 (SecurityX Forensics)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

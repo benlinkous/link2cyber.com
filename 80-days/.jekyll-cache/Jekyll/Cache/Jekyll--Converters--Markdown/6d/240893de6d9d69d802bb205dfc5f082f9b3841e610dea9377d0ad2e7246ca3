@@ -1,0 +1,96 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 74
+parent: Advanced Security
+nav_order: 74</p>
+
+<h1 id="-link2cyber-bootcamp--day-74">✅ Link2Cyber Bootcamp — Day 74</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> SecurityX (CAS-005)<br />
+<strong>Focus:</strong> Securing containers, hypervisors, VM isolation, image scanning, and Kubernetes policies<br />
+<strong>Tools:</strong> HTB Academy, Docker, Podman, Trivy, real-world container hardening project</p>
+<h2 id="-task-1-container-and-virtualization-security-concepts">📦 Task 1: Container and Virtualization Security Concepts</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>CAS-005 Domain 4 – Virtualization and Cloud Security</li>
+  <li>CAS-005 Domain 1 – Enterprise Security Integration
+<strong>Actions:</strong></li>
+  <li>Define:
+    <ul>
+      <li>Containers vs VMs (isolation and risk)</li>
+      <li>Hypervisor types (Type 1 vs Type 2)</li>
+      <li>Container risks: image injection, insecure defaults, breakout
+<strong>Output:</strong></li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-container-vm-concepts.md</code></li>
+  <li>Table: Platform | Isolation | Security Control | Risk
+    <h2 id="-task-2-image-scanning-and-container-hardening">🔍 Task 2: Image Scanning and Container Hardening</h2>
+  </li>
+  <li>Scan a container with Trivy or Dockle</li>
+  <li>Harden:
+    <ul>
+      <li>Remove unnecessary packages</li>
+      <li>Use non-root user</li>
+      <li>Add <code class="language-plaintext highlighter-rouge">no-new-privileges</code> and seccomp/apparmor profile</li>
+    </ul>
+  </li>
+  <li>Simulate a privileged container breakout and fix it
+<strong>Commands:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">docker run --security-opt</code>, <code class="language-plaintext highlighter-rouge">trivy</code>, <code class="language-plaintext highlighter-rouge">podman</code>, <code class="language-plaintext highlighter-rouge">docker scan</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-container-hardening.md</code></li>
+  <li>Screenshot: Scan results, config fixes
+    <h2 id="-task-3-htb-academy--optional-tryhackme">🧪 Task 3: HTB Academy + Optional TryHackMe</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/122">Container and Virtualization Security</a>
+    <h3 id="optional-tryhackme">Optional TryHackMe:</h3>
+  </li>
+  <li><a href="https://tryhackme.com/room/containersecurity">Container Security</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-container-lab-notes.md</code></li>
+  <li>Screenshot: Kubernetes policy or Dockerfile adjustment
+    <h2 id="️-project-of-the-day-secure-container-image-build-guide">🛠️ Project of the Day: “Secure Container Image Build Guide”</h2>
+    <p><strong>Scenario:</strong><br />
+You’re designing the Docker build standard for a dev team transitioning to containers.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Create secure Dockerfile:</li>
+    </ol>
+    <ul>
+      <li>Base image from official repo</li>
+      <li>Drop privileges, install minimal tools, healthcheck
+        <ol>
+          <li>Scan and correct vulnerabilities</li>
+          <li>Document build, scan, and deploy workflow
+<strong>Deliverables:</strong></li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-secure-dockerfile-guide.md</code></li>
+  <li>File: <code class="language-plaintext highlighter-rouge">Dockerfile</code> + Trivy output
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Concept        | Purpose                                       |
+|————————|———————————————–|
+| Trivy / Dockle         | Scan container images for vulnerabilities     |
+| Docker / Podman        | Build and run isolated app environments       |
+| Hypervisor Types       | Secure VMs and platform-level access          |
+| seccomp / AppArmor     | Constrain container capabilities              |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-container-vm-concepts.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-container-hardening.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-container-lab-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-secure-dockerfile-guide.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">Dockerfile</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 74 – SecurityX Container and Virtualization Hardening"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 74 (SecurityX Containers and VMs)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

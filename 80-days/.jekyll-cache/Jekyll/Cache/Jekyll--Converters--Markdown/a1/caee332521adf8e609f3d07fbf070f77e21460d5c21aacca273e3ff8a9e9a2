@@ -1,0 +1,77 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 52
+parent: Basic Security
+nav_order: 52</p>
+
+<h1 id="-link2cyber-bootcamp--day-52-revised">✅ Link2Cyber Bootcamp — Day 52 (Revised)</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Linux+ (XK0-005)<br />
+<strong>Learning Methods:</strong> Hack The Box Academy + Machine + Real-World Project<br />
+<strong>Goal:</strong> Master partitioning, filesystem management, and storage troubleshooting</p>
+<h2 id="-task-1-manage-partitions-and-filesystems">💾 Task 1: Manage Partitions and Filesystems</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>Linux+ Domain 1 – Storage and Filesystem Configuration
+<strong>Actions:</strong></li>
+  <li>Create a new partition using <code class="language-plaintext highlighter-rouge">fdisk</code> or <code class="language-plaintext highlighter-rouge">parted</code></li>
+  <li>Format it with <code class="language-plaintext highlighter-rouge">mkfs.ext4</code> or <code class="language-plaintext highlighter-rouge">mkfs.xfs</code></li>
+  <li>Mount manually and persist via <code class="language-plaintext highlighter-rouge">/etc/fstab</code>
+<strong>Commands:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">lsblk</code>, <code class="language-plaintext highlighter-rouge">fdisk</code>, <code class="language-plaintext highlighter-rouge">parted</code>, <code class="language-plaintext highlighter-rouge">mkfs</code>, <code class="language-plaintext highlighter-rouge">mount</code>, <code class="language-plaintext highlighter-rouge">blkid</code>, <code class="language-plaintext highlighter-rouge">df</code>, <code class="language-plaintext highlighter-rouge">du</code>
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">partition-filesystem-setup.md</code></li>
+  <li>Screenshot: Partition and mount verification
+    <h2 id="-task-2-htb-academy--machine">🧪 Task 2: HTB Academy + Machine</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/61">File &amp; Directory Management</a>
+    <h3 id="htb-machine">HTB Machine:</h3>
+  </li>
+  <li><strong>Bashed</strong>
+    <ul>
+      <li>Enumerate and explore Linux directories</li>
+      <li>Leverage exposed web shell for file system practice</li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">htb-bashed-filesystem-notes.md</code></li>
+  <li>Screenshot: Access to /var, /home, or <code class="language-plaintext highlighter-rouge">/etc/fstab</code> discovery
+    <h2 id="️-project-of-the-day-encrypted-data-storage-partition">🛠️ Project of the Day: “Encrypted Data Storage Partition”</h2>
+    <p><strong>Scenario:</strong><br />
+The security team wants to create a secure data partition for logs.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Create a 1GB file-based partition using <code class="language-plaintext highlighter-rouge">dd</code></li>
+      <li>Format it with <code class="language-plaintext highlighter-rouge">ext4</code> and mount at <code class="language-plaintext highlighter-rouge">/secure-logs</code></li>
+      <li>Restrict access to the <code class="language-plaintext highlighter-rouge">secops</code> group only</li>
+      <li>Add an <code class="language-plaintext highlighter-rouge">rsyslog</code> test to output to <code class="language-plaintext highlighter-rouge">/secure-logs/log.txt</code></li>
+      <li>Persist mount in <code class="language-plaintext highlighter-rouge">/etc/fstab</code></li>
+      <li>Document all steps
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-secure-partition.md</code></li>
+  <li>Screenshot: Secure mount and test log entry
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Command     | Purpose                                        |
+|——————–|————————————————|
+| <code class="language-plaintext highlighter-rouge">fdisk</code>, <code class="language-plaintext highlighter-rouge">mkfs</code>, <code class="language-plaintext highlighter-rouge">mount</code> | Create and attach filesystems          |
+| <code class="language-plaintext highlighter-rouge">df</code>, <code class="language-plaintext highlighter-rouge">du</code>, <code class="language-plaintext highlighter-rouge">lsblk</code> | Analyze disk usage and space                 |
+| <code class="language-plaintext highlighter-rouge">/etc/fstab</code>       | Persistent mount configuration                |
+| <code class="language-plaintext highlighter-rouge">rsyslog</code>, <code class="language-plaintext highlighter-rouge">chmod</code> | Log redirection and permission control        |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">partition-filesystem-setup.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">htb-bashed-filesystem-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-secure-partition.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 52 – Filesystems, Storage, and Secure Partition Project"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 52 (Linux+ HTB + Project)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

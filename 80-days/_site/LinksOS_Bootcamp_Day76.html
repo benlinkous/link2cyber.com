@@ -1,0 +1,85 @@
+<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 76
+parent: Advanced Security
+nav_order: 76</p>
+
+<h1 id="-link2cyber-bootcamp--day-76">✅ Link2Cyber Bootcamp — Day 76</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> SecurityX (CAS-005)<br />
+<strong>Focus:</strong> API threats, secure API development, authentication, rate limiting, and gateway enforcement<br />
+<strong>Tools:</strong> HTB Academy, Postman, OWASP API Top 10, real-world API security project</p>
+<h2 id="-task-1-api-security-threats-and-owasp-api-top-10">🌐 Task 1: API Security Threats and OWASP API Top 10</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>CAS-005 Domain 1 – Application Security</li>
+  <li>CAS-005 Domain 3 – Threat Detection and Prevention
+<strong>Actions:</strong></li>
+  <li>Study and summarize the OWASP API Top 10 (2023)</li>
+  <li>Compare with OWASP Web Top 10</li>
+  <li>Simulate threat scenarios for:
+    <ul>
+      <li>BOLA, Broken Auth, Excessive Data Exposure, Improper Asset Mgmt
+<strong>Output:</strong></li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-owasp-api-top10.md</code></li>
+  <li>Table: API Threat | Description | Impact | Mitigation
+    <h2 id="-task-2-api-authentication-and-gateway-controls">🔐 Task 2: API Authentication and Gateway Controls</h2>
+  </li>
+  <li>Explore:
+    <ul>
+      <li>OAuth2 flows: Auth Code, Client Credentials, PKCE</li>
+      <li>API key leakage and abuse</li>
+      <li>Rate limiting, throttling, JWT validation, WAF integration</li>
+    </ul>
+  </li>
+  <li>Simulate API abuse with Postman (e.g., replay, rate overload)</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-api-auth-controls.md</code></li>
+  <li>Screenshot: API flow, JWT payload, or WAF rule mockup
+    <h2 id="-task-3-htb-academy--optional-tryhackme">🧪 Task 3: HTB Academy + Optional TryHackMe</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/135">API and Web Services Security</a>
+    <h3 id="optional-tryhackme">Optional TryHackMe:</h3>
+  </li>
+  <li><a href="https://tryhackme.com/room/owaspapi">OWASP API Security</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-api-lab-notes.md</code></li>
+  <li>Screenshot: Attack replay, rule block, or JWT session analysis
+    <h2 id="️-project-of-the-day-secure-api-gateway-policy-design">🛠️ Project of the Day: “Secure API Gateway Policy Design”</h2>
+    <p><strong>Scenario:</strong><br />
+You’re tasked with designing a gateway policy for all backend APIs exposed to external partners.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Define 3 API endpoints (e.g., <code class="language-plaintext highlighter-rouge">/users</code>, <code class="language-plaintext highlighter-rouge">/orders</code>, <code class="language-plaintext highlighter-rouge">/status</code>)</li>
+      <li>Assign auth method, rate limit, required headers</li>
+      <li>Include logging, geo-IP restrictions, DDoS protection</li>
+      <li>Document policy and test flow with Postman
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-api-gateway-policy.md</code></li>
+  <li>Screenshot or file: Postman test, header enforcement
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Concept       | Purpose                                        |
+|———————-|————————————————|
+| OWASP API Top 10     | Framework for identifying API-specific risks   |
+| OAuth2, JWT, API Keys| Secure API authentication methods              |
+| Postman              | Simulate and test API attack surface           |
+| API Gateway          | Enforce rate limits, rules, auth, and filters  |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-owasp-api-top10.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-api-auth-controls.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-api-lab-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-api-gateway-policy.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 76 – SecurityX API Security and Gateway Policy"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 76 (SecurityX API Security)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>

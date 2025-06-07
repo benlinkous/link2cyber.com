@@ -1,0 +1,84 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 77
+parent: Advanced Security
+nav_order: 77</p>
+
+<h1 id="-link2cyber-bootcamp--day-77">✅ Link2Cyber Bootcamp — Day 77</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> SecurityX (CAS-005)<br />
+<strong>Focus:</strong> Data classification, data loss prevention (DLP), privacy regulations, and sensitive data handling<br />
+<strong>Tools:</strong> HTB Academy, regex/data detectors, DLP policy design, real-world privacy compliance project</p>
+<h2 id="-task-1-data-classification-and-handling">📁 Task 1: Data Classification and Handling</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>CAS-005 Domain 2 – Governance and Compliance</li>
+  <li>CAS-005 Domain 3 – Data Security
+<strong>Actions:</strong></li>
+  <li>Define levels of data classification:
+    <ul>
+      <li>Public, Internal, Confidential, Regulated</li>
+    </ul>
+  </li>
+  <li>Simulate tagging/classification of 10 sample data objects (files, DB fields, backups)
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-data-classification.md</code></li>
+  <li>Table: Data Type | Classification | Handling Rule | Storage Method
+    <h2 id="-task-2-dlp-and-privacy-controls">🛡 Task 2: DLP and Privacy Controls</h2>
+  </li>
+  <li>Review:
+    <ul>
+      <li>DLP use cases: email exfiltration, USB access, clipboard monitoring</li>
+      <li>Regex-based DLP policies (SSNs, CCNs, PHI, API keys)</li>
+    </ul>
+  </li>
+  <li>Simulate detection with tools or write mock DLP policies</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-dlp-policies.md</code></li>
+  <li>Screenshot: Pattern match log or DLP rule logic
+    <h2 id="-task-3-htb-academy--optional-tryhackme">🧪 Task 3: HTB Academy + Optional TryHackMe</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/119">Data Privacy and Protection</a>
+    <h3 id="optional-tryhackme">Optional TryHackMe:</h3>
+  </li>
+  <li><a href="https://tryhackme.com/room/gdpr">GDPR and Privacy</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-privacy-lab-notes.md</code></li>
+  <li>Screenshot: Data detection rule, tagging, or alert test
+    <h2 id="️-project-of-the-day-privacy-driven-data-handling-policy">🛠️ Project of the Day: “Privacy-Driven Data Handling Policy”</h2>
+    <p><strong>Scenario:</strong><br />
+You’re tasked with creating a lightweight data classification and handling policy for a startup subject to GDPR and CCPA.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Define data classes and examples</li>
+      <li>Describe access, storage, retention, and disposal methods</li>
+      <li>Include encryption expectations and DLP controls</li>
+      <li>Draft as Markdown policy with table formatting
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-data-privacy-policy.md</code></li>
+  <li>Table: Classification | Retention | Access | Protection
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Concept       | Purpose                                        |
+|———————-|————————————————|
+| Data Classification  | Segment sensitivity levels for controls       |
+| DLP (Regex, File Types) | Prevent accidental or malicious data exfil |
+| GDPR/CCPA/SOX        | Map data practices to legal frameworks        |
+| Policy Drafting      | Document practical data-handling procedures   |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-data-classification.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-dlp-policies.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-privacy-lab-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-data-privacy-policy.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 77 – SecurityX DLP, Privacy, and Data Classification"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 77 (SecurityX Data Privacy and Handling)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

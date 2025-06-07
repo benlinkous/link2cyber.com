@@ -1,0 +1,89 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 53
+parent: Basic Security
+nav_order: 53</p>
+
+<h1 id="-link2cyber-bootcamp--day-53-revised">✅ Link2Cyber Bootcamp — Day 53 (Revised)</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Linux+ (XK0-005)<br />
+<strong>Learning Methods:</strong> Hack The Box Academy + Machine + Real-World Project<br />
+<strong>Goal:</strong> Manage processes, analyze services, and control system behavior with systemd</p>
+<h2 id="️-task-1-process-management-and-priorities">⚙️ Task 1: Process Management and Priorities</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>Linux+ Domain 1 &amp; 2 — Process control, performance, and automation
+<strong>Actions:</strong></li>
+  <li>Use <code class="language-plaintext highlighter-rouge">ps</code>, <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">htop</code>, <code class="language-plaintext highlighter-rouge">nice</code>, <code class="language-plaintext highlighter-rouge">renice</code>, <code class="language-plaintext highlighter-rouge">kill</code>, <code class="language-plaintext highlighter-rouge">pkill</code></li>
+  <li>Adjust CPU priority of a heavy process</li>
+  <li>Terminate, pause, and resume jobs
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">process-control-practice.md</code></li>
+  <li>Screenshot: <code class="language-plaintext highlighter-rouge">top</code> with changed priorities
+    <h2 id="️-task-2-service-control-with-systemd">🛠️ Task 2: Service Control with systemd</h2>
+  </li>
+  <li>View active services</li>
+  <li>Enable and disable one custom service</li>
+  <li>Analyze boot time with <code class="language-plaintext highlighter-rouge">systemd-analyze</code></li>
+  <li>Read logs for a failed service
+<strong>Commands:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">systemctl</code>, <code class="language-plaintext highlighter-rouge">journalctl</code>, <code class="language-plaintext highlighter-rouge">nano</code> (to create <code class="language-plaintext highlighter-rouge">.service</code>), <code class="language-plaintext highlighter-rouge">systemd-analyze</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">systemd-service-management.md</code></li>
+  <li>File: <code class="language-plaintext highlighter-rouge">hello-timer.service</code></li>
+  <li>Screenshot: Service status + logs
+    <h2 id="-task-3-htb-academy--machine">🧪 Task 3: HTB Academy + Machine</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/138">System Services and Daemons</a>
+    <h3 id="htb-machine">HTB Machine:</h3>
+  </li>
+  <li><strong>Cronos</strong>
+    <ul>
+      <li>Discover and exploit cron job</li>
+      <li>Explore <code class="language-plaintext highlighter-rouge">/etc/init.d</code>, <code class="language-plaintext highlighter-rouge">/etc/cron.*</code>, and logs for persistence</li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">htb-cronos-service-escalation.md</code></li>
+  <li>Screenshot: Privilege escalation via service path or cron
+    <h2 id="️-project-of-the-day-custom-monitoring-service">🛠️ Project of the Day: “Custom Monitoring Service”</h2>
+    <p><strong>Scenario:</strong><br />
+DevOps wants a lightweight service to monitor <code class="language-plaintext highlighter-rouge">/var/log/syslog</code> for the word “ERROR”.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Write a Bash script that tails <code class="language-plaintext highlighter-rouge">/var/log/syslog</code> and logs “ALERT!” if “ERROR” appears</li>
+      <li>Create a systemd service and enable it</li>
+      <li>Redirect logs to <code class="language-plaintext highlighter-rouge">/var/log/custom-alerts.log</code></li>
+      <li>Test startup on reboot</li>
+      <li>Document service and testing steps
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-custom-alert-service.md</code></li>
+  <li>File: <code class="language-plaintext highlighter-rouge">alert-monitor.service</code></li>
+  <li>Screenshot: Service log and journalctl output
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Command     | Purpose                                        |
+|——————–|————————————————|
+| <code class="language-plaintext highlighter-rouge">systemctl</code>, <code class="language-plaintext highlighter-rouge">journalctl</code> | Manage and view Linux services         |
+| <code class="language-plaintext highlighter-rouge">ps</code>, <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">nice</code> | Manage processes and adjust priorities       |
+| <code class="language-plaintext highlighter-rouge">cron</code>, <code class="language-plaintext highlighter-rouge">init.d</code>   | Schedule tasks and escalate via misconfig     |
+| Bash + systemd     | Build persistent custom monitoring tool        |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">process-control-practice.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">systemd-service-management.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">hello-timer.service</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">htb-cronos-service-escalation.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-custom-alert-service.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">alert-monitor.service</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 53 – Processes, Services, and Custom Alert Project"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 53 (Linux+ HTB + Project)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

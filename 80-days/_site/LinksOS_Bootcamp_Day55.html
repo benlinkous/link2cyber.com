@@ -1,0 +1,95 @@
+<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 55
+parent: Basic Security
+nav_order: 55</p>
+
+<h1 id="-link2cyber-bootcamp--day-55-revised">✅ Link2Cyber Bootcamp — Day 55 (Revised)</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Linux+ (XK0-005)<br />
+<strong>Learning Methods:</strong> Hack The Box Academy + Machine + Real-World Project<br />
+<strong>Goal:</strong> Master package management, system logging, and Bash scripting for automation</p>
+<h2 id="-task-1-package-management">📦 Task 1: Package Management</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>Linux+ Domain 1 – Software Management
+<strong>Actions:</strong></li>
+  <li>Install, update, remove packages using:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">apt</code>, <code class="language-plaintext highlighter-rouge">dpkg</code>, <code class="language-plaintext highlighter-rouge">snap</code> (Debian/Ubuntu)</li>
+      <li>or <code class="language-plaintext highlighter-rouge">dnf</code>, <code class="language-plaintext highlighter-rouge">rpm</code>, <code class="language-plaintext highlighter-rouge">yum</code> (RHEL/CentOS/Fedora)</li>
+    </ul>
+  </li>
+  <li>List and audit installed software</li>
+  <li>Clean up unused packages
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">package-management-review.md</code></li>
+  <li>Screenshot: Installed and removed package logs
+    <h2 id="-task-2-system-logging-and-analysis">📋 Task 2: System Logging and Analysis</h2>
+  </li>
+  <li>Linux+ Domain 2 – Security and Monitoring</li>
+  <li>Review logs using <code class="language-plaintext highlighter-rouge">journalctl</code>, <code class="language-plaintext highlighter-rouge">logrotate</code>, <code class="language-plaintext highlighter-rouge">/var/log/auth.log</code></li>
+  <li>Configure a custom logrotate rule</li>
+  <li>Extract all sudo events from last 24 hours</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">log-analysis-and-rotation.md</code></li>
+  <li>Screenshot: Output of filtered logs and config
+    <h2 id="-task-3-htb-academy--machine">🧪 Task 3: HTB Academy + Machine</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/93">Shells and Scripting</a>
+    <h3 id="htb-machine">HTB Machine:</h3>
+  </li>
+  <li><strong>Postman</strong>
+    <ul>
+      <li>Extract credentials</li>
+      <li>Use curl/wget and Bash to script data access</li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">htb-postman-scripting.md</code></li>
+  <li>Screenshot: Credential reuse or scripted task
+    <h2 id="️-project-of-the-day-update-and-audit-automation-script">🛠️ Project of the Day: “Update and Audit Automation Script”</h2>
+    <p><strong>Scenario:</strong><br />
+You’re asked to write a script to auto-update the system and send a log summary to <code class="language-plaintext highlighter-rouge">/var/log/sys-updates.log</code>.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Create script to run:</li>
+    </ol>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">apt update &amp;&amp; apt upgrade -y</code></li>
+      <li><code class="language-plaintext highlighter-rouge">df -h</code>, <code class="language-plaintext highlighter-rouge">uptime</code>, <code class="language-plaintext highlighter-rouge">free -m</code></li>
+      <li>Append output to log file
+        <ol>
+          <li>Log timestamp for each run</li>
+          <li>Add cron job for daily execution</li>
+          <li>Test, debug, and secure with correct permissions
+<strong>Deliverables:</strong></li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-update-audit-script.md</code></li>
+  <li>Script: <code class="language-plaintext highlighter-rouge">sys_update.sh</code></li>
+  <li>Screenshot: Cron entry and sample log output
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Command     | Purpose                                        |
+|——————–|————————————————|
+| <code class="language-plaintext highlighter-rouge">apt</code>, <code class="language-plaintext highlighter-rouge">yum</code>, <code class="language-plaintext highlighter-rouge">dnf</code>| Install and manage software packages           |
+| <code class="language-plaintext highlighter-rouge">logrotate</code>, <code class="language-plaintext highlighter-rouge">journalctl</code> | Manage logs and configure retention    |
+| <code class="language-plaintext highlighter-rouge">bash</code>, <code class="language-plaintext highlighter-rouge">cron</code>, <code class="language-plaintext highlighter-rouge">nano</code> | Automate tasks and schedule routines      |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">package-management-review.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">log-analysis-and-rotation.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">htb-postman-scripting.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-update-audit-script.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">sys_update.sh</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 55 – Package Management, Logging, and Shell Script Project"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 55 (Linux+ HTB + Project)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>

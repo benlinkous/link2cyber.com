@@ -1,0 +1,92 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 59
+parent: Basic Security
+nav_order: 59</p>
+
+<h1 id="-link2cyber-bootcamp--day-59">✅ Link2Cyber Bootcamp — Day 59</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Linux+ (XK0-005)<br />
+<strong>Learning Methods:</strong> Hack The Box Academy + Machine + Real-World Project<br />
+<strong>Goal:</strong> Practice system backups, file compression, and job scheduling using cron and at</p>
+<h2 id="-task-1-backup-and-compression-utilities">💾 Task 1: Backup and Compression Utilities</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>Linux+ Domain 4 – System Operations and Maintenance
+<strong>Actions:</strong></li>
+  <li>Backup home directory using <code class="language-plaintext highlighter-rouge">tar</code>, <code class="language-plaintext highlighter-rouge">rsync</code>, <code class="language-plaintext highlighter-rouge">scp</code></li>
+  <li>Compress backup using <code class="language-plaintext highlighter-rouge">gzip</code>, <code class="language-plaintext highlighter-rouge">bzip2</code>, or <code class="language-plaintext highlighter-rouge">xz</code></li>
+  <li>Restore a <code class="language-plaintext highlighter-rouge">.tar.gz</code> and validate contents
+<strong>Commands:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">tar</code>, <code class="language-plaintext highlighter-rouge">rsync</code>, <code class="language-plaintext highlighter-rouge">scp</code>, <code class="language-plaintext highlighter-rouge">gzip</code>, <code class="language-plaintext highlighter-rouge">xz</code>, <code class="language-plaintext highlighter-rouge">ls -lh</code>
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">backup-compression-practice.md</code></li>
+  <li>Screenshot: Archive creation, compression output
+    <h2 id="️-task-2-scheduling-with-cron-and-at">⏲️ Task 2: Scheduling with Cron and At</h2>
+  </li>
+  <li>Schedule recurring job with <code class="language-plaintext highlighter-rouge">cron</code> to run every 12 hours</li>
+  <li>Schedule one-time job with <code class="language-plaintext highlighter-rouge">at</code> to log disk usage</li>
+  <li>Review logs in <code class="language-plaintext highlighter-rouge">/var/log/syslog</code> or <code class="language-plaintext highlighter-rouge">/var/log/cron.log</code></li>
+  <li><code class="language-plaintext highlighter-rouge">crontab -e</code>, <code class="language-plaintext highlighter-rouge">at</code>, <code class="language-plaintext highlighter-rouge">atq</code>, <code class="language-plaintext highlighter-rouge">cron.d</code>, <code class="language-plaintext highlighter-rouge">logger</code>, <code class="language-plaintext highlighter-rouge">tail</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">cron-at-job-scheduling.md</code></li>
+  <li>Screenshot: Job run logs and output file
+    <h2 id="-task-3-htb-academy--machine">🧪 Task 3: HTB Academy + Machine</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/112">Linux Job Scheduling and Automation</a>
+    <h3 id="htb-machine">HTB Machine:</h3>
+  </li>
+  <li><strong>Shocker</strong>
+    <ul>
+      <li>Exploit command injection to access a cron-based foothold</li>
+      <li>Analyze <code class="language-plaintext highlighter-rouge">/etc/crontab</code>, environment variables, and privilege elevation</li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">htb-shocker-cron-analysis.md</code></li>
+  <li>Screenshot: Command execution via cron job or shell
+    <h2 id="️-project-of-the-day-resilient-backup-job-system">🛠️ Project of the Day: “Resilient Backup Job System”</h2>
+    <p><strong>Scenario:</strong><br />
+Create a system that backs up <code class="language-plaintext highlighter-rouge">/etc</code>, compresses the archive, and logs backup success with timestamp. Schedule it daily.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Create script:</li>
+    </ol>
+    <ul>
+      <li>Backup <code class="language-plaintext highlighter-rouge">/etc</code> → <code class="language-plaintext highlighter-rouge">/var/backups/etc.tar.gz</code></li>
+      <li>Log success with timestamp → <code class="language-plaintext highlighter-rouge">/var/log/etc-backup.log</code>
+        <ol>
+          <li>Set <code class="language-plaintext highlighter-rouge">cron</code> job at 2:00am daily</li>
+          <li>Use color-coded log entry: success = green, fail = red</li>
+          <li>Validate backup with <code class="language-plaintext highlighter-rouge">tar -tvf</code>
+<strong>Deliverables:</strong></li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-daily-backup-job.md</code></li>
+  <li>Script: <code class="language-plaintext highlighter-rouge">etc_backup.sh</code></li>
+  <li>Screenshot: Cron entry, log file, and restored archive test
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Command     | Purpose                                        |
+|——————–|————————————————|
+| <code class="language-plaintext highlighter-rouge">rsync</code>, <code class="language-plaintext highlighter-rouge">scp</code>, <code class="language-plaintext highlighter-rouge">tar</code>, <code class="language-plaintext highlighter-rouge">gzip</code> | Perform backups and compress files |
+| <code class="language-plaintext highlighter-rouge">cron</code>, <code class="language-plaintext highlighter-rouge">at</code>       | Schedule and run recurring or one-time jobs   |
+| <code class="language-plaintext highlighter-rouge">logger</code>, <code class="language-plaintext highlighter-rouge">tail</code>, <code class="language-plaintext highlighter-rouge">/var/log</code> | Log job results and monitor output  |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">backup-compression-practice.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">cron-at-job-scheduling.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">htb-shocker-cron-analysis.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-daily-backup-job.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">etc_backup.sh</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 59 – Linux+ Backups, Compression, and Job Scheduling"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 59 (Linux+ HTB + Backup Project)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET
