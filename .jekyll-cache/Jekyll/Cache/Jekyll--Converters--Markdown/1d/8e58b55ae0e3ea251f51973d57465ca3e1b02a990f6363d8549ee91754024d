@@ -1,0 +1,97 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 54
+parent: Basic Security
+nav_order: 54</p>
+
+<h1 id="-link2cyber-bootcamp--day-54-revised">✅ Link2Cyber Bootcamp — Day 54 (Revised)</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Linux+ (XK0-005)<br />
+<strong>Learning Methods:</strong> Hack The Box Academy + Machine + Real-World Project<br />
+<strong>Goal:</strong> Configure network interfaces, troubleshoot connections, and secure systems with firewall rules</p>
+<h2 id="-task-1-network-configuration-and-troubleshooting">🌐 Task 1: Network Configuration and Troubleshooting</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>Linux+ Domain 3 — Network setup and diagnostics
+<strong>Actions:</strong></li>
+  <li>Configure a static IP via <code class="language-plaintext highlighter-rouge">nmcli</code> or <code class="language-plaintext highlighter-rouge">nmtui</code></li>
+  <li>Review <code class="language-plaintext highlighter-rouge">/etc/netplan/</code> or <code class="language-plaintext highlighter-rouge">/etc/network/interfaces</code></li>
+  <li>Test DNS resolution and routing with <code class="language-plaintext highlighter-rouge">dig</code>, <code class="language-plaintext highlighter-rouge">traceroute</code>, <code class="language-plaintext highlighter-rouge">ping</code>
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">network-config-and-diagnostics.md</code></li>
+  <li>Screenshot: IP config, route, DNS lookup
+    <h2 id="-task-2-linux-firewall-management">🔥 Task 2: Linux Firewall Management</h2>
+  </li>
+  <li>Use <code class="language-plaintext highlighter-rouge">ufw</code> or <code class="language-plaintext highlighter-rouge">iptables</code> to:
+    <ul>
+      <li>Block inbound SSH</li>
+      <li>Allow HTTP/HTTPS</li>
+      <li>Log and verify packet behavior
+<strong>Commands:</strong></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ufw</code>, <code class="language-plaintext highlighter-rouge">iptables</code>, <code class="language-plaintext highlighter-rouge">iptables-save</code>, <code class="language-plaintext highlighter-rouge">iptables-restore</code>, <code class="language-plaintext highlighter-rouge">ss</code>, <code class="language-plaintext highlighter-rouge">netstat</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">firewall-rule-testing.md</code></li>
+  <li>Screenshot: Rules applied and port check
+    <h2 id="-task-3-htb-academy--machine">🧪 Task 3: HTB Academy + Machine</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/73">Networking Fundamentals</a>
+    <h3 id="htb-machine">HTB Machine:</h3>
+  </li>
+  <li><strong>Beep</strong>
+    <ul>
+      <li>Enumerate services and test remote access</li>
+      <li>Identify open ports and weak firewall policies</li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">htb-beep-network-analysis.md</code></li>
+  <li>Screenshot: Access proof or scanned port map
+    <h2 id="️-project-of-the-day-secure-internal-web-server">🛠️ Project of the Day: “Secure Internal Web Server”</h2>
+    <p><strong>Scenario:</strong><br />
+You’re asked to deploy a web server that is only accessible from a specific subnet (e.g., 192.168.10.0/24).
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Install <code class="language-plaintext highlighter-rouge">apache2</code> (or <code class="language-plaintext highlighter-rouge">nginx</code>)</li>
+      <li>Set static IP</li>
+      <li>Write iptables rules to:</li>
+    </ol>
+    <ul>
+      <li>Allow traffic from 192.168.10.0/24</li>
+      <li>Block all other IPs
+        <ol>
+          <li>Create script to restore rules at boot</li>
+          <li>Test from another device or virtual subnet
+<strong>Deliverables:</strong></li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-secure-webserver.md</code></li>
+  <li>Script: <code class="language-plaintext highlighter-rouge">restore-firewall.sh</code></li>
+  <li>Screenshot: Allowed/denied traffic test
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Command     | Purpose                                        |
+|——————–|————————————————|
+| <code class="language-plaintext highlighter-rouge">nmcli</code>, <code class="language-plaintext highlighter-rouge">nmtui</code>, <code class="language-plaintext highlighter-rouge">netplan</code> | Configure and verify interfaces      |
+| <code class="language-plaintext highlighter-rouge">ufw</code>, <code class="language-plaintext highlighter-rouge">iptables</code>  | Apply and manage firewall policies             |
+| <code class="language-plaintext highlighter-rouge">dig</code>, <code class="language-plaintext highlighter-rouge">ping</code>, <code class="language-plaintext highlighter-rouge">ss</code>| Connectivity testing                           |
+| <code class="language-plaintext highlighter-rouge">iptables-save</code>    | Persist and reload firewall state              |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">network-config-and-diagnostics.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">firewall-rule-testing.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">htb-beep-network-analysis.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-secure-webserver.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">restore-firewall.sh</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 54 – Linux Networking, Firewall, and Web Server Security Project"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 54 (Linux+ HTB + Project)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

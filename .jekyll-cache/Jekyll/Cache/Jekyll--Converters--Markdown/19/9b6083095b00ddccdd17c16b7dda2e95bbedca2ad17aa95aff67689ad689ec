@@ -1,0 +1,86 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 51
+parent: Basic Security
+nav_order: 51</p>
+
+<h1 id="-link2cyber-bootcamp--day-51-revised-without-thm-repeat">✅ Link2Cyber Bootcamp — Day 51 (Revised without THM Repeat)</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Linux+ (XK0-005)<br />
+<strong>Learning Methods:</strong> Hack The Box Academy + Machine + Real-World Project<br />
+<strong>Goal:</strong> Master user and group management, permissions, and Linux CLI basics through lessons, practice, and simulation</p>
+<h2 id="-task-1-user-and-group-administration">🧩 Task 1: User and Group Administration</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>Linux+ Domain 1 – System Management</li>
+  <li>Domain 2 – Security
+<strong>Actions:</strong></li>
+  <li>Create users, set home directories, define shells</li>
+  <li>Modify group membership and set account aging</li>
+  <li>View and explain: <code class="language-plaintext highlighter-rouge">/etc/passwd</code>, <code class="language-plaintext highlighter-rouge">/etc/shadow</code>, <code class="language-plaintext highlighter-rouge">/etc/group</code>
+<strong>Commands:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">useradd</code>, <code class="language-plaintext highlighter-rouge">usermod</code>, <code class="language-plaintext highlighter-rouge">passwd</code>, <code class="language-plaintext highlighter-rouge">groupadd</code>, <code class="language-plaintext highlighter-rouge">chage</code>, <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">groups</code>
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">user-group-management.md</code></li>
+  <li>Screenshot: CLI evidence of group/user creation
+    <h2 id="-task-2-file-permissions-and-acls">🔐 Task 2: File Permissions and ACLs</h2>
+  </li>
+  <li>Use <code class="language-plaintext highlighter-rouge">chmod</code>, <code class="language-plaintext highlighter-rouge">chown</code>, <code class="language-plaintext highlighter-rouge">umask</code>, <code class="language-plaintext highlighter-rouge">setfacl</code>, <code class="language-plaintext highlighter-rouge">getfacl</code> to apply and inspect permissions</li>
+  <li>Simulate a shared directory between users with different access rights</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">permissions-and-acl-practice.md</code></li>
+  <li>Screenshot: <code class="language-plaintext highlighter-rouge">ls -l</code> and ACL output for test files
+    <h2 id="️-task-3-hack-the-box-academy--machine">⚔️ Task 3: Hack The Box Academy + Machine</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/1">Linux Fundamentals</a>
+    <h3 id="htb-machine">HTB Machine:</h3>
+  </li>
+  <li><strong>Lame</strong>
+    <ul>
+      <li>Enumerate SMB</li>
+      <li>Gain foothold</li>
+      <li>Practice Linux file navigation and user mapping</li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">htb-lame-notes.md</code></li>
+  <li>Screenshot: Shell access or <code class="language-plaintext highlighter-rouge">/etc/passwd</code> dump
+    <h2 id="-project-of-the-day-team-access-simulation">🛠 Project of the Day: “Team Access Simulation”</h2>
+    <p><strong>Scenario:</strong><br />
+A new <code class="language-plaintext highlighter-rouge">devops</code> team is being onboarded. You’ve been asked to configure user access and a shared directory.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Create users: <code class="language-plaintext highlighter-rouge">alice</code>, <code class="language-plaintext highlighter-rouge">bob</code>, and <code class="language-plaintext highlighter-rouge">guest</code></li>
+      <li>Create group: <code class="language-plaintext highlighter-rouge">devops</code></li>
+      <li>Add <code class="language-plaintext highlighter-rouge">alice</code> and <code class="language-plaintext highlighter-rouge">bob</code> to <code class="language-plaintext highlighter-rouge">devops</code> group</li>
+      <li>Create <code class="language-plaintext highlighter-rouge">/opt/devops-data/</code> with group read/write</li>
+      <li>Prevent <code class="language-plaintext highlighter-rouge">guest</code> from accessing <code class="language-plaintext highlighter-rouge">/opt/devops-data/</code></li>
+      <li>Log all permissions and test actions for each user
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-devops-access.md</code></li>
+  <li>Screenshot: Group membership, permissions, access denied
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Command     | Purpose                                        |
+|——————–|————————————————|
+| <code class="language-plaintext highlighter-rouge">useradd</code>, <code class="language-plaintext highlighter-rouge">usermod</code>, <code class="language-plaintext highlighter-rouge">passwd</code> | Linux account creation            |
+| <code class="language-plaintext highlighter-rouge">chmod</code>, <code class="language-plaintext highlighter-rouge">setfacl</code>, <code class="language-plaintext highlighter-rouge">umask</code>    | File permission management         |
+| HTB Academy + Machine          | Real-world Linux CLI and SMB access |
+| Project                        | Simulated team access request       |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">user-group-management.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">permissions-and-acl-practice.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">htb-lame-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-devops-access.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 51 – Linux Fundamentals with Project and HTB"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 51 (Linux+ HTB + Project)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

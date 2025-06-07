@@ -1,0 +1,71 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 27
+parent: Fundamentals
+nav_order: 27</p>
+
+<h1 id="-link2cyber-bootcamp--day-27">✅ Link2Cyber Bootcamp — Day 27</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Security+ (SY0-601)<br />
+<strong>Goal:</strong> Understand network security concepts and secure communication protocols</p>
+<h2 id="-focus-network-security-and-protocols">🔐 Focus: Network Security and Protocols</h2>
+<p>Today you’ll build command over <strong>network security controls</strong>, <strong>secure communication protocols</strong>, and <strong>monitoring techniques</strong> essential for real-world SOC analysis and Security+ Domain 2 mastery.</p>
+<h2 id="-task-1-secure-protocols-and-port-review">🌐 Task 1: Secure Protocols and Port Review</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>3.3 – Secure protocols and their use cases</li>
+  <li>3.1 – Implement secure network architecture concepts
+<strong>Actions:</strong></li>
+  <li>Create a table of common ports and secure alternatives (e.g., HTTPS over HTTP, SSH over Telnet)</li>
+  <li>Document the differences between:
+    <ul>
+      <li>SSL vs TLS</li>
+      <li>VPN vs SSH tunneling</li>
+      <li>FTPS vs SFTP
+<strong>Output:</strong></li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">secure-protocols-and-ports.md</code></li>
+  <li>Table: Protocol | Port | Secure? | Use Case
+    <h2 id="-task-2-tryhackme-labs--protocols-and-network-layers">🧪 Task 2: TryHackMe Labs – Protocols and Network Layers</h2>
+  </li>
+  <li><a href="https://tryhackme.com/room/introtothenetwork">TryHackMe: Intro to Networking</a></li>
+  <li><a href="https://tryhackme.com/room/networksecurity">TryHackMe: Network Security Basics</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">network-security-lab-notes.md</code></li>
+  <li>Screenshot: Completed rooms or config analysis
+    <h2 id="-task-3-network-defense-tools-drill">🧰 Task 3: Network Defense Tools Drill</h2>
+  </li>
+  <li>Install and experiment with basic packet inspection tools:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">tcpdump</code></li>
+      <li><code class="language-plaintext highlighter-rouge">wireshark</code> (optional GUI)</li>
+      <li><code class="language-plaintext highlighter-rouge">netstat</code>, <code class="language-plaintext highlighter-rouge">ss</code></li>
+    </ul>
+  </li>
+  <li>Monitor open ports, scan traffic to/from your device, and document insights</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">packet-monitoring-logs.md</code></li>
+  <li>Screenshot: Packet capture output or firewall rule logs
+    <h2 id="️-tools-learned-today">🛠️ Tools Learned Today</h2>
+    <p>| Tool / Command   | Purpose                                 |
+|——————|——————————————|
+| <code class="language-plaintext highlighter-rouge">tcpdump</code>, <code class="language-plaintext highlighter-rouge">ss</code>  | View active traffic and socket state     |
+| <code class="language-plaintext highlighter-rouge">netstat</code>, <code class="language-plaintext highlighter-rouge">ufw</code> | Monitor and control network connections  |
+| <code class="language-plaintext highlighter-rouge">wireshark</code>      | Deep packet inspection (GUI, optional)   |
+| <code class="language-plaintext highlighter-rouge">iptables</code>, <code class="language-plaintext highlighter-rouge">firewalld</code> | Custom firewall rule control      |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">secure-protocols-and-ports.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">network-security-lab-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">packet-monitoring-logs.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 27 – Network Security and Secure Protocols"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 27"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

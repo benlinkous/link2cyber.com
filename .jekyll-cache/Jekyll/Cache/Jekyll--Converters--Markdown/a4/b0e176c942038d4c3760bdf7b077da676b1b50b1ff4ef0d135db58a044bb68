@@ -1,0 +1,63 @@
+I"<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 30
+parent: Fundamentals
+nav_order: 30</p>
+
+<h1 id="-link2cyber-bootcamp--day-30">✅ Link2Cyber Bootcamp — Day 30</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Security+ (SY0-601)<br />
+<strong>Goal:</strong> Finalize Security+ prep, review incident response, and validate exam readiness</p>
+<h2 id="-final-certification-confidence-statement">🎯 Final Certification Confidence Statement</h2>
+<p>By completing today’s tasks, you’ve demonstrated hands-on understanding and theoretical mastery of all <strong>Security+ SY0-601</strong> exam domains. You are now ready to <strong>schedule and pass the Security+ exam</strong> with confidence.</p>
+<h2 id="-task-1-incident-response-and-forensics">🚨 Task 1: Incident Response and Forensics</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>4.1 – Incident response process</li>
+  <li>4.2 – Digital forensics and evidence handling
+<strong>Actions:</strong></li>
+  <li>Document the 6 steps of incident response (Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned)</li>
+  <li>List key forensics terms (chain of custody, volatility, hashing evidence)
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">incident-response-process.md</code></li>
+  <li>Table: Step | Description | Tools Used
+    <h2 id="-task-2-tryhackme--incident-and-ir-tools">🧪 Task 2: TryHackMe – Incident and IR Tools</h2>
+  </li>
+  <li><a href="https://tryhackme.com/room/incidentresponse">TryHackMe: Incident Response</a></li>
+  <li><a href="https://tryhackme.com/room/introtodigitalforensics">TryHackMe: Intro to Forensics</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">incident-lab-notes.md</code></li>
+  <li>Screenshot: Summary of tools used or flagged incidents
+    <h2 id="-task-3-security-final-readiness-checklist">📋 Task 3: Security+ Final Readiness Checklist</h2>
+  </li>
+  <li>Covers Domains 1–5 of the exam</li>
+  <li>Self-assess your confidence per domain (Y/N)
+| Domain | Description | Confident? |
+|——–|————-|————|
+| 1      | Threats, Attacks, Vulnerabilities | Y/N |
+| 2      | Architecture and Design          | Y/N |
+| 3      | Implementation (Protocols, Tools)| Y/N |
+| 4      | Operations and Incident Response | Y/N |
+| 5      | Governance, Risk, and Compliance | Y/N |</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityplus_final_readiness.md</code></li>
+  <li>Notes: Areas to revisit before exam
+    <h2 id="-bonus-reflection-prompt">🧠 Bonus Reflection Prompt</h2>
+  </li>
+  <li>What was the most useful tool or concept you learned?</li>
+  <li>What would you tell a future learner about your bootcamp experience?
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">incident-response-process.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">incident-lab-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityplus_final_readiness.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 30 – Incident Response and Security+ Certification Prep Complete"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 30"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

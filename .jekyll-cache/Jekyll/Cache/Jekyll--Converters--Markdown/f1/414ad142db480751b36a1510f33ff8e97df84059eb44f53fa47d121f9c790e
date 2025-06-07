@@ -1,0 +1,74 @@
+I"f<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 21
+parent: Fundamentals
+nav_order: 21</p>
+
+<h1 id="-link2cyber-bootcamp--day-21">✅ Link2Cyber Bootcamp — Day 21</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Tech+ and CompTIA A+ (220-1102) Final Review and Readiness<br />
+<strong>Goal:</strong> Confirm readiness, identify gaps, and build confidence for exam</p>
+<h2 id="-certification-readiness-notice">🎯 Certification Readiness Notice</h2>
+<p>Based on your progress through Days 1–20, <strong>you are now considered <em>ready</em> to attempt the Tech+ and A+ Core 2 (220-1102)</strong> exams. This week will reinforce, review, and sharpen your skills — not build them from scratch.
+By the end of this day, you should:</p>
+<ul class="task-list">
+  <li>Pass a full practice test with &gt; 85% accuracy</li>
+  <li>Have written documentation for key concepts</li>
+  <li>Be able to solve common ticket scenarios without reference
+    <h2 id="-task-1-full-practice-exam--a-220-1102">🧪 Task 1: Full Practice Exam – A+ 220-1102</h2>
+    <p><strong>Actions:</strong></p>
+  </li>
+  <li>Take a full-length A+ (220-1102) practice exam using CompTIA’s format</li>
+  <li>Review any missed questions and categorize them by domain
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">a+_practice_exam_1_results.md</code></li>
+  <li>Summary Table: Scores by domain (Windows, Security, Troubleshooting, etc.)
+    <h2 id="-task-2-tech-core-review--terms-and-systems">🔍 Task 2: Tech+ Core Review – Terms and Systems</h2>
+  </li>
+  <li>Review your notes and documentation for the following areas:
+    <ul>
+      <li>System types (desktop, mobile, embedded)</li>
+      <li>OS features and support</li>
+      <li>Device and user support scenarios</li>
+    </ul>
+  </li>
+  <li>Create a visual guide or mind map</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">techplus_review_summary.md</code></li>
+  <li>Graphic (optional): <code class="language-plaintext highlighter-rouge">techplus_mindmap.png</code>
+    <h2 id="️-task-3-troubleshooting-scenarios-windowslinux">🛠️ Task 3: Troubleshooting Scenarios (Windows/Linux)</h2>
+  </li>
+  <li>Create and solve 3 support ticket scenarios:
+    <ol>
+      <li>User login issues</li>
+      <li>Malware detection and removal</li>
+      <li>Backup and restore failure</li>
+    </ol>
+  </li>
+  <li>Use tools from earlier days (<code class="language-plaintext highlighter-rouge">journalctl</code>, <code class="language-plaintext highlighter-rouge">rkhunter</code>, <code class="language-plaintext highlighter-rouge">rsync</code>, etc.)</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">troubleshooting_ticket_responses.md</code></li>
+  <li>Screenshot: Terminal evidence or before/after configs
+    <h2 id="-key-tools-you-must-know-mini-review">🧰 Key Tools You Must Know (Mini Review)</h2>
+    <p>| Tool              | Purpose                                |
+|——————-|—————————————-|
+| <code class="language-plaintext highlighter-rouge">rkhunter</code>, <code class="language-plaintext highlighter-rouge">clamscan</code> | Malware scanning and logs         |
+| <code class="language-plaintext highlighter-rouge">rsync</code>, <code class="language-plaintext highlighter-rouge">tar</code>    | Backups and recovery                   |
+| <code class="language-plaintext highlighter-rouge">journalctl</code>, <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">systemctl</code> | Troubleshooting OS issues |
+| <code class="language-plaintext highlighter-rouge">useradd</code>, <code class="language-plaintext highlighter-rouge">passwd</code>, <code class="language-plaintext highlighter-rouge">groups</code> | Account configuration       |
+| Cloud Sync Tools  | Google Drive, OneDrive, iCloud basics |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">a+_practice_exam_1_results.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">techplus_review_summary.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">troubleshooting_ticket_responses.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 21 – A+ and Tech+ Readiness Review"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 21"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

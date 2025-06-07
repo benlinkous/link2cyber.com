@@ -1,0 +1,84 @@
+I":<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 66
+parent: Advanced Security
+nav_order: 66</p>
+
+<h1 id="-link2cyber-bootcamp--day-66">✅ Link2Cyber Bootcamp — Day 66</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> SecurityX (CAS-005)<br />
+<strong>Focus:</strong> Incident response lifecycle, playbook creation, team roles, and tabletop scenarios<br />
+<strong>Tools:</strong> HTB Academy, SIEM simulation (ELK/Wazuh logs), real-world IR project</p>
+<h2 id="-task-1-incident-response-planning-and-frameworks">🚨 Task 1: Incident Response Planning and Frameworks</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>CAS-005 Domain 3 – Incident Response and Security Operations
+<strong>Actions:</strong></li>
+  <li>Review IR phases (NIST 800-61):
+    <ul>
+      <li>Preparation, Detection, Containment, Eradication, Recovery, Lessons Learned</li>
+    </ul>
+  </li>
+  <li>Define IR team roles: IR lead, communications, forensics, legal</li>
+  <li>Map internal processes to IR phases
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-incident-response-framework.md</code></li>
+  <li>Table: IR Phase | Team Role | Tool/Task | Notes
+    <h2 id="-task-2-playbooks-and-response-templates">🛠 Task 2: Playbooks and Response Templates</h2>
+  </li>
+  <li>Draft 2 playbooks:
+    <ol>
+      <li><strong>Ransomware on file server</strong></li>
+      <li><strong>Suspicious outbound connection from dev laptop</strong></li>
+    </ol>
+  </li>
+  <li>Include decision trees, triage actions, and logs to pull</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-response-playbooks.md</code></li>
+  <li>Diagram: Playbook flowchart or checklist
+    <h2 id="-task-3-htb-academy--log-sample-elkwazuhthm">🧪 Task 3: HTB Academy + Log Sample (ELK/Wazuh/THM)</h2>
+    <h3 id="htb-academy-module">HTB Academy Module:</h3>
+  </li>
+  <li><a href="https://academy.hackthebox.com/module/168">Incident Response Fundamentals</a>
+    <h3 id="optional-tryhackme">Optional TryHackMe:</h3>
+  </li>
+  <li><a href="https://tryhackme.com/room/securitymonitoring">Security Monitoring and SIEM</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">securityx-incident-lab-notes.md</code></li>
+  <li>Screenshot: SIEM log event or response annotation
+    <h2 id="️-project-of-the-day-ir-policy--tabletop-scenario">🛠️ Project of the Day: “IR Policy + Tabletop Scenario”</h2>
+    <p><strong>Scenario:</strong><br />
+As the new security lead, you’re asked to prepare the IR policy and run a tabletop simulation for an executive team.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Draft 1-page IR policy for your organization</li>
+      <li>Create a tabletop scenario (e.g., insider threat, stolen laptop, phishing attack)</li>
+      <li>Define injects, decisions, escalation points</li>
+      <li>Log what decisions teams make and reflect on response gaps
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">project-ir-policy-and-tabletop.md</code></li>
+  <li>Table: Scenario step | Team decision | Outcome | Gap
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Concept      | Purpose                                        |
+|———————|————————————————|
+| NIST IR Framework   | Phased incident response lifecycle             |
+| SIEM (Wazuh/ELK)    | Log correlation and threat detection           |
+| IR Playbooks        | Actionable workflows per scenario              |
+| Tabletop Exercise   | Simulated response and decision evaluation     |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-incident-response-framework.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-response-playbooks.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">securityx-incident-lab-notes.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">project-ir-policy-and-tabletop.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 66 – SecurityX IR Planning and Playbooks"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 66 (SecurityX Incident Response)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET
