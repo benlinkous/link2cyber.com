@@ -1,0 +1,27 @@
+
+# Jekyll build artifacts
+_site/
+.jekyll-cache/
+
+# Editor and OS files
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Ruby bundler and gem files
+.bundle/
+vendor/
+Gemfile.lock
+
+# Node modules if used for frontend tooling
+node_modules/
+
+# Cache files
+*.log
+.cache/
+tmp/
+**/.sass-cache/
+
+# Project-specific
+80-days/_site/
