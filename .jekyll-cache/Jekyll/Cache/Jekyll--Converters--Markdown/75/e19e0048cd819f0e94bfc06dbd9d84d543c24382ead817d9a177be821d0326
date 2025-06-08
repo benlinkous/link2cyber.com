@@ -1,0 +1,49 @@
+I"u<h1 id="-linkos-bootcamp--day-49">✅ LinkOS Bootcamp — Day 49</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> PenTest+ (PT0-002) — Web Application Attacks and Automation<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — Web fuzzing, HTTP tools, and script-based attacks<br />
+<strong>Goal:</strong> Exploit vulnerable web apps using OWASP techniques and automate discovery</p>
+
+<hr />
+
+<h2 id="-task-1-owasp-top-10-and-web-app-attack-scenarios">🌐 Task 1: OWASP Top 10 and Web App Attack Scenarios</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>PenTest+ 4.1 – Web application attacks</li>
+  <li>Linux+ – Scripting, cURL, parameter fuzzing, logs</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Review the OWASP Top 10:
+    <ul>
+      <li>Injection, Broken Auth, XSS, CSRF, SSRF, IDOR</li>
+    </ul>
+  </li>
+  <li>Use Burp Suite (or CLI tools) to exploit:
+    <ul>
+      <li>Reflected XSS, SQLi, LFI, login brute-force</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">owasp-top10-summary.md</code></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Table: Attack</td>
+          <td>Example</td>
+          <td>Tool</td>
+          <td>Risk</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+:ET

@@ -1,0 +1,66 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 17
+parent: Fundamentals
+nav_order: 17</p>
+
+<h1 id="-link2cyber-bootcamp--day-17">✅ Link2Cyber Bootcamp — Day 17</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Focus:</strong> A+, Tech+, Security+, Linux+<br />
+<strong>Labs, Projects, Tools, and Documentation</strong><br />
+<strong>Date:</strong> (Insert actual date)</p>
+<h2 id="-focus-areas">🧩 Focus Areas</h2>
+<ul class="task-list">
+  <li><strong>CompTIA A+ (220-1102):</strong> Malware Removal Process</li>
+  <li><strong>Tech+:</strong> Threat Identification and Defense Strategy</li>
+  <li><strong>Security+:</strong> Endpoint Protection</li>
+  <li><strong>Linux+:</strong> Threat Detection, Isolation, and Logging</li>
+  <li><strong>TryHackMe:</strong> Malware Sandbox, Rootkit Hunter</li>
+  <li><strong>Tool Integration:</strong> <code class="language-plaintext highlighter-rouge">chkrootkit</code>, <code class="language-plaintext highlighter-rouge">rkhunter</code>, <code class="language-plaintext highlighter-rouge">clamav</code>, <code class="language-plaintext highlighter-rouge">maltrail</code>, <code class="language-plaintext highlighter-rouge">/var/log</code>, <code class="language-plaintext highlighter-rouge">ufw</code>, <code class="language-plaintext highlighter-rouge">systemd-journal</code>
+    <h2 id="-task-1-identify-and-classify-malware-a--security">🛑 Task 1: Identify and Classify Malware (A+ / Security+)</h2>
+    <p><strong>Actions:</strong></p>
+  </li>
+  <li>Research types of malware: virus, worm, trojan, ransomware, spyware</li>
+  <li>List tools used to detect each category</li>
+  <li>Practice identifying threats via logs and file signatures
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">malware-types-overview.md</code></li>
+  <li>Sample log review: <code class="language-plaintext highlighter-rouge">malicious-log-signatures.md</code>
+    <h2 id="-task-2-malware-removal-procedure-a">🧹 Task 2: Malware Removal Procedure (A+)</h2>
+  </li>
+  <li>Simulate malware infection by downloading EICAR test file</li>
+  <li>Run scans using <code class="language-plaintext highlighter-rouge">chkrootkit</code>, <code class="language-plaintext highlighter-rouge">rkhunter</code>, and <code class="language-plaintext highlighter-rouge">clamscan</code></li>
+  <li>Isolate and delete malicious files, review logs</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">malware-removal-checklist.md</code></li>
+  <li>Screenshots: Terminal output of scans and actions taken
+    <h2 id="-task-3-tryhackme--malware-and-threat-detection">🧪 Task 3: TryHackMe – Malware and Threat Detection</h2>
+  </li>
+  <li><a href="https://tryhackme.com/room/malwareintro">TryHackMe: Malware Analysis Intro</a></li>
+  <li><a href="https://tryhackme.com/room/linuxrootkits">TryHackMe: Rootkits</a></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">malware-analysis-findings.md</code>
+    <h2 id="️-tools-learned-today">🛠️ Tools Learned Today</h2>
+    <p>| Tool / Command   | Purpose                                |
+|——————|—————————————-|
+| <code class="language-plaintext highlighter-rouge">chkrootkit</code>     | Check system for known rootkits        |
+| <code class="language-plaintext highlighter-rouge">rkhunter</code>       | Scan for known rootkits and anomalies  |
+| <code class="language-plaintext highlighter-rouge">clamav</code>         | Virus scanner and signature checker    |
+| <code class="language-plaintext highlighter-rouge">ufw</code>            | Host-based firewall                    |
+| <code class="language-plaintext highlighter-rouge">/var/log</code>, <code class="language-plaintext highlighter-rouge">journalctl</code> | Log analysis for infections   |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">malware-types-overview.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">malware-removal-checklist.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">malware-analysis-findings.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">malicious-log-signatures.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 17 – Malware Detection, Removal, and Logging"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Default Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

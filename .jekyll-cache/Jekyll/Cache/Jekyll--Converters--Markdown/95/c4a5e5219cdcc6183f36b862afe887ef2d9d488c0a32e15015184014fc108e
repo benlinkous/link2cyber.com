@@ -1,0 +1,35 @@
+I"�<h1 id="-linkos-bootcamp--day-44">✅ LinkOS Bootcamp — Day 44</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Network+ (N10-008 or N10-009) — DHCP, DNS, Wireless, and NAT<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — Hostname resolution, name servers, and wireless tools<br />
+<strong>Goal:</strong> Understand DHCP leasing, DNS name resolution, wireless security, and NAT behavior</p>
+
+<hr />
+
+<h2 id="-task-1-dhcp-and-dns-overview">📡 Task 1: DHCP and DNS Overview</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>Network+ 2.3 – DNS, DHCP operation</li>
+  <li>Network+ 2.4 – DHCP lease process and DNS zones</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Diagram:
+    <ul>
+      <li>DHCP DORA process</li>
+      <li>Forward and reverse DNS lookups</li>
+    </ul>
+  </li>
+  <li>Explain zone files, resolvers, and recursive queries</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">dhcp-dns-overview.md</code></li>
+  <li>Diagram (optional): DHCP workflow and DNS resolution</li>
+</ul>
+
+:ET

@@ -1,0 +1,83 @@
+I"n<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 7
+parent: Fundamentals
+nav_order: 7</p>
+
+<h1 id="-link2cyber-bootcamp--day-7">✅ Link2Cyber Bootcamp — Day 7</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Focus:</strong> A+, Tech+, Security+, Linux+<br />
+<strong>Labs, Projects, Tools, and Documentation</strong><br />
+<strong>Date:</strong> (Insert actual date)</p>
+<h2 id="️-focus-areas">🗂️ Focus Areas</h2>
+<ul class="task-list">
+  <li><strong>CompTIA A+ (220-1102):</strong> Security Settings, Operating System Features</li>
+  <li><strong>Tech+:</strong> File Systems and OS Optimization</li>
+  <li><strong>Security+:</strong> Malware Identification and Removal</li>
+  <li><strong>Linux+:</strong> File System Management, Disk Utilities</li>
+  <li><strong>TryHackMe:</strong> Malware analysis, file system exploration</li>
+  <li><strong>LinksOS Tools:</strong> Integrated throughout tasks
+    <h2 id="️-task-1-file-system-management">🗃️ Task 1: File System Management</h2>
+    <p><strong>Mapped Objectives:</strong></p>
+  </li>
+  <li>Linux+: Manage file systems, partitions, and mount points</li>
+  <li>Tech+: Identify types of file systems and their use
+<strong>Actions:</strong></li>
+  <li>Use <code class="language-plaintext highlighter-rouge">lsblk</code>, <code class="language-plaintext highlighter-rouge">df</code>, and <code class="language-plaintext highlighter-rouge">mount</code> to explore and document your system layout</li>
+  <li>Create a new disk image and format it using <code class="language-plaintext highlighter-rouge">mkfs.ext4</code></li>
+  <li>Mount it manually, copy files, and analyze space usage with <code class="language-plaintext highlighter-rouge">du</code><br />
+<strong>Tools:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">lsblk</code>, <code class="language-plaintext highlighter-rouge">df -h</code>, <code class="language-plaintext highlighter-rouge">du -sh *</code>, <code class="language-plaintext highlighter-rouge">mkfs.ext4</code>, <code class="language-plaintext highlighter-rouge">mount</code>, <code class="language-plaintext highlighter-rouge">umount</code>, <code class="language-plaintext highlighter-rouge">blkid</code>
+<strong>Output:</strong></li>
+  <li>Markdown: “LinksOS File System Layout + Mounting Exercise”
+    <h2 id="️-task-2-malware-types-and-detection">🛡️ Task 2: Malware Types and Detection</h2>
+  </li>
+  <li>Security+: 1.2 — Compare types of malware</li>
+  <li>A+ 220-1102 2.4 — Malware removal steps</li>
+  <li>A+ 220-1102 3.3 — Tools to prevent and remove malware</li>
+  <li>Research and list malware types: virus, worm, trojan, rootkit, spyware, etc.</li>
+  <li>Install and run <code class="language-plaintext highlighter-rouge">chkrootkit</code>, <code class="language-plaintext highlighter-rouge">rkhunter</code>, and <code class="language-plaintext highlighter-rouge">clamav</code> on your system</li>
+  <li>Simulate a malware incident and create a response report</li>
+  <li><code class="language-plaintext highlighter-rouge">chkrootkit</code>, <code class="language-plaintext highlighter-rouge">rkhunter</code>, <code class="language-plaintext highlighter-rouge">clamscan</code>, <code class="language-plaintext highlighter-rouge">freshclam</code></li>
+  <li>Markdown report: “Malware Scan Results + Prevention Recommendations”
+    <h2 id="️-task-3-os-security-settings-and-features">⚙️ Task 3: OS Security Settings and Features</h2>
+  </li>
+  <li>A+ 220-1102 1.5 — Security settings for OS</li>
+  <li>Security+: 3.2 — Secure configuration for endpoints</li>
+  <li>Create a standard user and practice privilege escalation</li>
+  <li>Harden sudo access by editing <code class="language-plaintext highlighter-rouge">/etc/sudoers</code></li>
+  <li>Lock down file permissions on key directories</li>
+  <li><code class="language-plaintext highlighter-rouge">adduser</code>, <code class="language-plaintext highlighter-rouge">visudo</code>, <code class="language-plaintext highlighter-rouge">chmod</code>, <code class="language-plaintext highlighter-rouge">passwd</code>, <code class="language-plaintext highlighter-rouge">groups</code></li>
+  <li>Create a secure user policy document and permissions checklist
+    <h2 id="-task-4-tryhackme--malware-analysis-intro">🧪 Task 4: TryHackMe – Malware Analysis Intro</h2>
+  </li>
+  <li>Security+: Malware types, indicators, analysis
+<strong>Link:</strong></li>
+  <li><a href="https://tryhackme.com/room/malwareintro">TryHackMe: Malware Intro Room</a></li>
+  <li>Complete the room, document malware signatures, detection tools, and manual triage</li>
+  <li>Reflect on the difference between behavioral and signature-based detection
+    <h2 id="️-tools-learned-today">🛠️ Tools Learned Today</h2>
+    <p>| Tool / Command         | Function Description                           |
+|————————|————————————————|
+| <code class="language-plaintext highlighter-rouge">lsblk</code>, <code class="language-plaintext highlighter-rouge">df</code>, <code class="language-plaintext highlighter-rouge">du</code>    | Disk and file system usage visualization       |
+| <code class="language-plaintext highlighter-rouge">mkfs.ext4</code>, <code class="language-plaintext highlighter-rouge">mount</code>   | Create and mount new file systems              |
+| <code class="language-plaintext highlighter-rouge">clamscan</code>, <code class="language-plaintext highlighter-rouge">chkrootkit</code>, <code class="language-plaintext highlighter-rouge">rkhunter</code> | Malware scanning and detection tools |
+| <code class="language-plaintext highlighter-rouge">visudo</code>, <code class="language-plaintext highlighter-rouge">adduser</code>, <code class="language-plaintext highlighter-rouge">passwd</code> | User account and sudo policy management |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">file-system-layout.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">malware-scan-report.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">secure-user-policy.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Screenshots and logs for all malware scans</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 7 – File Systems, Malware Defense, and OS Security"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Default Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

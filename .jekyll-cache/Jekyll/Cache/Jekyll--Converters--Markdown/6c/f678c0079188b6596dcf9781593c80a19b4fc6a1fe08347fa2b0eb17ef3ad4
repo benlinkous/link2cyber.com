@@ -1,0 +1,35 @@
+I"�<h1 id="-linkos-bootcamp--day-37">✅ LinkOS Bootcamp — Day 37</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> CySA+ (CS0-003) — Identity and Access Management (IAM)<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — File permissions, sudo, and user roles<br />
+<strong>Goal:</strong> Secure system access through role-based controls and access policies</p>
+
+<hr />
+
+<h2 id="-task-1-identity-and-access-control-models">🔐 Task 1: Identity and Access Control Models</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>CySA+ 3.1 – Identity models and access types</li>
+  <li>Linux+ – Role separation, sudo, and authentication</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Define and document:
+    <ul>
+      <li>RBAC, ABAC, MAC, DAC</li>
+      <li>MFA types and authentication factors</li>
+    </ul>
+  </li>
+  <li>Apply role separation using group policies in Linux</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">access-control-models.md</code></li>
+  <li>Diagram (optional): RBAC vs DAC roles</li>
+</ul>
+
+:ET

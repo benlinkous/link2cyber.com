@@ -1,0 +1,47 @@
+I"<h1 id="-linkos-bootcamp--day-47">✅ LinkOS Bootcamp — Day 47</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> PenTest+ (PT0-002) — Vulnerability Identification and Exploitation<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — CVE hunting, patch auditing, exploit tools<br />
+<strong>Goal:</strong> Use identified vulnerabilities to simulate real-world exploit chains</p>
+
+<hr />
+
+<h2 id="-task-1-identify-vulnerabilities-and-build-exploit-chains">💣 Task 1: Identify Vulnerabilities and Build Exploit Chains</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>PenTest+ 2.3 – Vulnerability identification</li>
+  <li>PenTest+ 3.1 – Exploit vulnerability types</li>
+  <li>Linux+ – CVE analysis and patch gap validation</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Search CVEs using:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">searchsploit</code>, CVE Details, NVD, ExploitDB</li>
+    </ul>
+  </li>
+  <li>Match known services (Apache, Samba, SSH) to public exploits</li>
+  <li>Diagram an exploit chain: Recon → Enumeration → Exploit → Foothold</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">vulnerability-chain-analysis.md</code></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Table: Service</td>
+          <td>CVE</td>
+          <td>Exploit Path</td>
+          <td>Mitigation</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+:ET

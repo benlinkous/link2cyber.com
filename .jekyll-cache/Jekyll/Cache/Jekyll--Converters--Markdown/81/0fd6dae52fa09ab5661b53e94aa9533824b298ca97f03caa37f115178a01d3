@@ -1,0 +1,44 @@
+I"H<h1 id="-linkos-bootcamp--day-34">✅ LinkOS Bootcamp — Day 34</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> CySA+ (CS0-003) — Security Operations &amp; Incident Response<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — Recovery, backups, and system forensics<br />
+<strong>Goal:</strong> Practice incident response steps, digital evidence handling, and secure system recovery</p>
+
+<hr />
+
+<h2 id="-task-1-incident-response-phases-and-tools">🚨 Task 1: Incident Response Phases and Tools</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>CySA+ 4.1 – Incident response procedures</li>
+  <li>Linux+ – Disaster recovery, snapshot, and file restoration</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Define and document the 6 IR steps:
+    <ul>
+      <li>Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned</li>
+    </ul>
+  </li>
+  <li>Match each to Linux tools or sysadmin actions</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">incident-response-phases.md</code></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Table: IR Phase</td>
+          <td>Example</td>
+          <td>Tool</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+:ET

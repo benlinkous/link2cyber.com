@@ -1,3 +1,8 @@
+---
+title: Day 47 –
+parent: Basic Security
+nav_order: 17
+---
 # ✅ LinkOS Bootcamp — Day 47
 
 **Full-Time Learner Track (8–10 hours/day)**  
@@ -24,66 +29,3 @@
 - Markdown: `vulnerability-chain-analysis.md`  
 - Table: Service | CVE | Exploit Path | Mitigation
 
----
-
-## 🧪 Task 2: THM + HTB Labs – Exploitation
-
-### TryHackMe:
-- [Vulnversity](https://tryhackme.com/room/vulnversity)  
-- [Kenobi](https://tryhackme.com/room/kenobi)
-
-### Hack The Box:
-- HTB Academy: “Exploitation Basics” module  
-- Live Box: “Blue” or “Jerry” (SMB/HTTP focus)
-
-**Output:**  
-- Markdown: `exploit-lab-notes.md`  
-- Screenshot: Reverse shell or privilege escalation output
-
----
-
-## 🛠️ Task 3: Linux Exploit Tools and Scripting
-
-**Actions:**  
-- Use:
-  - `searchsploit`, `msfconsole`, `wget`, `nc`, `bash`  
-- Write a short script to automate:
-  - Download exploit  
-  - Transfer payload  
-  - Set permissions
-
-**Output:**  
-- Markdown: `linux-exploit-scripts.md`  
-- Script: `exploit-chain.sh`  
-- Screenshot: Script output or shell capture
-
----
-
-## 🛠️ Tools and Techniques Today
-
-| Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
-| `searchsploit`, `msfconsole` | Find and launch known exploits       |
-| `nc`, `bash`, `wget` | Transfer payloads and establish foothold    |
-| CVE/NVD/ExploitDB   | Match service versions to public vulnerabilities |
-
----
-
-## 📁 Documentation Checklist
-
-- [ ] `vulnerability-chain-analysis.md`  
-- [ ] `exploit-lab-notes.md`  
-- [ ] `linux-exploit-scripts.md`  
-- [ ] `exploit-chain.sh`  
-- [ ] Git Commit:
-  ```bash
-  git add . && git commit -m "Day 47 – Exploit Discovery and Chain Simulation" && git push origin main
-  ```
-
----
-
-**📦 Final Export & Backup Step**
-
-```bash
-git add . && git commit -m "Daily update – LinkOS Bootcamp Day 47" && git push origin main
-```

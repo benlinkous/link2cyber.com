@@ -1,0 +1,76 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 60
+parent: Basic Security
+nav_order: 60</p>
+
+<h1 id="-link2cyber-bootcamp--day-60">✅ Link2Cyber Bootcamp — Day 60</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Linux+ (XK0-005)<br />
+<strong>Focus Areas:</strong> Review, Lab Simulation, Final Checklist, Portfolio Polish<br />
+<strong>Goal:</strong> Validate your readiness to pass the Linux+ certification and finalize documentation</p>
+<h2 id="-task-1-final-domain-confidence-review">🧠 Task 1: Final Domain Confidence Review</h2>
+<p><strong>Mapped Objectives:</strong></p>
+<ul class="task-list">
+  <li>Domains 1–4: Complete coverage
+<strong>Actions:</strong></li>
+  <li>Complete the confidence self-assessment below</li>
+  <li>Review notes, projects, and labs for any weak areas</li>
+  <li>Retake practice quizzes on HTB Academy if needed
+| Domain | Topic                               | Confident? (Y/N) | Notes |
+|——–|————————————-|——————|——-|
+| 1      | System Management                   |                  |       |
+| 2      | Security                            |                  |       |
+| 3      | Networking                          |                  |       |
+| 4      | Scripting, Automation, Recovery     |                  |       |
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">linuxplus-readiness-review.md</code></li>
+  <li>List: Topics to revisit or reinforce
+    <h2 id="-task-2-htbthm-linux-simulation-lab-final-practice">🧪 Task 2: HTB/THM Linux Simulation Lab (Final Practice)</h2>
+    <p><strong>Options:</strong></p>
+  </li>
+  <li>HTB Machine: <em>Bashed</em>, <em>Access</em>, or <em>Postman</em> (your choice)</li>
+  <li>Optional TryHackMe: <em>Linux Challenge Lab</em> or <em>Red Team Ops</em></li>
+  <li>Complete end-to-end exploitation:
+    <ul>
+      <li>Recon → Enumeration → Exploit → Escalation → Cleanup</li>
+    </ul>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">linux-final-simulation-lab.md</code></li>
+  <li>Screenshot: Root shell, enumeration proof, or flag
+    <h2 id="️-project-of-the-day-linux-portfolio-cleanup-and-export">🛠️ Project of the Day: “Linux+ Portfolio Cleanup and Export”</h2>
+    <p><strong>Scenario:</strong><br />
+You’re preparing to share your learning archive or back it up.
+<strong>Steps:</strong></p>
+    <ol>
+      <li>Review your Markdown and <code class="language-plaintext highlighter-rouge">.sh</code> files from Days 51–59</li>
+      <li>Organize them into folders: <code class="language-plaintext highlighter-rouge">notes/</code>, <code class="language-plaintext highlighter-rouge">projects/</code>, <code class="language-plaintext highlighter-rouge">scripts/</code></li>
+      <li>Create a README.md for the Linux+ folder</li>
+      <li>Push final version to GitHub and verify repo formatting
+<strong>Deliverables:</strong></li>
+    </ol>
+  </li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">linuxplus-final-readme.md</code></li>
+  <li>GitHub repo or folder structure screenshot
+    <h2 id="️-tools-and-concepts-today">🛠️ Tools and Concepts Today</h2>
+    <p>| Tool / Task         | Purpose                                        |
+|———————|————————————————|
+| Confidence Tracker  | Evaluate Linux+ exam readiness                 |
+| Final HTB Machine   | Reinforce command-line mastery                 |
+| GitHub README/Repo  | Share and back up your bootcamp experience     |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">linuxplus-readiness-review.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">linux-final-simulation-lab.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">linuxplus-final-readme.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 60 – Linux+ Certification Readiness and Portfolio Finalization"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong></p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 60 (Linux+ Final Wrap-Up)"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

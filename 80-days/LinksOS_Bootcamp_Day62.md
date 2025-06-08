@@ -1,4 +1,9 @@
 ---
+title: Day 62 –
+parent: Advanced Security
+nav_order: 2
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default

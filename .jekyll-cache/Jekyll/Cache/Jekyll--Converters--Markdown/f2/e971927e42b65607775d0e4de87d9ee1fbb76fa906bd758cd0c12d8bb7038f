@@ -1,0 +1,48 @@
+I"<h1 id="-linkos-bootcamp--day-48">✅ LinkOS Bootcamp — Day 48</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> PenTest+ (PT0-002) — Gaining Access and Post-Exploitation<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — Credential harvesting, file system control, persistence<br />
+<strong>Goal:</strong> Gain system access, escalate privileges, and maintain control for data extraction</p>
+
+<hr />
+
+<h2 id="️-task-1-privilege-escalation-techniques">🛠️ Task 1: Privilege Escalation Techniques</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>PenTest+ 3.2 – Post-exploitation tactics</li>
+  <li>PenTest+ 3.3 – Lateral movement and persistence</li>
+  <li>Linux+ – File permissions, SUID, cron jobs, and password files</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Search for:
+    <ul>
+      <li>SUID/SGID binaries</li>
+      <li>Writable scripts in cron</li>
+      <li>World-readable password configs</li>
+    </ul>
+  </li>
+  <li>Escalate using GTFOBins, <code class="language-plaintext highlighter-rouge">/etc/passwd</code>, <code class="language-plaintext highlighter-rouge">/etc/shadow</code></li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">priv-esc-vectors.md</code></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Table: Finding</td>
+          <td>Technique</td>
+          <td>Tool</td>
+          <td>Outcome</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+:ET

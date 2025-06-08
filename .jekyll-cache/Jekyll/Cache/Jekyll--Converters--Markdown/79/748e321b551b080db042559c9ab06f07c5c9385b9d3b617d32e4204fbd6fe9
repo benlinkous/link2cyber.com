@@ -1,0 +1,43 @@
+I"N<h1 id="-linkos-bootcamp--day-41">✅ LinkOS Bootcamp — Day 41</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Network+ (N10-008 or N10-009) — Start of 7-day sprint<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — Network commands, interfaces, and services<br />
+<strong>Goal:</strong> Review foundational networking concepts and practice Linux network tools</p>
+
+<hr />
+
+<h2 id="-task-1-network-fundamentals-and-protocol-stack">🌐 Task 1: Network Fundamentals and Protocol Stack</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>Network+ 1.1 – OSI and TCP/IP model</li>
+  <li>Network+ 1.3 – Protocol types and ports</li>
+  <li>Linux+ – Understand and configure networking services</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Draw or recreate OSI and TCP/IP model</li>
+  <li>Memorize common protocol/port pairs (HTTPS, SSH, DNS, SNMP, FTP)</li>
+  <li>Compare TCP vs UDP, IPv4 vs IPv6</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">network-stack-and-ports.md</code></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Table: Protocol</td>
+          <td>Port</td>
+          <td>TCP/UDP</td>
+          <td>Purpose</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+:ET

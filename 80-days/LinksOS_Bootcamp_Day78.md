@@ -1,4 +1,9 @@
 ---
+title: Day 78 –
+parent: Advanced Security
+nav_order: 18
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default

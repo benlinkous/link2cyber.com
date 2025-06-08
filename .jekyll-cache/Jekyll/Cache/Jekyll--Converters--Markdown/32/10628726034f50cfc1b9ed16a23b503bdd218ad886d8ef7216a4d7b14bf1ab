@@ -1,0 +1,87 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 9
+parent: Fundamentals
+nav_order: 9</p>
+
+<h1 id="-link2cyber-bootcamp--day-9">✅ Link2Cyber Bootcamp — Day 9</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Focus:</strong> A+, Tech+, Security+, Linux+<br />
+<strong>Labs, Projects, Tools, and Documentation</strong><br />
+<strong>Date:</strong> (Insert actual date)</p>
+<h2 id="-focus-areas">🧩 Focus Areas</h2>
+<ul class="task-list">
+  <li><strong>CompTIA A+ (220-1102):</strong> Operational Procedures</li>
+  <li><strong>Tech+:</strong> IT Documentation and Change Management</li>
+  <li><strong>Security+:</strong> Risk Management and Policies</li>
+  <li><strong>Linux+:</strong> Scheduled Jobs, Logging, and Automation</li>
+  <li><strong>TryHackMe:</strong> Risk-based security and job scheduling</li>
+  <li><strong>LinksOS Tools:</strong> Integrated throughout tasks
+    <h2 id="-task-1-operational-procedures-a--tech">🧭 Task 1: Operational Procedures (A+ / Tech+)</h2>
+    <p><strong>Mapped Objectives:</strong></p>
+  </li>
+  <li>A+ 220-1102 4.1–4.3: Best practices, documentation, and change management</li>
+  <li>Tech+: Recognize the role of SOPs and ITIL-style procedures
+<strong>Actions:</strong></li>
+  <li>Write and format a basic SOP (Standard Operating Procedure) for system updates</li>
+  <li>Document a mock change request for adding a new package to a Linux system</li>
+  <li>Review roles and responsibilities in IT support escalation paths
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">sop-update-procedure.md</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">change-request-template.md</code>
+    <h2 id="-task-2-risk-management-and-policies-security">🧠 Task 2: Risk Management and Policies (Security+)</h2>
+  </li>
+  <li>Security+: 5.1 – Risk types and impact</li>
+  <li>Security+: 5.2 – Security policies, training, and user behavior</li>
+  <li>Define types of risks: strategic, compliance, reputational, operational</li>
+  <li>Create a mock Acceptable Use Policy (AUP) and a user training reminder</li>
+  <li>Reflect on real-world risks in a Linux admin environment</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">risk-policy-overview.md</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">acceptable-use-policy.md</code>
+    <h2 id="️-task-3-job-scheduling-and-automation-linux">⚙️ Task 3: Job Scheduling and Automation (Linux+)</h2>
+  </li>
+  <li>Linux+: Schedule jobs using <code class="language-plaintext highlighter-rouge">cron</code> and <code class="language-plaintext highlighter-rouge">at</code></li>
+  <li>Linux+: Automate logging tasks and periodic security checks</li>
+  <li>Create 3 cron jobs: (1) update package list, (2) log disk space, (3) send a message</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">at</code> to schedule a one-time event</li>
+  <li>Log entries manually with <code class="language-plaintext highlighter-rouge">logger</code> and inspect <code class="language-plaintext highlighter-rouge">/var/log/syslog</code>
+<strong>Tools Used:</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">crontab -e</code>, <code class="language-plaintext highlighter-rouge">at</code>, <code class="language-plaintext highlighter-rouge">uptime</code>, <code class="language-plaintext highlighter-rouge">logger</code>, <code class="language-plaintext highlighter-rouge">/var/log</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">cron-job-schedule.md</code></li>
+  <li>Screenshots of cron tasks and logs
+    <h2 id="-task-4-tryhackme--scheduled-tasks--risk-basics">🧪 Task 4: TryHackMe – Scheduled Tasks + Risk Basics</h2>
+  </li>
+  <li>Security+: Understand scheduling risks and user access</li>
+  <li>Linux+: Review automation in attack/defense scenarios
+<strong>Link:</strong></li>
+  <li><a href="https://tryhackme.com/room/introtorisk">TryHackMe: Intro to Risk Management Room</a></li>
+  <li><a href="https://tryhackme.com/room/cronjobs">TryHackMe: Linux Cron Jobs Room</a></li>
+  <li>Complete both rooms</li>
+  <li>Reflect on how attackers can abuse scheduled tasks</li>
+  <li>Write a defensive hardening checklist for job schedulers
+    <h2 id="️-tools-learned-today">🛠️ Tools Learned Today</h2>
+    <p>| Tool / Command   | Function Description                              |
+|——————|—————————————————|
+| <code class="language-plaintext highlighter-rouge">crontab</code>, <code class="language-plaintext highlighter-rouge">at</code>  | Job scheduling (repeated or one-time tasks)       |
+| <code class="language-plaintext highlighter-rouge">logger</code>         | Manual logging to system logs                     |
+| <code class="language-plaintext highlighter-rouge">uptime</code>, <code class="language-plaintext highlighter-rouge">top</code>  | Monitor resource use and system performance       |
+| <code class="language-plaintext highlighter-rouge">nano</code>, <code class="language-plaintext highlighter-rouge">less</code>   | Terminal-based file editing and reading           |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">sop-update-procedure.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">change-request-template.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">acceptable-use-policy.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">risk-policy-overview.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">cron-job-schedule.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 9 – Operational Procedures, Risk Management, and Automation"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Default Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

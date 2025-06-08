@@ -1,4 +1,9 @@
 ---
+title: Day 28 –
+parent: Fundamentals
+nav_order: 28
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default

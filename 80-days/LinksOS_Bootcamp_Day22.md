@@ -1,4 +1,9 @@
 ---
+title: Day 22 –
+parent: Fundamentals
+nav_order: 22
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default

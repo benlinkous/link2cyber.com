@@ -1,0 +1,89 @@
+I"� <hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 12
+parent: Fundamentals
+nav_order: 12</p>
+
+<h1 id="-link2cyber-bootcamp--day-12">✅ Link2Cyber Bootcamp — Day 12</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Focus:</strong> A+, Tech+, Security+, Linux+<br />
+<strong>Labs, Projects, Tools, and Documentation</strong><br />
+<strong>Date:</strong> (Insert actual date)</p>
+<h2 id="-focus-areas">🧩 Focus Areas</h2>
+<ul class="task-list">
+  <li><strong>CompTIA A+ (220-1102):</strong> System Utilities and Task Management</li>
+  <li><strong>Tech+:</strong> Maintenance Scripting and Automation</li>
+  <li><strong>Security+:</strong> Host Security and Hardening</li>
+  <li><strong>Linux+:</strong> Systemd Services and Custom Unit Files</li>
+  <li><strong>TryHackMe:</strong> Host-based security and Linux automation</li>
+  <li><strong>LinksOS Tools:</strong> Integrated throughout tasks
+    <h2 id="-task-1-windowslinux-system-utilities-a">🧰 Task 1: Windows/Linux System Utilities (A+)</h2>
+    <p><strong>Mapped Objectives:</strong></p>
+  </li>
+  <li>A+ 220-1102 1.6: Common Windows utilities (msconfig, task manager, etc.)</li>
+  <li>A+ 220-1102 1.1: Identify features and tools of operating systems
+<strong>Actions:</strong></li>
+  <li>Compare Task Manager and <code class="language-plaintext highlighter-rouge">top/htop</code> for performance monitoring</li>
+  <li>Simulate disabling a startup service in Windows and Linux (<code class="language-plaintext highlighter-rouge">systemctl disable</code>)</li>
+  <li>Practice using Disk Cleanup, Check Disk, and Resource Monitor (or Linux equivalents)
+<strong>Tools:</strong></li>
+  <li>Windows: <code class="language-plaintext highlighter-rouge">msconfig</code>, <code class="language-plaintext highlighter-rouge">taskmgr</code>, <code class="language-plaintext highlighter-rouge">chkdsk</code></li>
+  <li>Linux: <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">htop</code>, <code class="language-plaintext highlighter-rouge">systemctl</code>, <code class="language-plaintext highlighter-rouge">df</code>, <code class="language-plaintext highlighter-rouge">du</code>
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">os-utilities-cheat-sheet.md</code></li>
+  <li>Notes: <code class="language-plaintext highlighter-rouge">performance-tools-comparison.md</code>
+    <h2 id="️-task-2-create-a-custom-systemd-service-linux">⚙️ Task 2: Create a Custom Systemd Service (Linux+)</h2>
+  </li>
+  <li>Linux+: Create and manage systemd unit files</li>
+  <li>Linux+: Use scripts as services for automation</li>
+  <li>Write a shell script that logs disk usage every 15 minutes</li>
+  <li>Create a <code class="language-plaintext highlighter-rouge">.service</code> file in <code class="language-plaintext highlighter-rouge">/etc/systemd/system/</code> and enable it</li>
+  <li>Log output to <code class="language-plaintext highlighter-rouge">/var/log</code> using <code class="language-plaintext highlighter-rouge">tee</code> or redirection</li>
+  <li><code class="language-plaintext highlighter-rouge">nano</code>, <code class="language-plaintext highlighter-rouge">chmod +x</code>, <code class="language-plaintext highlighter-rouge">systemctl</code>, <code class="language-plaintext highlighter-rouge">journalctl</code>, <code class="language-plaintext highlighter-rouge">crontab</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">disk-monitor-service.md</code></li>
+  <li>Shell script: <code class="language-plaintext highlighter-rouge">disk-logger.sh</code>
+    <h2 id="️-task-3-host-based-security--hardening-security">🛡️ Task 3: Host-Based Security &amp; Hardening (Security+)</h2>
+  </li>
+  <li>Security+: 3.1 – Hardening techniques (disable services, patching, firewall)</li>
+  <li>Security+: 2.1 – Configuration baselines and policy enforcement</li>
+  <li>Disable unneeded services using <code class="language-plaintext highlighter-rouge">systemctl</code></li>
+  <li>Set <code class="language-plaintext highlighter-rouge">ufw</code> to allow SSH only from a specific IP range</li>
+  <li>Enable automatic security updates if supported</li>
+  <li><code class="language-plaintext highlighter-rouge">ufw</code>, <code class="language-plaintext highlighter-rouge">fail2ban</code>, <code class="language-plaintext highlighter-rouge">apt</code>, <code class="language-plaintext highlighter-rouge">unattended-upgrades</code>, <code class="language-plaintext highlighter-rouge">systemctl</code></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">host-hardening-checklist.md</code></li>
+  <li>Screenshots: Service disable and firewall rules
+    <h2 id="-task-4-tryhackme--host-security-and-automation">🧪 Task 4: TryHackMe – Host Security and Automation</h2>
+  </li>
+  <li>Security+: Apply system-based security configuration</li>
+  <li>Linux+: Manage services and schedule tasks
+<strong>Link:</strong></li>
+  <li><a href="https://tryhackme.com/room/hardeninglinux">TryHackMe: Hardening Linux Room</a></li>
+  <li><a href="https://tryhackme.com/room/taskscheduling">TryHackMe: Task Scheduling</a></li>
+  <li>Complete both rooms</li>
+  <li>Take note of services audited and startup behavior</li>
+  <li>Reflect on startup scripts vs service files
+    <h2 id="️-tools-learned-today">🛠️ Tools Learned Today</h2>
+    <p>| Tool / Command       | Function Description                                 |
+|———————-|——————————————————|
+| <code class="language-plaintext highlighter-rouge">systemctl</code>, <code class="language-plaintext highlighter-rouge">journalctl</code> | Manage and inspect Linux services               |
+| <code class="language-plaintext highlighter-rouge">.service</code> files     | Create custom background service units               |
+| <code class="language-plaintext highlighter-rouge">ufw</code>, <code class="language-plaintext highlighter-rouge">fail2ban</code>    | Host-based security/firewall/intrusion prevention    |
+| <code class="language-plaintext highlighter-rouge">df</code>, <code class="language-plaintext highlighter-rouge">du</code>, <code class="language-plaintext highlighter-rouge">top</code>    | Resource and performance monitoring                  |</p>
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">os-utilities-cheat-sheet.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">performance-tools-comparison.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">disk-monitor-service.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">host-hardening-checklist.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 12 – System Utilities, Custom Services, and Host Security"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Default Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

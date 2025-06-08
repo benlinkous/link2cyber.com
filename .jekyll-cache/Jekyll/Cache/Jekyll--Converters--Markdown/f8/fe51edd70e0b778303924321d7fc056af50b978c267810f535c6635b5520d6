@@ -1,0 +1,67 @@
+I"�<hr />
+<p><img src="/assets/icons/icon-cyber-panther.png" alt="Panther Icon" /></p>
+
+<p>layout: default
+title: Day 25
+parent: Fundamentals
+nav_order: 25</p>
+
+<h1 id="-link2cyber-bootcamp--day-25">✅ Link2Cyber Bootcamp — Day 25</h1>
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> Tech+ and CompTIA A+ (220-1102)<br />
+<strong>Goal:</strong> Final certification prep, confidence check, and mastery reinforcement</p>
+<h2 id="-certification-confirmation-day">🎯 Certification Confirmation Day</h2>
+<p><strong>By completing today’s tasks, you will be fully ready to sit for:</strong></p>
+<ul class="task-list">
+  <li>✅ <strong>Tech+</strong></li>
+  <li>✅ <strong>A+ Core 2 (220-1102)</strong>
+You’ve logged 25 days of consistent, documented, hands-on learning, labs, and troubleshooting. All objectives have been covered and practiced.
+    <h2 id="-task-1-final-readiness-checklist-a--tech">✅ Task 1: Final Readiness Checklist (A+ &amp; Tech+)</h2>
+    <p><strong>Actions:</strong></p>
+  </li>
+  <li>Use the checklist below to verify that you can confidently demonstrate each topic.</li>
+  <li>Mark “Y” if confident or “N” if not — revisit any “N” items.
+| Domain | Objective | Confident? |
+|——–|———–|————|
+| OS Installation | Windows, Linux setup &amp; config | Y/N |
+| Security | Permissions, malware removal, firewalls | Y/N |
+| Software Troubleshooting | Common issues, logs, updates | Y/N |
+| Operational Procedures | Backup, recovery, documentation | Y/N |
+| User Management | Accounts, permissions, policies | Y/N |
+| Cloud &amp; Mobile | Sync, MDM, cloud access | Y/N |
+| CLI Tools | Linux &amp; Windows admin commands | Y/N |
+<strong>Output:</strong></li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">cert_readiness_checklist.md</code>
+    <h2 id="-task-2-self-reflection-and-journal-entry">🧠 Task 2: Self-Reflection and Journal Entry</h2>
+    <p><strong>Prompt:</strong></p>
+  </li>
+  <li>What are you most confident about now?</li>
+  <li>What surprised you during the 25-day journey?</li>
+  <li>What advice would you give your past self on Day 1?</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">final_readiness_reflection.md</code>
+    <h2 id="-task-3-lab-of-choice--celebrate--practice">🧪 Task 3: Lab of Choice — Celebrate &amp; Practice</h2>
+    <p>Choose one favorite lab to repeat — for mastery, speed, or deeper understanding.<br />
+Examples:</p>
+  </li>
+  <li>Linux Fundamentals</li>
+  <li>Malware Analysis</li>
+  <li>File Permissions Drill</li>
+  <li>System Recovery</li>
+  <li>Cloud CLI Practice</li>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">final_lab_repeat_day25.md</code></li>
+  <li>Screenshot: Final lab recap
+    <h2 id="-documentation-checklist">📁 Documentation Checklist</h2>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">cert_readiness_checklist.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">final_readiness_reflection.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">final_lab_repeat_day25.md</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git Commit:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Day 25 – Final Cert Readiness and Reflection"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+    <p><strong>📦 Final Export &amp; Backup Step</strong>
+Save this file and commit updates to your Obsidian vault and GitHub repo:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Daily update – Link2Cyber Bootcamp Day 25"</span> <span class="o">&amp;&amp;</span> git push origin main
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

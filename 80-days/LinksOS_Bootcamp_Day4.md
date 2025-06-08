@@ -1,4 +1,9 @@
 ---
+title: Day 04 –
+parent: Fundamentals
+nav_order: 4
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default

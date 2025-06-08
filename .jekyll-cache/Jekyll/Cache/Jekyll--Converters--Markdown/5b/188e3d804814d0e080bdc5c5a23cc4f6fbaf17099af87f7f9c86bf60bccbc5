@@ -1,0 +1,40 @@
+I"�<h1 id="-linkos-bootcamp--day-38">✅ LinkOS Bootcamp — Day 38</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> CySA+ (CS0-003) — Security Architecture and Hardening<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — OS configuration, system integrity, and audit<br />
+<strong>Goal:</strong> Lock down Linux systems with CIS-aligned controls and secure configurations</p>
+
+<hr />
+
+<h2 id="-task-1-system-hardening-techniques">🔧 Task 1: System Hardening Techniques</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>CySA+ 2.2 – Secure configurations and controls</li>
+  <li>Linux+ – Kernel modules, service control, and filesystem protections</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Document and apply:
+    <ul>
+      <li>Disable unused services and modules</li>
+      <li>Enforce strong permissions for <code class="language-plaintext highlighter-rouge">/etc</code> and <code class="language-plaintext highlighter-rouge">/var/log</code></li>
+      <li>Remove legacy protocols (e.g., Telnet, FTP)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Tools:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">systemctl</code>, <code class="language-plaintext highlighter-rouge">modprobe</code>, <code class="language-plaintext highlighter-rouge">ufw</code>, <code class="language-plaintext highlighter-rouge">chkconfig</code>, <code class="language-plaintext highlighter-rouge">apt remove</code></li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">linux-hardening-checklist.md</code></li>
+  <li>Screenshot: Config change and validation</li>
+</ul>
+
+:ET

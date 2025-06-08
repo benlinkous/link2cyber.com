@@ -1,0 +1,41 @@
+I"b<h1 id="-linkos-bootcamp--day-36">✅ LinkOS Bootcamp — Day 36</h1>
+
+<p><strong>Full-Time Learner Track (8–10 hours/day)</strong><br />
+<strong>Cert Focus:</strong> CySA+ (CS0-003) — Threat Hunting, Correlation, and Detection<br />
+<strong>Integrated Focus:</strong> Linux+ (XK0-005) — Log parsing, shell scripting, and event chaining<br />
+<strong>Goal:</strong> Use real-world threat intel and Linux logs to identify indicators of compromise (IOCs)</p>
+
+<hr />
+
+<h2 id="️-task-1-threat-hunting-methodologies">🕵️ Task 1: Threat Hunting Methodologies</h2>
+
+<p><strong>Mapped Objectives:</strong></p>
+<ul>
+  <li>CySA+ 3.3 – Threat hunting techniques</li>
+  <li>Linux+ – Use scripts and filters to extract behavior patterns from logs</li>
+</ul>
+
+<p><strong>Actions:</strong></p>
+<ul>
+  <li>Define and compare:
+    <ul>
+      <li>IOC vs TTP vs behavior-based indicators</li>
+      <li>Hypothesis-based vs analytics-driven threat hunting</li>
+    </ul>
+  </li>
+  <li>Search system logs for:
+    <ul>
+      <li>Unauthorized access</li>
+      <li>Suspicious network connections</li>
+      <li>Abnormal privilege use</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Output:</strong></p>
+<ul>
+  <li>Markdown: <code class="language-plaintext highlighter-rouge">threat-hunting-methods.md</code></li>
+  <li>Screenshot or logs: Sample event chain with interpretation</li>
+</ul>
+
+:ET

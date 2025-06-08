@@ -1,4 +1,9 @@
 ---
+title: Day 74 –
+parent: Advanced Security
+nav_order: 14
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default

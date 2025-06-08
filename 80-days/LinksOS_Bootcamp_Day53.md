@@ -1,4 +1,9 @@
 ---
+title: Day 53 –
+parent: Basic Security
+nav_order: 23
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dbbc466fb41cdeb7",
+        "id": "e712401b4815a754",
         "type": "tabs",
         "children": [
           {
-            "id": "20f02312fbf14a69",
+            "id": "5419a06d6a2ad2d6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 305.5
   },
   "right": {
     "id": "5812ae701e190cd6",
@@ -165,11 +165,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "20f02312fbf14a69",
+  "active": "822f871551e3ce2a",
   "lastOpenFiles": [
-    "about.md",
-    "_site/nav-output.yml",
-    "_site/generate-nav.sh",
+    "_site/update-parents.sh",
+    "_site/80-days/LinksOS_Bootcamp_Day50.html",
+    "_site/80-days/LinksOS_Bootcamp_Day49.html",
+    "_site/80-days/LinksOS_Bootcamp_Day48.html",
+    "_site/80-days/LinksOS_Bootcamp_Day47.html",
+    "_site/80-days/LinksOS_Bootcamp_Day46.html",
+    "_site/80-days/LinksOS_Bootcamp_Day45.html",
+    "_site/80-days/LinksOS_Bootcamp_Day44.html",
+    "_site/80-days/LinksOS_Bootcamp_Day43.html",
+    "_site/80-days/LinksOS_Bootcamp_Day42.html",
+    "_site/80-days/LinksOS_Bootcamp_Day41.html",
+    "_site/assets/images/backgrounds/bg-placeholder.png",
+    "_site/assets/icons/icon-serpent-eagle-moon.png",
+    "_site/assets/icons/icon-serpent-binary.png",
+    "_site/assets/icons/icon-red-panther.png",
+    "_site/assets/icons/icon-purple-team-logo.png",
+    "_site/assets/icons/icon-purple-panther.png",
+    "_site/assets/icons/icon-panther-purple-training.png",
+    "_site/assets/icons/icon-metallic-panther.png",
+    "_site/assets/icons/icon-mechanical-panther.png",
+    "_site/assets/icons/icon-lunar-metallic.png",
+    "_site/README.md",
     "_site/80-days/LinksOS_Bootcamp_Day50.md",
     "_site/80-days/LinksOS_Bootcamp_Day49.md",
     "_site/80-days/LinksOS_Bootcamp_Day48.md",
@@ -190,27 +209,9 @@
     "_site/80-days/LinksOS_Bootcamp_Day33.md",
     "_site/80-days/LinksOS_Bootcamp_Day32.md",
     "_site/80-days/LinksOS_Bootcamp_Day31.md",
-    "generate-nav.sh",
-    "contact.md",
-    "index.md",
-    "nav-output.yml",
-    "_site/80-days/_site/update-parents.sh",
-    "_site/80-days/_site/fundamentals.html",
-    "_site/80-days/_site/basic-security.html",
-    "_site/80-days/_site/advanced-security.html",
-    "_site/80-days/_site/LinksOS_Bootcamp_Day9.html",
-    "_site/80-days/_site/LinksOS_Bootcamp_Day80.html",
-    "_site/_site/assets/images/backgrounds/bg-placeholder.png",
-    "_site/_site/assets/icons/icon-serpent-eagle-moon.png",
-    "_site/_site/assets/icons/icon-serpent-binary.png",
-    "_site/_site/assets/icons/icon-red-panther.png",
-    "_site/_site/assets/icons/icon-purple-team-logo.png",
-    "_site/_site/assets/icons/icon-purple-panther.png",
-    "_site/_site/assets/icons/icon-panther-purple-training.png",
-    "_site/_site/assets/icons/icon-metallic-panther.png",
-    "_site/_site/assets/icons/icon-mechanical-panther.png",
-    "_site/_site/assets/icons/icon-lunar-metallic.png",
-    "_site/_site/README.md",
-    "lab-template.md"
+    "80-days/fundamentals.md",
+    "80-days/basic-security.md",
+    "80-days/advanced-security.md",
+    "80-days/LinksOS_Bootcamp_Day1.md"
   ]
 }

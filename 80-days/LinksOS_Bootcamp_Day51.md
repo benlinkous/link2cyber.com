@@ -1,4 +1,9 @@
 ---
+title: Day 51 –
+parent: Basic Security
+nav_order: 21
+---
+---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
 layout: default
