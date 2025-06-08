@@ -1,14 +1,3 @@
----
-title: Link2Cyber Bootcamp
-nav_exclude: true
----
-
-# 🛡️ Link2Cyber Bootcamp Overview
-
-Learn cybersecurity in 80 structured days using the LinksOS learning environment. Track your journey through Fundamentals, Basic Security, and Advanced Security.
-
----
-
 ## 📘 Fundamentals (Days 1–30)
 <details>
 <summary>Expand Days 1–30</summary>
@@ -45,9 +34,8 @@ Learn cybersecurity in 80 structured days using the LinksOS learning environment
 - [Day 30](/80-days/LinksOS_Bootcamp_Day30)
 </details>
 
----
 
-## 🔐 Basic Security (Days 31–60)
+## 🛡️ Basic Security (Days 31–60)
 <details>
 <summary>Expand Days 31–60</summary>
 
@@ -83,9 +71,8 @@ Learn cybersecurity in 80 structured days using the LinksOS learning environment
 - [Day 60](/80-days/LinksOS_Bootcamp_Day60)
 </details>
 
----
 
-## 🧨 Advanced Security (Days 61–80)
+## 🔥 Advanced Security (Days 61–80)
 <details>
 <summary>Expand Days 61–80</summary>
 
