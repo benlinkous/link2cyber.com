@@ -1,7 +1,8 @@
 ---
-title: Day 49 –
-parent: Basic Security
-nav_order: 19
+grand_parent: 80 DAYS
+nav_order: 49
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 49
 ---
 # ✅ LinkOS Bootcamp — Day 49
 
@@ -10,7 +11,7 @@ nav_order: 19
 **Integrated Focus:** Linux+ (XK0-005) — Web fuzzing, HTTP tools, and script-based attacks  
 **Goal:** Exploit vulnerable web apps using OWASP techniques and automate discovery
 
----
+
 
 ## 🌐 Task 1: OWASP Top 10 and Web App Attack Scenarios
 

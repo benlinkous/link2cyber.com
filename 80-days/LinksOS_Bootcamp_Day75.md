@@ -1,8 +1,8 @@
 ---
-title: Day 75 –
-parent: Advanced Security
-nav_order: 15
----
+grand_parent: 80 DAYS
+nav_order: 75
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 75
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -57,7 +57,7 @@ You're creating a secure GitHub repo template for new Python microservices.
 - Repo files: Sample `.py`, `.pre-commit-config.yaml`, scan output
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | SDLC                | Lifecycle phases of secure software            |
 | SonarQube, Semgrep  | Static analysis and code quality review        |
 | GitHub Security     | Repo-level scanning and PR enforcement         |

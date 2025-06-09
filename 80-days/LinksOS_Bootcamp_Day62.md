@@ -1,8 +1,8 @@
 ---
-title: Day 62 –
-parent: Advanced Security
-nav_order: 2
----
+grand_parent: 80 DAYS
+nav_order: 62
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 62
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -58,7 +58,7 @@ You're asked to create a register for 5 high-value assets and include how their 
 - Table: Asset | Control | Testing Method | Owner | Metric
 ## 🛠️ Tools and Concepts Today
 | Concept / Tool      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | Control Types        | Framework for implementing and testing security |
 | Asset Classification | Sensitivity-based resource tracking            |
 | Red/Blue/Purple Team | Roles in control testing and ops                |

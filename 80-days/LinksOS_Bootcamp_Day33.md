@@ -1,7 +1,8 @@
 ---
-title: Day 33 –
-parent: Basic Security
-nav_order: 3
+grand_parent: 80 DAYS
+nav_order: 33
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 33
 ---
 # ✅ LinkOS Bootcamp — Day 33
 
@@ -10,7 +11,7 @@ nav_order: 3
 **Integrated Focus:** Linux+ (XK0-005) — Logging, integrity, and host-based controls  
 **Goal:** Use host-based tools to detect and respond to suspicious activity
 
----
+
 
 ## 🔍 Task 1: Host-Based Security Tools & SIEM Logs
 

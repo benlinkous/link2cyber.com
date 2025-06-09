@@ -1,8 +1,8 @@
 ---
-title: Day 74 –
-parent: Advanced Security
-nav_order: 14
----
+grand_parent: 80 DAYS
+nav_order: 74
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 74
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -60,7 +60,7 @@ You're designing the Docker build standard for a dev team transitioning to conta
 - File: `Dockerfile` + Trivy output
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept        | Purpose                                       |
-|------------------------|-----------------------------------------------|
+||--|
 | Trivy / Dockle         | Scan container images for vulnerabilities     |
 | Docker / Podman        | Build and run isolated app environments       |
 | Hypervisor Types       | Secure VMs and platform-level access          |

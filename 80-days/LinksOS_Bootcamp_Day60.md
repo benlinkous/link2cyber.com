@@ -1,8 +1,8 @@
 ---
-title: Day 60 –
-parent: Basic Security
-nav_order: 30
----
+grand_parent: 80 DAYS
+nav_order: 60
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 60
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -24,7 +24,7 @@ nav_order: 60
 - Review notes, projects, and labs for any weak areas  
 - Retake practice quizzes on HTB Academy if needed
 | Domain | Topic                               | Confident? (Y/N) | Notes |
-|--------|-------------------------------------|------------------|-------|
+|--|-||-|
 | 1      | System Management                   |                  |       |
 | 2      | Security                            |                  |       |
 | 3      | Networking                          |                  |       |
@@ -53,7 +53,7 @@ You're preparing to share your learning archive or back it up.
 - GitHub repo or folder structure screenshot
 ## 🛠️ Tools and Concepts Today
 | Tool / Task         | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | Confidence Tracker  | Evaluate Linux+ exam readiness                 |
 | Final HTB Machine   | Reinforce command-line mastery                 |
 | GitHub README/Repo  | Share and back up your bootcamp experience     |

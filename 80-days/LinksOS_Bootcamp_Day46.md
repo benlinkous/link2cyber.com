@@ -1,7 +1,8 @@
 ---
-title: Day 46 –
-parent: Basic Security
-nav_order: 16
+grand_parent: 80 DAYS
+nav_order: 46
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 46
 ---
 # ✅ LinkOS Bootcamp — Day 46
 
@@ -10,7 +11,7 @@ nav_order: 16
 **Integrated Focus:** Linux+ (XK0-005) — Scanning tools and service discovery  
 **Goal:** Perform active scanning, enumerate services, and prep for exploitation
 
----
+
 
 ## 🔎 Task 1: Active Reconnaissance Techniques
 

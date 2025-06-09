@@ -1,8 +1,8 @@
 ---
-title: Day 17 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 17
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 17
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -43,7 +43,7 @@ nav_order: 17
 - Markdown: `malware-analysis-findings.md`
 ## 🛠️ Tools Learned Today
 | Tool / Command   | Purpose                                |
-|------------------|----------------------------------------|
+||-|
 | `chkrootkit`     | Check system for known rootkits        |
 | `rkhunter`       | Scan for known rootkits and anomalies  |
 | `clamav`         | Virus scanner and signature checker    |

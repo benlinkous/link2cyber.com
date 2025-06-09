@@ -1,8 +1,8 @@
 ---
-title: Day 18 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 18
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 18
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -43,7 +43,7 @@ nav_order: 18
 - Markdown: `file-security-lab-notes.md`
 ## 🛠️ Tools Learned Today
 | Tool / Command   | Purpose                                     |
-|------------------|---------------------------------------------|
+|||
 | `gpg`            | Encrypt, decrypt, and sign files            |
 | `sha256sum`      | Generate and verify hashes                  |
 | `chmod`, `encfs` | Restrict file access and encrypt folders    |

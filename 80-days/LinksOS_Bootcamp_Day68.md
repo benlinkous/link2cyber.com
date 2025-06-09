@@ -1,8 +1,8 @@
 ---
-title: Day 68 –
-parent: Advanced Security
-nav_order: 8
----
+grand_parent: 80 DAYS
+nav_order: 68
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 68
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -60,7 +60,7 @@ You're asked to propose and simulate a new detection use case for your SOC’s S
 - Screenshot: Rule logic or visual alert trace
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | Wazuh / Graylog      | Collect and correlate logs                    |
 | Sigma Rules / YAML   | Define custom alerts and detections          |
 | SIEM Pipeline        | Normalize, correlate, alert                   |

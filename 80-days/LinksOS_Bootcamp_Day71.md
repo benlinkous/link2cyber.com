@@ -1,8 +1,8 @@
 ---
-title: Day 71 –
-parent: Advanced Security
-nav_order: 11
----
+grand_parent: 80 DAYS
+nav_order: 71
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 71
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -54,7 +54,7 @@ You're designing an infrastructure for a client that requires 99.99% uptime, dis
 - Diagram (optional): Architecture + timeline
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept       | Purpose                                        |
-|----------------------|------------------------------------------------|
+|-||
 | RTO/RPO, HA Clusters  | Design for uptime, recovery, and continuity  |
 | Backup Methods        | Ensure data recoverability and consistency    |
 | DR Test Plan          | Validate actual response and recovery         |

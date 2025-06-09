@@ -1,8 +1,8 @@
 ---
-title: Day 52 –
-parent: Basic Security
-nav_order: 22
----
+grand_parent: 80 DAYS
+nav_order: 52
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 52
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -52,7 +52,7 @@ The security team wants to create a secure data partition for logs.
 - Screenshot: Secure mount and test log entry
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
+|--||
 | `fdisk`, `mkfs`, `mount` | Create and attach filesystems          |
 | `df`, `du`, `lsblk` | Analyze disk usage and space                 |
 | `/etc/fstab`       | Persistent mount configuration                |

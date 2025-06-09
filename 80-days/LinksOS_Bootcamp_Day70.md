@@ -1,8 +1,8 @@
 ---
-title: Day 70 –
-parent: Advanced Security
-nav_order: 10
----
+grand_parent: 80 DAYS
+nav_order: 70
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 70
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -55,7 +55,7 @@ The CISO has requested a Zero Trust adoption plan for internal staff and cloud a
 - Table: App | Identity Method | Control | Enforcement | Notes
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | RBAC, ABAC, DAC      | Access control enforcement models             |
 | OAuth2, SAML, OIDC   | Identity federation and delegated auth        |
 | Zero Trust           | Trust-less network with continuous validation |

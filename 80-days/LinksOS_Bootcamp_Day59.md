@@ -1,8 +1,8 @@
 ---
-title: Day 59 –
-parent: Basic Security
-nav_order: 29
----
+grand_parent: 80 DAYS
+nav_order: 59
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 59
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -60,7 +60,7 @@ Create a system that backs up `/etc`, compresses the archive, and logs backup su
 - Screenshot: Cron entry, log file, and restored archive test
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
+|--||
 | `rsync`, `scp`, `tar`, `gzip` | Perform backups and compress files |
 | `cron`, `at`       | Schedule and run recurring or one-time jobs   |
 | `logger`, `tail`, `/var/log` | Log job results and monitor output  |

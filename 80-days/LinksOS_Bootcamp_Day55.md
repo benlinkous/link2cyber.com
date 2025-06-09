@@ -1,8 +1,8 @@
 ---
-title: Day 55 –
-parent: Basic Security
-nav_order: 25
----
+grand_parent: 80 DAYS
+nav_order: 55
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 55
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -61,7 +61,7 @@ You're asked to write a script to auto-update the system and send a log summary 
 - Screenshot: Cron entry and sample log output
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
+|--||
 | `apt`, `yum`, `dnf`| Install and manage software packages           |
 | `logrotate`, `journalctl` | Manage logs and configure retention    |
 | `bash`, `cron`, `nano` | Automate tasks and schedule routines      |

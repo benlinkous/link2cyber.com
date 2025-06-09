@@ -1,7 +1,8 @@
 ---
-title: Day 31 –
-parent: Basic Security
-nav_order: 1
+grand_parent: 80 DAYS
+nav_order: 31
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 31
 ---
 # ✅ LinkOS Bootcamp — Day 31
 
@@ -10,7 +11,7 @@ nav_order: 1
 **Integrated Focus:** Linux+ (XK0-005) — Daily tool and concept reinforcement  
 **Goal:** Begin behavioral analytics, threat detection, and log analysis
 
----
+
 
 ## 🧠 CySA+ Domain Focus: Threat & Vulnerability Management (D1)
 

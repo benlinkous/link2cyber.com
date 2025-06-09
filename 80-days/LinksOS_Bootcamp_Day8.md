@@ -1,8 +1,8 @@
 ---
-title: Day 08 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 8
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 08
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -61,7 +61,7 @@ nav_order: 8
 - Test SSH/SFTP sessions in your own VM
 ## 🛠️ Tools Learned Today
 | Tool / Command         | Function Description                             |
-|------------------------|--------------------------------------------------|
+||--|
 | `apt`, `dpkg`, `snap`  | Package installation and audit                   |
 | `openssl`, `curl`      | SSL/TLS inspection, HTTP request verification    |
 | `ss`, `netstat`, `ncat`| View open ports and simulate network sessions    |

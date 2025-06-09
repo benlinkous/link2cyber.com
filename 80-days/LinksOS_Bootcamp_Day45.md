@@ -1,7 +1,8 @@
 ---
-title: Day 45 –
-parent: Basic Security
-nav_order: 15
+grand_parent: 80 DAYS
+nav_order: 45
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 45
 ---
 # ✅ LinkOS Bootcamp — Day 45 
 
@@ -10,7 +11,7 @@ nav_order: 15
 **Integrated Focus:** Linux+ (XK0-005) — Bash utilities, scanning prep, access control  
 **Supplemental Platforms:** TryHackMe (THM) + Hack The Box (HTB)
 
----
+
 
 ## 🎯 Day 1 PenTest+ Prep Focus: Planning, Scoping, and Legal Boundaries
 

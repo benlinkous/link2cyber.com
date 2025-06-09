@@ -1,8 +1,8 @@
 ---
-title: Day 69 –
-parent: Advanced Security
-nav_order: 9
----
+grand_parent: 80 DAYS
+nav_order: 69
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 69
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -59,7 +59,7 @@ You’re tasked with producing a hardened build guide for a new Linux image used
 - Screenshot: Before/after hardening test
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | EDR Agents / Logs    | Detect endpoint behavior and alert             |
 | Host Hardening       | Remove exposure and enforce configuration      |
 | CIS Benchmarks       | Baseline security standards for system config  |

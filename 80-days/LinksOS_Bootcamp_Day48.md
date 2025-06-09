@@ -1,7 +1,8 @@
 ---
-title: Day 48 –
-parent: Basic Security
-nav_order: 18
+grand_parent: 80 DAYS
+nav_order: 48
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 48
 ---
 # ✅ LinkOS Bootcamp — Day 48
 
@@ -10,7 +11,7 @@ nav_order: 18
 **Integrated Focus:** Linux+ (XK0-005) — Credential harvesting, file system control, persistence  
 **Goal:** Gain system access, escalate privileges, and maintain control for data extraction
 
----
+
 
 ## 🛠️ Task 1: Privilege Escalation Techniques
 

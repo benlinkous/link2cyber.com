@@ -1,8 +1,8 @@
 ---
-title: Day 51 –
-parent: Basic Security
-nav_order: 21
----
+grand_parent: 80 DAYS
+nav_order: 51
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 51
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -59,7 +59,7 @@ A new `devops` team is being onboarded. You’ve been asked to configure user ac
 - Screenshot: Group membership, permissions, access denied
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
+|--||
 | `useradd`, `usermod`, `passwd` | Linux account creation            |
 | `chmod`, `setfacl`, `umask`    | File permission management         |
 | HTB Academy + Machine          | Real-world Linux CLI and SMB access |

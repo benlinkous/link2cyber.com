@@ -1,8 +1,8 @@
 ---
-title: Day 29 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 29
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 29
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -45,7 +45,7 @@ Today’s goal is to master Security+ Domain 3 and 6 content related to encrypti
 - Screenshot: Completion or certificate chain walk-through
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept     | Purpose                                     |
-|--------------------|----------------------------------------------|
+|--|-|
 | `openssl`          | Generate keys, inspect certs, convert formats |
 | TLS/SSL            | Secure communication protocols               |
 | CA / CRL / OCSP    | Certificate lifecycle management             |

@@ -1,7 +1,8 @@
 ---
-title: Day 41 –
-parent: Basic Security
-nav_order: 11
+grand_parent: 80 DAYS
+nav_order: 41
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 41
 ---
 # ✅ LinkOS Bootcamp — Day 41
 
@@ -10,7 +11,7 @@ nav_order: 11
 **Integrated Focus:** Linux+ (XK0-005) — Network commands, interfaces, and services  
 **Goal:** Review foundational networking concepts and practice Linux network tools
 
----
+
 
 ## 🌐 Task 1: Network Fundamentals and Protocol Stack
 

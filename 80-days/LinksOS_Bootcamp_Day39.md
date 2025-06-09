@@ -1,7 +1,8 @@
 ---
-title: Day 39 –
-parent: Basic Security
-nav_order: 9
+grand_parent: 80 DAYS
+nav_order: 39
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 39
 ---
 # ✅ LinkOS Bootcamp — Day 39
 
@@ -10,7 +11,7 @@ nav_order: 9
 **Integrated Focus:** Linux+ (XK0-005) — Open-source tool integration and detection  
 **Goal:** Use open-source tools like Suricata, Wazuh, and Fail2ban to detect threats and automate response
 
----
+
 
 ## 🧠 Task 1: Network-Based Intrusion Detection (NIDS)
 

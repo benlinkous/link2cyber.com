@@ -1,8 +1,8 @@
 ---
-title: Day 21 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 21
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 21
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -46,7 +46,7 @@ By the end of this day, you should:
 - Screenshot: Terminal evidence or before/after configs
 ## 🧰 Key Tools You Must Know (Mini Review)
 | Tool              | Purpose                                |
-|-------------------|----------------------------------------|
+|-|-|
 | `rkhunter`, `clamscan` | Malware scanning and logs         |
 | `rsync`, `tar`    | Backups and recovery                   |
 | `journalctl`, `top`, `systemctl` | Troubleshooting OS issues |

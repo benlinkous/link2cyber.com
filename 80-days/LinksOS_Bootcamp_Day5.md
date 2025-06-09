@@ -1,8 +1,8 @@
 ---
-title: Day 05 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 5
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 05
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -69,7 +69,7 @@ nav_order: 5
 - Reflect on what went wrong or right
 ## 🛠️ Tools Learned Today
 | Tool / Command     | Function Description                   |
-|--------------------|----------------------------------------|
+|--|-|
 | `htop`             | Monitor system performance             |
 | `useradd`, `passwd`| Create and manage user accounts        |
 | `chmod`, `chown`   | Permission management                  |

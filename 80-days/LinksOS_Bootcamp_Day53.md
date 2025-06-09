@@ -1,8 +1,8 @@
 ---
-title: Day 53 –
-parent: Basic Security
-nav_order: 23
----
+grand_parent: 80 DAYS
+nav_order: 53
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 53
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -60,7 +60,7 @@ DevOps wants a lightweight service to monitor `/var/log/syslog` for the word “
 - Screenshot: Service log and journalctl output
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
+|--||
 | `systemctl`, `journalctl` | Manage and view Linux services         |
 | `ps`, `top`, `nice` | Manage processes and adjust priorities       |
 | `cron`, `init.d`   | Schedule tasks and escalate via misconfig     |

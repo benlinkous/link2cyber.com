@@ -1,8 +1,8 @@
 ---
-title: Day 11 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 11
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 11
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -63,7 +63,7 @@ nav_order: 11
 - Reflect on real-world use of sticky bit and ACLs
 ## 🛠️ Tools Learned Today
 | Tool / Command       | Function Description                                 |
-|----------------------|------------------------------------------------------|
+|-||
 | `chmod`, `chown`     | Basic permission and ownership control               |
 | `setfacl`, `getfacl` | ACL-based user permission management                 |
 | `umask`, `lsattr`    | Default permissions and file attribute handling      |

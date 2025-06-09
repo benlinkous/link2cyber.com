@@ -1,7 +1,8 @@
 ---
-title: Day 36 –
-parent: Basic Security
-nav_order: 6
+grand_parent: 80 DAYS
+nav_order: 36
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 36
 ---
 # ✅ LinkOS Bootcamp — Day 36
 
@@ -10,7 +11,7 @@ nav_order: 6
 **Integrated Focus:** Linux+ (XK0-005) — Log parsing, shell scripting, and event chaining  
 **Goal:** Use real-world threat intel and Linux logs to identify indicators of compromise (IOCs)
 
----
+
 
 ## 🕵️ Task 1: Threat Hunting Methodologies
 

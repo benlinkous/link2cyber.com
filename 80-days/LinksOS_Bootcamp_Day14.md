@@ -1,8 +1,8 @@
 ---
-title: Day 14 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 14
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 14
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -65,7 +65,7 @@ nav_order: 14
 - Screenshot: ISO mount and contents
 ## 🛠️ Tools Learned Today
 | Tool / Command       | Function Description                             |
-|----------------------|--------------------------------------------------|
+|-|--|
 | `virt-manager`, `vboxmanage` | Create and manage virtual machines        |
 | `mount`, `isoinfo`   | Mount and explore ISO image contents             |
 | `lsblk`, `dmesg`     | Analyze devices and media mount behavior         |

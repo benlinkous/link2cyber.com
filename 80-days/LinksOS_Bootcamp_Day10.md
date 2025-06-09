@@ -1,8 +1,8 @@
 ---
-title: Day 10 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 10
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 10
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -63,7 +63,7 @@ nav_order: 10
 - Reflect on attack vectors using open remote ports
 ## 🛠️ Tools Learned Today
 | Tool / Command       | Function Description                               |
-|----------------------|----------------------------------------------------|
+|-|-|
 | `ssh`, `scp`, `rsync`| Remote shell and secure file transfer              |
 | `sshd_config`, `ufw` | SSH service config and firewall control            |
 | `fail2ban`           | Intrusion prevention and brute-force detection     |

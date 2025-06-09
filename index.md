@@ -1,4 +1,5 @@
 ## 📘 Fundamentals (Days 1–30)
+nav_exclude: true
 <details>
 <summary>Expand Days 1–30</summary>
 

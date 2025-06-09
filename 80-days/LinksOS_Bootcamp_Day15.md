@@ -1,8 +1,8 @@
 ---
-title: Day 15 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 15
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 15
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -64,7 +64,7 @@ nav_order: 15
 - Reflect on common missteps in recovery plans
 ## 🛠️ Tools Learned Today
 | Tool / Command       | Function Description                               |
-|----------------------|----------------------------------------------------|
+|-|-|
 | `rsync`, `tar`, `gzip`| CLI backup and archiving tools                    |
 | Timeshift            | Linux system image snapshots and recovery          |
 | `cron`               | Automate backup scripts                            |

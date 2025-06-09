@@ -1,8 +1,8 @@
 ---
-title: Day 30 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 30
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 30
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -36,7 +36,7 @@ By completing today's tasks, you’ve demonstrated hands-on understanding and th
 - Covers Domains 1–5 of the exam  
 - Self-assess your confidence per domain (Y/N)
 | Domain | Description | Confident? |
-|--------|-------------|------------|
+|--|-||
 | 1      | Threats, Attacks, Vulnerabilities | Y/N |
 | 2      | Architecture and Design          | Y/N |
 | 3      | Implementation (Protocols, Tools)| Y/N |

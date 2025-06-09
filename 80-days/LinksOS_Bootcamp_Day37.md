@@ -1,7 +1,8 @@
 ---
-title: Day 37 –
-parent: Basic Security
-nav_order: 7
+grand_parent: 80 DAYS
+nav_order: 37
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 37
 ---
 # ✅ LinkOS Bootcamp — Day 37
 
@@ -10,7 +11,7 @@ nav_order: 7
 **Integrated Focus:** Linux+ (XK0-005) — File permissions, sudo, and user roles  
 **Goal:** Secure system access through role-based controls and access policies
 
----
+
 
 ## 🔐 Task 1: Identity and Access Control Models
 

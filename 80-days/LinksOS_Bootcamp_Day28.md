@@ -1,8 +1,8 @@
 ---
-title: Day 28 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 28
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 28
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -45,7 +45,7 @@ Today you’ll cover Security+ Domain 5 and Domain 2 objectives related to **ris
 - Screenshot: Completion or notes on frameworks used (NIST, COBIT, ISO)
 ## 🛠️ Tools and Frameworks Covered Today
 | Framework / Tool | Purpose                                 |
-|------------------|------------------------------------------|
+|||
 | NIST SP 800-53   | Risk and control framework (US gov)      |
 | ISO/IEC 27001    | International standard for ISMS          |
 | Risk Matrix      | Measure impact and probability of risk   |

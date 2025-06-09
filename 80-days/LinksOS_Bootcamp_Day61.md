@@ -1,8 +1,8 @@
 ---
-title: Day 61 –
-parent: Advanced Security
-nav_order: 1
----
+grand_parent: 80 DAYS
+nav_order: 61
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 61
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -58,7 +58,7 @@ You're tasked with starting a risk register and basic security policy for a fict
 - Screenshot (optional): Policy shared in Git or as PDF
 ## 🛠️ Tools and Concepts Today
 | Concept / Tool      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | NIST, ISO, COBIT     | Framework alignment and compliance            |
 | SABSA, TOGAF         | Architecture methodology                      |
 | Risk matrix, policy  | GRC documentation and communication           |

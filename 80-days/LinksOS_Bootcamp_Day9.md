@@ -1,8 +1,8 @@
 ---
-title: Day 09 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 9
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 09
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -63,7 +63,7 @@ nav_order: 9
 - Write a defensive hardening checklist for job schedulers
 ## 🛠️ Tools Learned Today
 | Tool / Command   | Function Description                              |
-|------------------|---------------------------------------------------|
+|||
 | `crontab`, `at`  | Job scheduling (repeated or one-time tasks)       |
 | `logger`         | Manual logging to system logs                     |
 | `uptime`, `top`  | Monitor resource use and system performance       |

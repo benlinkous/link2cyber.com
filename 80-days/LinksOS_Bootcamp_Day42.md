@@ -1,7 +1,8 @@
 ---
-title: Day 42 –
-parent: Basic Security
-nav_order: 12
+grand_parent: 80 DAYS
+nav_order: 42
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 42
 ---
 # ✅ LinkOS Bootcamp — Day 42
 
@@ -10,7 +11,7 @@ nav_order: 12
 **Integrated Focus:** Linux+ (XK0-005) — Interface control, drivers, NIC configs  
 **Goal:** Understand networking hardware, media types, topologies, and interface configuration
 
----
+
 
 ## 📦 Task 1: Network Devices and Media
 

@@ -1,8 +1,8 @@
 ---
-title: Day 66 –
-parent: Advanced Security
-nav_order: 6
----
+grand_parent: 80 DAYS
+nav_order: 66
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 66
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -54,7 +54,7 @@ As the new security lead, you're asked to prepare the IR policy and run a tablet
 - Table: Scenario step | Team decision | Outcome | Gap
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | NIST IR Framework   | Phased incident response lifecycle             |
 | SIEM (Wazuh/ELK)    | Log correlation and threat detection           |
 | IR Playbooks        | Actionable workflows per scenario              |

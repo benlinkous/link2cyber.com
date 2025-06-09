@@ -1,8 +1,8 @@
 ---
-title: Day 25 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 25
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 25
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -25,7 +25,7 @@ You’ve logged 25 days of consistent, documented, hands-on learning, labs, and 
 - Use the checklist below to verify that you can confidently demonstrate each topic.  
 - Mark “Y” if confident or “N” if not — revisit any “N” items.
 | Domain | Objective | Confident? |
-|--------|-----------|------------|
+|--|--||
 | OS Installation | Windows, Linux setup & config | Y/N |
 | Security | Permissions, malware removal, firewalls | Y/N |
 | Software Troubleshooting | Common issues, logs, updates | Y/N |

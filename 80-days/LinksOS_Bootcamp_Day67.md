@@ -1,8 +1,8 @@
 ---
-title: Day 67 –
-parent: Advanced Security
-nav_order: 7
----
+grand_parent: 80 DAYS
+nav_order: 67
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 67
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -60,7 +60,7 @@ You're asked to create a script that copies key logs, collects hashes, and expor
 - Screenshot: Archive + hash + log
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | `md5sum`, `stat`, `tar` | Preserve evidence and verify integrity    |
 | `auth.log`, `audit.log` | Monitor and collect OS forensic artifacts |
 | HTB/THM Forensics Labs | Practice analysis and metadata recovery    |

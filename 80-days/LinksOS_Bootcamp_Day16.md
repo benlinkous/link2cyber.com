@@ -1,8 +1,8 @@
 ---
-title: Day 16 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 16
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 16
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -42,7 +42,7 @@ nav_order: 16
 - Markdown: `iam-security-findings.md`
 ## 🛠️ Tools Learned Today
 | Command       | Purpose                            |
-|---------------|------------------------------------|
+|||
 | `passwd`      | Manage user passwords              |
 | `chage`       | Configure account expiration       |
 | `usermod`     | Modify account settings            |

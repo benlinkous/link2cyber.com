@@ -1,8 +1,8 @@
 ---
-title: Day 57 –
-parent: Basic Security
-nav_order: 27
----
+grand_parent: 80 DAYS
+nav_order: 57
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 57
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -52,7 +52,7 @@ Your system won’t boot due to a bad mount or systemd service crash. You're ask
 - Screenshot: Rescue boot or fixed fstab output
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
+|--||
 | `journalctl`, `dmesg` | Troubleshooting and boot logs              |
 | `systemctl rescue`, `reboot` | Recovery and shutdown methods        |
 | `/etc/fstab`, `mount` | Filesystem repair and persistence          |

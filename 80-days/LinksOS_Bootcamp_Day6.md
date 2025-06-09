@@ -1,8 +1,8 @@
 ---
-title: Day 06 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 6
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 06
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -68,7 +68,7 @@ nav_order: 6
 - List of common misconfigs and defenses
 ## 🛠️ Tools Learned Today
 | Tool / Command         | Function Description                           |
-|------------------------|------------------------------------------------|
+|||
 | `ventoy`, `gparted`    | OS installation and partitioning               |
 | `grub-install`         | Bootloader configuration and repair            |
 | `journalctl`, `dmesg`  | System boot and log inspection                 |

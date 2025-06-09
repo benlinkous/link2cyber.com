@@ -1,8 +1,8 @@
 ---
-title: Day 54 –
-parent: Basic Security
-nav_order: 24
----
+grand_parent: 80 DAYS
+nav_order: 54
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 54
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -61,7 +61,7 @@ You're asked to deploy a web server that is only accessible from a specific subn
 - Screenshot: Allowed/denied traffic test
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                        |
-|--------------------|------------------------------------------------|
+|--||
 | `nmcli`, `nmtui`, `netplan` | Configure and verify interfaces      |
 | `ufw`, `iptables`  | Apply and manage firewall policies             |
 | `dig`, `ping`, `ss`| Connectivity testing                           |

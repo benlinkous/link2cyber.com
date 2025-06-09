@@ -1,7 +1,8 @@
 ---
-title: Day 38 –
-parent: Basic Security
-nav_order: 8
+grand_parent: 80 DAYS
+nav_order: 38
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 38
 ---
 # ✅ LinkOS Bootcamp — Day 38
 
@@ -10,7 +11,7 @@ nav_order: 8
 **Integrated Focus:** Linux+ (XK0-005) — OS configuration, system integrity, and audit  
 **Goal:** Lock down Linux systems with CIS-aligned controls and secure configurations
 
----
+
 
 ## 🔧 Task 1: System Hardening Techniques
 

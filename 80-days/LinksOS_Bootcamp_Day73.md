@@ -1,8 +1,8 @@
 ---
-title: Day 73 –
-parent: Advanced Security
-nav_order: 13
----
+grand_parent: 80 DAYS
+nav_order: 73
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 73
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -55,7 +55,7 @@ You’ve been asked to propose a secure architecture for deploying a cloud-based
 - Diagram: Reference cloud deployment or security zones
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept       | Purpose                                        |
-|----------------------|------------------------------------------------|
+|-||
 | IaaS/PaaS/SaaS        | Understand cloud architecture layers          |
 | IAM, NACLs, WAF       | Control access and traffic in cloud           |
 | Shared Responsibility | Split security duties between cloud & org     |

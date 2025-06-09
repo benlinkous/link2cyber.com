@@ -1,7 +1,8 @@
 ---
-title: Day 43 –
-parent: Basic Security
-nav_order: 13
+grand_parent: 80 DAYS
+nav_order: 43
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 43
 ---
 # ✅ LinkOS Bootcamp — Day 43
 
@@ -10,7 +11,7 @@ nav_order: 13
 **Integrated Focus:** Linux+ (XK0-005) — Network testing, static routes, and tools  
 **Goal:** Master IP addressing, CIDR, subnetting, and basic routing commands
 
----
+
 
 ## 🌐 Task 1: IP Addressing and Subnetting
 

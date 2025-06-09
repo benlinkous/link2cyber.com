@@ -1,8 +1,8 @@
 ---
-title: Day 79 –
-parent: Advanced Security
-nav_order: 19
----
+grand_parent: 80 DAYS
+nav_order: 79
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 79
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -56,7 +56,7 @@ You’re asked to produce a visual, strategic dashboard for the company’s annu
 - Table or image: Executive dashboard summary
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept       | Purpose                                        |
-|----------------------|------------------------------------------------|
+|-||
 | Governance Frameworks | Structure the overall security posture       |
 | KPIs, KRIs            | Monitor health and direction of security     |
 | Briefing Reports      | Summarize actionable security findings        |

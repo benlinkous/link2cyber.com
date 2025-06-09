@@ -1,8 +1,8 @@
 ---
-title: Day 63 –
-parent: Advanced Security
-nav_order: 3
----
+grand_parent: 80 DAYS
+nav_order: 63
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 63
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -56,7 +56,7 @@ A quarterly audit has revealed unpatched services across 3 servers. You're assig
 - Table: Service | CVE | Patch Source | Rollback Plan
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                       |
-|---------------------|-----------------------------------------------|
+||--|
 | CVSS, CWSS, DREAD   | Quantify risk and exploitability              |
 | Vulnerability Register | Track, score, and respond to findings      |
 | Patch Playbook      | Formalize patch and rollback process          |

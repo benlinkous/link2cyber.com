@@ -1,7 +1,8 @@
 ---
-title: Day 34 –
-parent: Basic Security
-nav_order: 4
+grand_parent: 80 DAYS
+nav_order: 34
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 34
 ---
 # ✅ LinkOS Bootcamp — Day 34
 
@@ -10,7 +11,7 @@ nav_order: 4
 **Integrated Focus:** Linux+ (XK0-005) — Recovery, backups, and system forensics  
 **Goal:** Practice incident response steps, digital evidence handling, and secure system recovery
 
----
+
 
 ## 🚨 Task 1: Incident Response Phases and Tools
 

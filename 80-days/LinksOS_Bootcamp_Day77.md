@@ -1,8 +1,8 @@
 ---
-title: Day 77 –
-parent: Advanced Security
-nav_order: 17
----
+grand_parent: 80 DAYS
+nav_order: 77
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 77
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -54,7 +54,7 @@ You're tasked with creating a lightweight data classification and handling polic
 - Table: Classification | Retention | Access | Protection
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept       | Purpose                                        |
-|----------------------|------------------------------------------------|
+|-||
 | Data Classification  | Segment sensitivity levels for controls       |
 | DLP (Regex, File Types) | Prevent accidental or malicious data exfil |
 | GDPR/CCPA/SOX        | Map data practices to legal frameworks        |

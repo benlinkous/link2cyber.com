@@ -1,8 +1,8 @@
 ---
-title: Day 12 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 12
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 12
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -66,7 +66,7 @@ nav_order: 12
 - Reflect on startup scripts vs service files
 ## 🛠️ Tools Learned Today
 | Tool / Command       | Function Description                                 |
-|----------------------|------------------------------------------------------|
+|-||
 | `systemctl`, `journalctl` | Manage and inspect Linux services               |
 | `.service` files     | Create custom background service units               |
 | `ufw`, `fail2ban`    | Host-based security/firewall/intrusion prevention    |

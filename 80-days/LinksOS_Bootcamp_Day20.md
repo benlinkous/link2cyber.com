@@ -1,8 +1,8 @@
 ---
-title: Day 20 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 20
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 20
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -51,7 +51,7 @@ nav_order: 20
 - Markdown: `cloud-lab-reflection.md`
 ## 🛠️ Tools Learned Today
 | Tool / Command | Purpose                                           |
-|----------------|--------------------------------------------------|
+|-|--|
 | `aws`, `gcloud`, `az` | CLI tools for cloud platform access        |
 | `ssh-keygen`, `scp` | Secure key generation and transfer          |
 | `curl`, `cloud-init` | Access metadata and bootstrap cloud configs |

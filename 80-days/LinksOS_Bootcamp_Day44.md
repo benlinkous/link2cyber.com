@@ -1,7 +1,8 @@
 ---
-title: Day 44 –
-parent: Basic Security
-nav_order: 14
+grand_parent: 80 DAYS
+nav_order: 44
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 44
 ---
 # ✅ LinkOS Bootcamp — Day 44
 
@@ -10,7 +11,7 @@ nav_order: 14
 **Integrated Focus:** Linux+ (XK0-005) — Hostname resolution, name servers, and wireless tools  
 **Goal:** Understand DHCP leasing, DNS name resolution, wireless security, and NAT behavior
 
----
+
 
 ## 📡 Task 1: DHCP and DNS Overview
 

@@ -1,7 +1,8 @@
 ---
-title: Day 40 –
-parent: Basic Security
-nav_order: 10
+grand_parent: 80 DAYS
+nav_order: 40
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 40
 ---
 # ✅ LinkOS Bootcamp — Day 40
 
@@ -10,7 +11,7 @@ nav_order: 10
 **Integrated Focus:** Linux+ (XK0-005) Concepts Maintained  
 **Goal:** Confirm CySA+ readiness, reflect on key concepts, and simulate real exam conditions
 
----
+
 
 ## 🎯 Certification Confirmation Day — CySA+
 

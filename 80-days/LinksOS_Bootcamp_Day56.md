@@ -1,8 +1,8 @@
 ---
-title: Day 56 –
-parent: Basic Security
-nav_order: 26
----
+grand_parent: 80 DAYS
+nav_order: 56
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 56
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -52,7 +52,7 @@ The sysadmin team wants a CLI dashboard showing real-time system health and aler
 - Screenshot: Sample dashboard output
 ## 🛠️ Tools and Concepts Today
 | Tool / Command     | Purpose                                         |
-|--------------------|-------------------------------------------------|
+|--|-|
 | `df`, `uptime`, `free`, `w` | Monitor system resource usage        |
 | `journalctl`, `grep`, `awk` | Log analysis and filtering           |
 | `bash`, `printf`, `tput`    | Terminal formatting for dashboards   |

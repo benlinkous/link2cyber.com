@@ -1,8 +1,8 @@
 ---
-title: Day 26 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 26
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 26
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -44,7 +44,7 @@ Welcome to the final sprint! For the next five days, your focus is entirely on *
 - Markdown: `misconfiguration-checklist.md`
 ## 🛠️ Tools Learned Today
 | Tool / Technique | Purpose                                       |
-|------------------|-----------------------------------------------|
+||--|
 | Threat Modeling  | Identify attacker motives, goals, and vectors |
 | MITRE ATT&CK     | Understand attacker techniques and tactics    |
 | Wireshark (intro)| Capture & inspect traffic (passive awareness) |

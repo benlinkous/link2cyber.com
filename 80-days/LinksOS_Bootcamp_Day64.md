@@ -1,8 +1,8 @@
 ---
-title: Day 64 –
-parent: Advanced Security
-nav_order: 4
----
+grand_parent: 80 DAYS
+nav_order: 64
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 64
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -54,7 +54,7 @@ You’ve been asked to create a threat model for an internal business applicatio
 - Table: Component | Threat (STRIDE) | Control | Residual Risk
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | STRIDE              | Threat modeling for application design         |
 | DevSecOps           | Integrate security into DevOps pipeline        |
 | CI/CD Pipeline      | Automate secure build/test/deploy processes    |

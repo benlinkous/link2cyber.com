@@ -1,8 +1,8 @@
 ---
-title: Day 07 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 7
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 07
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -60,7 +60,7 @@ nav_order: 7
 - Reflect on the difference between behavioral and signature-based detection
 ## 🛠️ Tools Learned Today
 | Tool / Command         | Function Description                           |
-|------------------------|------------------------------------------------|
+|||
 | `lsblk`, `df`, `du`    | Disk and file system usage visualization       |
 | `mkfs.ext4`, `mount`   | Create and mount new file systems              |
 | `clamscan`, `chkrootkit`, `rkhunter` | Malware scanning and detection tools |

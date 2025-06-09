@@ -1,8 +1,8 @@
 ---
-title: Day 78 –
-parent: Advanced Security
-nav_order: 18
----
+grand_parent: 80 DAYS
+nav_order: 78
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 78
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -56,7 +56,7 @@ You're building a vendor onboarding checklist and security risk scoring system.
 - Table: Vendor | Risk Score | Action | Notes
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept        | Purpose                                       |
-|------------------------|-----------------------------------------------|
+||--|
 | SIG Questionnaire      | Vendor security evaluation                    |
 | SOC 2 / ISO 27001      | Attestations of control maturity              |
 | SLA + Security Clauses | Define expectations and enforce agreements    |

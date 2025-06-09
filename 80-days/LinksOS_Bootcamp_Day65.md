@@ -1,8 +1,8 @@
 ---
-title: Day 65 –
-parent: Advanced Security
-nav_order: 5
----
+grand_parent: 80 DAYS
+nav_order: 65
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 65
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -57,7 +57,7 @@ You’re asked to create documentation to help an internal team spin up a basic 
 - Files: `rootCA.crt`, `server.crt`, `server.key` (optional)
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept      | Purpose                                        |
-|---------------------|------------------------------------------------|
+|||
 | OpenSSL, GPG         | Key generation, signing, certificate creation |
 | PKI Infrastructure   | Establish trust and issue/verify certs        |
 | TLS/SSL, HMAC, AES   | Core crypto protocols and applications         |

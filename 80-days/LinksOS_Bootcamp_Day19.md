@@ -1,8 +1,8 @@
 ---
-title: Day 19 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 19
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 19
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -44,7 +44,7 @@ nav_order: 19
 - Screenshot: Device settings and MDM interface
 ## 🛠️ Tools Learned Today
 | Tool / Command | Purpose                                        |
-|----------------|------------------------------------------------|
+|-||
 | `adb`          | Android Debug Bridge (device communication)    |
 | `firejail`     | Sandbox mobile apps and isolate environments   |
 | 2FA apps       | Enhance mobile authentication security         |

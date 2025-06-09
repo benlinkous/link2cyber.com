@@ -1,7 +1,8 @@
 ---
-title: Day 35 –
-parent: Basic Security
-nav_order: 5
+grand_parent: 80 DAYS
+nav_order: 35
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 35
 ---
 # ✅ LinkOS Bootcamp — Day 35
 
@@ -10,7 +11,7 @@ nav_order: 5
 **Integrated Focus:** Linux+ (XK0-005) — Log analysis, system monitoring, and alert thresholds  
 **Goal:** Practice behavior-based detection, build a baseline, and tune alert rules
 
----
+
 
 ## 📊 Task 1: Establish Baselines for Linux Systems
 

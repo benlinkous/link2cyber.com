@@ -1,8 +1,8 @@
 ---
-title: Day 72 –
-parent: Advanced Security
-nav_order: 12
----
+grand_parent: 80 DAYS
+nav_order: 72
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 72
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -56,7 +56,7 @@ The CTO needs a one-pager showing current cyber risk exposure, detection activit
 - Screenshot or file: Dashboard layout
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept       | Purpose                                        |
-|----------------------|------------------------------------------------|
+|-||
 | MITRE ATT&CK         | Structure threat detection and TTPs           |
 | KPIs vs KRIs         | Track performance vs exposure in risk terms   |
 | Dashboarding         | Communicate security posture to leadership    |

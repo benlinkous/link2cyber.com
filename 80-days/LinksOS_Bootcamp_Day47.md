@@ -1,7 +1,8 @@
 ---
-title: Day 47 –
-parent: Basic Security
-nav_order: 17
+grand_parent: 80 DAYS
+nav_order: 47
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 47
 ---
 # ✅ LinkOS Bootcamp — Day 47
 
@@ -10,7 +11,7 @@ nav_order: 17
 **Integrated Focus:** Linux+ (XK0-005) — CVE hunting, patch auditing, exploit tools  
 **Goal:** Use identified vulnerabilities to simulate real-world exploit chains
 
----
+
 
 ## 💣 Task 1: Identify Vulnerabilities and Build Exploit Chains
 

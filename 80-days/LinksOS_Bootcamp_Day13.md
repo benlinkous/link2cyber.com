@@ -1,8 +1,8 @@
 ---
-title: Day 13 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 13
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 13
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -64,7 +64,7 @@ nav_order: 13
 - Summarize key takeaways about DNS security
 ## 🛠️ Tools Learned Today
 | Tool / Command       | Function Description                            |
-|----------------------|-------------------------------------------------|
+|-|-|
 | `dig`, `nslookup`    | Query and diagnose DNS resolution               |
 | `/etc/hosts`, `resolv.conf` | Control local hostname and DNS behavior   |
 | `traceroute`, `ping` | Trace route and check host reachability         |

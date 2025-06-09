@@ -1,8 +1,8 @@
 ---
-title: Day 27 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 27
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 27
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -45,7 +45,7 @@ Today you’ll build command over **network security controls**, **secure commun
 - Screenshot: Packet capture output or firewall rule logs
 ## 🛠️ Tools Learned Today
 | Tool / Command   | Purpose                                 |
-|------------------|------------------------------------------|
+|||
 | `tcpdump`, `ss`  | View active traffic and socket state     |
 | `netstat`, `ufw` | Monitor and control network connections  |
 | `wireshark`      | Deep packet inspection (GUI, optional)   |

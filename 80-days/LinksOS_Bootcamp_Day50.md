@@ -1,7 +1,8 @@
 ---
-title: Day 50 –
-parent: Basic Security
-nav_order: 20
+grand_parent: 80 DAYS
+nav_order: 50
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 50
 ---
 # ✅ LinkOS Bootcamp — Day 50
 
@@ -10,7 +11,7 @@ nav_order: 20
 **Integrated Focus:** Linux+ (XK0-005) — Tools recap and script usage  
 **Goal:** Review PenTest+ exam domains, retest weak areas, and simulate real-world analyst workflow
 
----
+
 
 ## 🎯 Final Certification Confidence — PenTest+
 

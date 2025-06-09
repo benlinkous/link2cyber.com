@@ -1,8 +1,8 @@
 ---
-title: Day 80 –
-parent: Advanced Security
-nav_order: 20
----
+grand_parent: 80 DAYS
+nav_order: 80
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 80
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -58,7 +58,7 @@ You're writing your internal debrief for training, certification reflection, and
 - Optional: `.zip` of portfolio for archiving
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept       | Purpose                                        |
-|----------------------|------------------------------------------------|
+|-||
 | Capstone Simulation  | Reinforce integrated architecture + response  |
 | Portfolio Finalization | Ensure lasting, reusable documentation       |
 | SecurityX Reflection | Internalize and extract long-term value       |

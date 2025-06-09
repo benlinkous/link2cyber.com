@@ -1,8 +1,8 @@
 ---
-title: Day 22 –
-parent: Fundamentals
+grand_parent: 80 DAYS
 nav_order: 22
----
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 22
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 

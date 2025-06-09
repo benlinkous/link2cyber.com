@@ -1,8 +1,8 @@
 ---
-title: Day 76 –
-parent: Advanced Security
-nav_order: 16
----
+grand_parent: 80 DAYS
+nav_order: 76
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 76
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -56,7 +56,7 @@ You’re tasked with designing a gateway policy for all backend APIs exposed to 
 - Screenshot or file: Postman test, header enforcement
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept       | Purpose                                        |
-|----------------------|------------------------------------------------|
+|-||
 | OWASP API Top 10     | Framework for identifying API-specific risks   |
 | OAuth2, JWT, API Keys| Secure API authentication methods              |
 | Postman              | Simulate and test API attack surface           |

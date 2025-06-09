@@ -1,8 +1,8 @@
 ---
-title: Day 58 –
-parent: Basic Security
-nav_order: 28
----
+grand_parent: 80 DAYS
+nav_order: 58
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 58
 ---
 ![Panther Icon](/assets/icons/icon-cyber-panther.png)
 
@@ -57,7 +57,7 @@ A security policy mandates account lockout after 3 failed login attempts and log
 - Screenshot: Locked user, log output
 ## 🛠️ Tools and Concepts Today
 | Tool / Concept     | Purpose                                         |
-|--------------------|-------------------------------------------------|
+|--|-|
 | `pam.d`, `chage`, `login.defs` | Control account policies            |
 | `setenforce`, `audit2why`     | Test and review SELinux denial logs  |
 | `visudo`, `audit.log`         | Secure elevated access and monitor   |

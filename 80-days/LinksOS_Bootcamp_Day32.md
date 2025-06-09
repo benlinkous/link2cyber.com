@@ -1,7 +1,8 @@
 ---
-title: Day 32 –
-parent: Basic Security
-nav_order: 2
+grand_parent: 80 DAYS
+nav_order: 32
+parent: "Fundamentals (Days 1\u201330)"
+title: Day 32
 ---
 # ✅ LinkOS Bootcamp — Day 32
 
@@ -10,7 +11,7 @@ nav_order: 2
 **Integrated Focus:** Linux+ (XK0-005) — Package scanning, CVEs, and hardening  
 **Goal:** Practice vulnerability scanning, analysis, and Linux system hardening
 
----
+
 
 ## 🔍 Task 1: Vulnerability Scan Planning and Analysis
 
