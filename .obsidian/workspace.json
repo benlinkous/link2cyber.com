@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "80-days/LinksOS_Bootcamp_Day1.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LinksOS_Bootcamp_Day1"
+              "title": "index"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 310.5
   },
   "right": {
     "id": "5812ae701e190cd6",
@@ -165,8 +165,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "822f871551e3ce2a",
+  "active": "5419a06d6a2ad2d6",
   "lastOpenFiles": [
+    "80-days/LinksOS_Bootcamp_Day1.md",
     "link2cyber.com-main/assets/images/backgrounds/bg-placeholder.png",
     "link2cyber.com-main/assets/images/backgrounds",
     "link2cyber.com-main/assets/icons/icon-serpent-eagle-moon.png",
@@ -178,7 +179,6 @@
     "link2cyber.com-main/assets/icons/icon-metallic-panther.png",
     "link2cyber.com-main/assets/icons/icon-mechanical-panther.png",
     "link2cyber.com-main/assets/icons/icon-lunar-metallic.png",
-    "link2cyber.com-main/assets/icons/icon-linkos-binary.png",
     "link2cyber.com-main/assets/images",
     "link2cyber.com-main/assets/icons",
     "link2cyber.com-main/assets",
