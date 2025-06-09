@@ -1,16 +1,6 @@
-
 title: Link2Cyber Bootcamp
 description: Learn cybersecurity through a structured 80-day journey using the LinksOS framework.
-
 remote_theme: just-the-docs/just-the-docs
-
-url: https://benlinkous.github.io/link2cyber.com
-
-just_the_docs:
-  collections:
-    80-days:
-      name: 80 Days
-      nav_fold: true
 
 collections:
   80-days:
@@ -18,12 +8,19 @@ collections:
     permalink: /80-days/:path/
     sort_by: nav_order
 
-aux_links:
-  GitHub Repo: https://github.com/benlinkous/link2cyber.com
+just_the_docs:
+  collections:
+    80-days:
+      name: "80 DAYS"
+      nav_fold: true
 
-nav_sort: case_insensitive
-logo: "/assets/logo-metallic-silver.png"
+# Optional: Enable search
+search_enabled: true
+search:
+  heading_level: 2
+  tokenizer_separator: /[\s/]+/
 
+# Optional: Customize callout boxes
 callouts_level: quiet
 callouts:
   highlight:
@@ -35,10 +32,10 @@ callouts:
     title: Warning
     color: red
 
-search_enabled: true
-search:
-  heading_level: 2
-  tokenizer_separator: /[\s/]+/
-
+# Optional: Back to top button
 back_to_top: true
 back_to_top_text: "Back to top"
+
+# Optional: External links
+aux_links:
+  GitHub Repo
