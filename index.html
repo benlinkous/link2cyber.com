@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link2Cyber | Practical Cybersecurity Training</title>
+  <meta name="description" content="Link2Cyber helps students, schools, and small businesses build real-world cybersecurity skills through hands-on training, workshops, and guided pathways." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080d12;
+      --bg2: #0d1520;
+      --bg3: #111d2e;
+      --border: rgba(0,200,120,0.15);
+      --green: #00e07a;
+      --green-dim: #00b360;
+      --green-glow: rgba(0,224,122,0.12);
+      --amber: #f5a623;
+      --blue: #3b9eff;
+      --text: #e4eef8;
+      --text-dim: #7a9ab8;
+      --text-muted: #4a6070;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Syne', sans-serif;
+      --radius: 12px;
+      --max: 1120px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,200,120,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,200,120,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    /* ─── NAV ─── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,13,18,0.92);
+      backdrop-filter: blur(16px);
+    }
+
+    nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--green);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span { color: var(--text-dim); }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .navlinks a {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+      letter-spacing: 0.05em;
+    }
+
+    .navlinks a:hover { color: var(--green); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #050a0e;
+    }
+
+    .btn-primary:hover { background: #00f588; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,224,122,0.35); }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      background: transparent;
+    }
+
+    .btn-outline:hover { border-color: var(--green); color: var(--green); background: var(--green-glow); }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -100px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0,224,122,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--green);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .kicker::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--green);
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    h1 .accent { color: var(--green); }
+
+    .lead {
+      font-size: 18px;
+      color: var(--text-dim);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .hero-meta::before {
+      content: '▸';
+      color: var(--green-dim);
+    }
+
+    /* Terminal card */
+    .terminal {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .terminal-bar {
+      background: var(--bg3);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #febc2e; }
+    .dot-g { background: #28c840; }
+
+    .term-title {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-left: 8px;
+    }
+
+    .terminal-body {
+      padding: 20px;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .t-prompt { color: var(--green); }
+    .t-cmd { color: var(--text); }
+    .t-out { color: var(--text-dim); }
+    .t-highlight { color: var(--amber); }
+    .t-blue { color: var(--blue); }
+    .t-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background: var(--green);
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      background: rgba(0,200,120,0.04);
+    }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 80px 0; position: relative; z-index: 1; }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--green);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-dim);
+      font-size: 17px;
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    /* ─── CARDS ─── */
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: rgba(0,200,120,0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--green-glow);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--text-dim);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card ul li {
+      font-size: 14px;
+      color: var(--text-dim);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--green-dim);
+      font-size: 11px;
+      top: 2px;
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(0,224,122,0.1);
+      color: var(--green);
+      margin-top: 16px;
+    }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* ─── PROGRAMS SECTION ─── */
+    .programs-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+
+    /* ─── STATS BAR ─── */
+    .stats-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 0;
+      background: var(--bg2);
+    }
+
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 0 24px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--mono);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ─── BOOTCAMP ─── */
+    .bootcamp-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .phase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .phase {
+      display: flex;
+      gap: 20px;
+      padding: 20px 24px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .phase:hover { border-color: rgba(0,200,120,0.3); }
+
+    .phase-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--green);
+      width: 32px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .phase-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .phase-meta {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cert-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cert-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .cert-name {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .cert-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ─── SPLIT ─── */
+    .split-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .split-content h2 { margin-bottom: 16px; }
+    .split-content p { color: var(--text-dim); margin-bottom: 20px; }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--text-dim);
+    }
+
+    .check-list li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ─── CONTACT ─── */
+    .contact-wrapper {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info h2 { margin-bottom: 16px; }
+    .contact-info p { color: var(--text-dim); margin-bottom: 32px; }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--green-glow);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .contact-text { font-size: 14px; color: var(--text-dim); }
+    .contact-val { font-weight: 600; color: var(--text); }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--green-dim);
+      box-shadow: 0 0 0 3px rgba(0,224,122,0.08);
+    }
+
+    .form-select option { background: var(--bg2); }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-left {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-left strong { color: var(--green); }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--green); }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .split-section { grid-template-columns: 1fr; }
+      .bootcamp-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); padding: 16px; }
+      .stat:nth-child(even) { border-bottom: none; }
+      .contact-wrapper { grid-template-columns: 1fr; padding: 32px; }
+      .navlinks { display: none; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .programs-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── ABOUT SECTION ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-code {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .c-comment { color: #3d5a70; }
+    .c-key { color: var(--blue); }
+    .c-val { color: var(--amber); }
+    .c-str { color: var(--green); }
+    .c-bracket { color: var(--text-muted); }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav>
+    <a href="#" class="brand">link<span>/</span>2cyber</a>
+    <ul class="navlinks">
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#bootcamp">80-Day Bootcamp</a></li>
+      <li><a href="#schools">Schools</a></li>
+      <li><a href="#businesses">Businesses</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary">Book a Call</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="kicker">Hands-on cybersecurity • Built for real people</div>
+        <h1>Practical security skills for <span class="accent">students, schools,</span> and small businesses.</h1>
+        <p class="lead">We teach the skills that matter — safe habits, real-world tools, and guided pathways from beginner to job-ready. No fluff, just clear progress and confidence.</p>
+        <div class="hero-actions">
+          <a href="#programs" class="btn btn-primary">See Programs</a>
+          <a href="#bootcamp" class="btn btn-outline">80-Day Bootcamp</a>
+          <a href="#contact" class="btn btn-outline">Get a Quote</a>
+        </div>
+        <div class="hero-meta">Serving New River Valley & SW Virginia · Remote options available</div>
+      </div>
+
+      <div class="terminal fade-up">
+        <div class="terminal-bar">
+          <div class="dot dot-r"></div>
+          <div class="dot dot-y"></div>
+          <div class="dot dot-g"></div>
+          <span class="term-title">link2cyber — getting-started.sh</span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="t-prompt">$</span> <span class="t-cmd">./choose-your-track.sh</span></div>
+          <div class="t-out" style="margin-top:4px">Available tracks:</div>
+          <div><span class="t-highlight">  [1]</span> <span class="t-out">Student Pathway</span></div>
+          <div><span class="t-highlight">  [2]</span> <span class="t-out">School Program</span></div>
+          <div><span class="t-highlight">  [3]</span> <span class="t-out">Business Workshop</span></div>
+          <div><span class="t-highlight">  [4]</span> <span class="t-out">80-Day Bootcamp</span></div>
+          <div style="margin-top:8px"><span class="t-prompt">$</span> <span class="t-cmd">start --track 4 --level beginner</span></div>
+          <div class="t-out">✓ Loading Day 01: System Orientation</div>
+          <div class="t-out">✓ Setting up LinksOS environment</div>
+          <div><span class="t-blue">→</span> <span class="t-out">TryHackMe: Linux Fundamentals</span></div>
+          <div style="margin-top:8px"><span class="t-prompt">$</span> <span class="t-cursor"></span></div>
+        </div>
+        <div class="tags" style="padding: 12px 20px 16px; border-top: 1px solid var(--border);">
+          <span class="tag">Phishing & Scams</span>
+          <span class="tag">Passwords & MFA</span>
+          <span class="tag">Linux CLI</span>
+          <span class="tag">Security+</span>
+          <span class="tag">Home Lab</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">80</div>
+        <div class="stat-label">Day structured bootcamp</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">CompTIA cert pathways</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">90<span style="font-size:24px">min</span></div>
+        <div class="stat-label">Workshop format available</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Prerequisites needed</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <div class="container">
+    <div class="programs-header">
+      <div>
+        <div class="section-label">// programs</div>
+        <h2>Choose your pathway</h2>
+        <p class="section-desc">Every track is built around doing, not just watching. Pick what fits your situation.</p>
+      </div>
+      <a href="#contact" class="btn btn-outline">Not sure? Talk to us →</a>
+    </div>
+
+    <div class="grid-3">
+      <div class="card fade-up">
+        <div class="card-icon">🎓</div>
+        <h3>Student Pathway</h3>
+        <p>Beginner-friendly steps toward real skills and career confidence.</p>
+        <ul>
+          <li>Foundations: safety habits + digital hygiene</li>
+          <li>Hands-on labs: accounts, MFA, backups, basic Linux</li>
+          <li>Portfolio projects: writeups + checklists</li>
+          <li>Career readiness & certification prep</li>
+        </ul>
+        <div class="card-badge">Best for: teens & career switchers</div>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-icon">⚡</div>
+        <h3>Bootcamp / Cohort</h3>
+        <p>Structured learning with accountability and real outcomes.</p>
+        <ul>
+          <li>8–12 weeks with flex scheduling</li>
+          <li>Weekly labs + guided practice</li>
+          <li>Resume & LinkedIn + interview prep</li>
+          <li>80-day curriculum option available</li>
+        </ul>
+        <div class="card-badge">Best for: serious learners → entry-level roles</div>
+      </div>
+
+      <div class="card fade-up">
+        <div class="card-icon">🛡️</div>
+        <h3>Workshops</h3>
+        <p>Short sessions for quick wins, awareness, and team training.</p>
+        <ul>
+          <li>"Stop getting hacked" for families</li>
+          <li>Small business phishing defense</li>
+          <li>Device & account hardening clinic</li>
+          <li>Custom sessions for clubs & teams</li>
+        </ul>
+        <div class="card-badge">Best for: clubs, staff PD, community groups</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 80-DAY BOOTCAMP -->
+<section id="bootcamp">
+  <div class="container">
+    <div class="section-label">// 80-day-bootcamp</div>
+    <h2>The LinksOS Bootcamp</h2>
+    <p class="section-desc">A structured 80-day journey through cybersecurity fundamentals, from zero to certification-ready.</p>
+
+    <div class="bootcamp-grid">
+      <div class="phase-list">
+        <div class="phase fade-up">
+          <div class="phase-num">01–30</div>
+          <div>
+            <div class="phase-title">📘 Fundamentals</div>
+            <div class="t-out" style="font-size:14px; color:var(--text-dim); margin: 4px 0 6px;">Hardware, software, security, and troubleshooting basics</div>
+            <div class="phase-meta">CompTIA ITF+ · A+ · Security+</div>
+          </div>
+        </div>
+        <div class="phase fade-up">
+          <div class="phase-num">31–55</div>
+          <div>
+            <div class="phase-title">🔐 Basic Security</div>
+            <div class="t-out" style="font-size:14px; color:var(--text-dim); margin: 4px 0 6px;">Authentication, encryption, network defenses, threat modeling</div>
+            <div class="phase-meta">Security+ · CySA+ · Linux+</div>
+          </div>
+        </div>
+        <div class="phase fade-up">
+          <div class="phase-num">56–80</div>
+          <div>
+            <div class="phase-title">🚀 Advanced Security</div>
+            <div class="t-out" style="font-size:14px; color:var(--text-dim); margin: 4px 0 6px;">Offensive & defensive tactics, SIEM, incident response</div>
+            <div class="phase-meta">PenTest+ · CySA+ · OSCP prep</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:8px;">
+          <h3 style="margin-bottom:12px; font-size:16px;">Day 1 sample modules</h3>
+          <ul>
+            <li>System Orientation: set up LinksOS VM + Obsidian vault</li>
+            <li>Linux CLI Basics: ls, cd, mkdir, rm, mv, touch</li>
+            <li>Networking Intro: ip, traceroute, dig, ping</li>
+            <li>Project: Create automated system report script</li>
+            <li>Lab: TryHackMe – Linux Fundamentals Part 1</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label" style="margin-bottom:16px;">cert pathways</div>
+        <div class="cert-list">
+          <div class="cert-card">
+            <div class="cert-dot" style="background:#f5a623"></div>
+            <div>
+              <div class="cert-name">CompTIA ITF+</div>
+              <div class="cert-sub">Foundations</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-dot" style="background:#3b9eff"></div>
+            <div>
+              <div class="cert-name">CompTIA A+</div>
+              <div class="cert-sub">IT Support</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">CompTIA Security+</div>
+              <div class="cert-sub">Core Certification</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-dot" style="background:var(--blue)"></div>
+            <div>
+              <div class="cert-name">CompTIA Linux+</div>
+              <div class="cert-sub">Linux Systems</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-dot" style="background:#c084fc"></div>
+            <div>
+              <div class="cert-name">CompTIA CySA+</div>
+              <div class="cert-sub">Analyst Track</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-dot" style="background:#f87171"></div>
+            <div>
+              <div class="cert-name">PenTest+</div>
+              <div class="cert-sub">Offensive Skills</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:20px; background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:20px;">
+          <div class="section-label" style="margin-bottom:12px;">tools & platforms</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">TryHackMe</span>
+            <span class="tag">HackTheBox</span>
+            <span class="tag">LinksOS</span>
+            <span class="tag">Obsidian</span>
+            <span class="tag">Git</span>
+            <span class="tag">Bash</span>
+            <span class="tag">Nmap</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">Metasploit</span>
+            <span class="tag">SIEM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SCHOOLS -->
+<section id="schools">
+  <div class="container">
+    <div class="split-section">
+      <div class="split-content fade-up">
+        <div class="section-label">// for-schools</div>
+        <h2>Bring cyber into your classroom</h2>
+        <p>Classroom-ready sessions that support CTE and career exploration — built around hands-on practice and safe systems.</p>
+        <ul class="check-list">
+          <li>Cyber safety + threat awareness curriculum</li>
+          <li>Intro labs: account security, Linux, networking basics</li>
+          <li>Student capstone projects + presentation support</li>
+          <li>Standards-aligned — we map to your course objectives</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Request School Info</a>
+      </div>
+
+      <div class="fade-up">
+        <div class="card" style="margin-bottom:16px;">
+          <h3>Example 4-week module</h3>
+          <ul style="margin-top:12px;">
+            <li>Weekly 60–90 minute sessions</li>
+            <li>Student checklists + guided lab materials</li>
+            <li>Teacher lesson plans + rubrics included</li>
+            <li>Optional: student portfolio/capstone project</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Good fit for your school if…</h3>
+          <ul style="margin-top:12px;">
+            <li>You run a CTE, IT, or Computer Science program</li>
+            <li>Students need career exploration in tech</li>
+            <li>You want hands-on, not lecture-only</li>
+            <li>You're in NRV / SWVA or open to remote delivery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BUSINESSES -->
+<section id="businesses">
+  <div class="container">
+    <div class="split-section">
+      <div class="fade-up">
+        <div class="card" style="margin-bottom:16px;">
+          <h3>Typical small business risks</h3>
+          <ul style="margin-top:12px;">
+            <li>Shared logins or weak password practices</li>
+            <li>No MFA on critical accounts (email, banking)</li>
+            <li>Staff not trained to spot phishing</li>
+            <li>No backup or recovery plan</li>
+          </ul>
+          <div class="card-badge">We fix all of these →</div>
+        </div>
+        <div class="card">
+          <h3>What you'll get</h3>
+          <ul style="margin-top:12px;">
+            <li>"Top 10 fixes" report with clear priorities</li>
+            <li>90-minute staff phishing awareness workshop</li>
+            <li>MFA + password policy implementation</li>
+            <li>Simple security checklist your team can follow</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="split-content fade-up">
+        <div class="section-label">// for-businesses</div>
+        <h2>Reduce risk without disrupting your team</h2>
+        <p>Practical training and lightweight security improvements built for small businesses — not enterprise IT departments.</p>
+        <ul class="check-list">
+          <li>Phishing-resistant habits + simulations</li>
+          <li>Account hardening: MFA, passwords, device safety</li>
+          <li>Works with Microsoft 365 & Google Workspace</li>
+          <li>No big IT overhaul required</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get a Business Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="section-label">// about</div>
+        <h2>Built by Ben Linkous</h2>
+        <p style="color:var(--text-dim); margin-bottom:20px; font-size:16px;">Link2Cyber exists to make cybersecurity approachable and useful. The focus is on habits, tools, and pathways that help people stay safer — and for motivated learners, build a real launchpad into IT and cyber careers.</p>
+        <p style="color:var(--text-dim); font-size:16px; margin-bottom:28px;">Every program is built on hands-on practice, real community impact, and clear progress milestones — one lab at a time.</p>
+        <div style="font-family:var(--mono); font-size:13px; color:var(--text-muted); padding:16px; background:var(--bg2); border:1px solid var(--border); border-radius:8px;">
+          Mission: <span style="color:var(--green)">practical skills</span> · <span style="color:var(--blue)">community impact</span> · <span style="color:var(--amber)">clear progress</span>
+        </div>
+      </div>
+
+      <div class="about-code fade-up">
+        <div><span class="c-comment">// link2cyber.config.js</span></div>
+        <div><span class="c-bracket">{</span></div>
+        <div>&nbsp;&nbsp;<span class="c-key">founder</span><span class="c-bracket">:</span> <span class="c-str">"Ben Linkous"</span><span class="c-bracket">,</span></div>
+        <div>&nbsp;&nbsp;<span class="c-key">mission</span><span class="c-bracket">:</span> <span class="c-str">"practical skills"</span><span class="c-bracket">,</span></div>
+        <div>&nbsp;&nbsp;<span class="c-key">audience</span><span class="c-bracket">: [</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"students"</span><span class="c-bracket">,</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"schools"</span><span class="c-bracket">,</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"small businesses"</span></div>
+        <div>&nbsp;&nbsp;<span class="c-bracket">],</span></div>
+        <div>&nbsp;&nbsp;<span class="c-key">location</span><span class="c-bracket">:</span> <span class="c-str">"NRV / SWVA"</span><span class="c-bracket">,</span></div>
+        <div>&nbsp;&nbsp;<span class="c-key">remote</span><span class="c-bracket">:</span> <span class="c-val">true</span><span class="c-bracket">,</span></div>
+        <div>&nbsp;&nbsp;<span class="c-key">prerequisites</span><span class="c-bracket">:</span> <span class="c-val">none</span></div>
+        <div><span class="c-bracket">}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-info fade-up">
+        <div class="section-label">// contact</div>
+        <h2>Let's find your starting point</h2>
+        <p>Tell me what you're trying to do and I'll recommend the fastest way to get there.</p>
+
+        <div class="contact-detail">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-text">Email</div>
+              <div class="contact-val">you@yourdomain.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-text">Service area</div>
+              <div class="contact-val">NRV / SW Virginia · Remote available</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⏱</div>
+            <div>
+              <div class="contact-text">Response time</div>
+              <div class="contact-val">Usually within 1 business day</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="section-label" style="margin-bottom:20px;">quick inquiry</div>
+        <div class="form-group">
+          <label class="form-label">Who is this for?</label>
+          <select class="form-select">
+            <option value="">Select track…</option>
+            <option>Student / Individual</option>
+            <option>School / Educator</option>
+            <option>Small Business</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Goal</label>
+          <select class="form-select">
+            <option value="">Select goal…</option>
+            <option>General awareness / safety</option>
+            <option>Hands-on skills building</option>
+            <option>Certification prep</option>
+            <option>Career change into IT/cyber</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Timeline</label>
+          <select class="form-select">
+            <option value="">Select timeline…</option>
+            <option>This month</option>
+            <option>This semester / quarter</option>
+            <option>Ongoing / no rush</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your message</label>
+          <textarea class="form-textarea" placeholder="Any other details — format preference, group size, budget, etc."></textarea>
+        </div>
+        <a href="mailto:you@yourdomain.com?subject=Link2Cyber%20Inquiry" class="btn btn-primary" style="width:100%; justify-content:center;">Send Inquiry →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>link2cyber</strong> · © <span id="yr"></span> Ben Linkous · NRV / SW Virginia
+      </div>
+      <div class="footer-links">
+        <a href="#programs">Programs</a>
+        <a href="#bootcamp">Bootcamp</a>
+        <a href="#schools">Schools</a>
+        <a href="#businesses">Businesses</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
