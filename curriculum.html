@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>80-Day Bootcamp Curriculum — Link2Cyber</title>
+  <meta name="description" content="The full Link2Cyber 80-day cybersecurity bootcamp curriculum. Free, public, structured learning from zero to job-ready using TryHackMe and the CompTIA path." />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080d12; --bg2: #0d1520; --bg3: #111d2e;
+      --border: rgba(0,200,120,0.15); --border2: rgba(0,200,120,0.28);
+      --green: #00e07a; --green-dim: #00b360; --green-glow: rgba(0,224,122,0.1);
+      --amber: #f5a623; --blue: #3b9eff; --red: #f87171;
+      --text: #e4eef8; --muted: #7a9ab8; --faint: #4a6070;
+      --mono: 'JetBrains Mono', monospace; --sans: 'Syne', sans-serif;
+      --max: 1200px; --sidebar: 260px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; overflow-x: hidden; }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── NAV ── */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8,13,18,0.94);
+      backdrop-filter: blur(14px);
+    }
+    nav {
+      max-width: var(--max); margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { font-family: var(--mono); font-weight: 700; font-size: 17px; color: var(--green); }
+    .brand span { color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.05em; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--green); text-decoration: none; }
+    .btn-sm {
+      display: inline-block; padding: 8px 16px; border-radius: 6px;
+      font-family: var(--mono); font-size: 12px; font-weight: 600;
+      background: var(--green); color: #050a0e; text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn-sm:hover { opacity: 0.88; text-decoration: none; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 36px;
+      background: linear-gradient(180deg, rgba(0,224,122,0.04) 0%, transparent 100%);
+    }
+    .page-header-inner { max-width: var(--max); margin: 0 auto; }
+    .kicker {
+      font-family: var(--mono); font-size: 11px; color: var(--green);
+      letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .kicker::before { content: ''; width: 20px; height: 1px; background: var(--green); display: block; }
+    .page-header h1 {
+      font-size: clamp(28px, 4vw, 44px); font-weight: 800;
+      letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 14px;
+    }
+    .page-header h1 .accent { color: var(--green); }
+    .page-header p { color: var(--muted); font-size: 16px; max-width: 580px; margin-bottom: 24px; }
+    .phase-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+    .phase-pill {
+      font-family: var(--mono); font-size: 12px; padding: 6px 14px;
+      border-radius: 6px; border: 1px solid var(--border); cursor: pointer;
+      transition: all 0.15s; color: var(--muted); background: transparent;
+    }
+    .phase-pill:hover, .phase-pill.active { border-color: var(--green); color: var(--green); background: var(--green-glow); }
+    .phase-pill.p1.active { border-color: var(--amber); color: var(--amber); background: rgba(245,166,35,0.08); }
+    .phase-pill.p2.active { border-color: var(--blue); color: var(--blue); background: rgba(59,158,255,0.08); }
+    .phase-pill.p3.active { border-color: var(--red); color: var(--red); background: rgba(248,113,113,0.08); }
+
+    /* ── SEARCH ── */
+    .search-wrap { max-width: var(--max); margin: 0 auto; padding: 16px 24px; border-bottom: 1px solid var(--border); }
+    .search-input {
+      width: 100%; background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 16px 10px 40px;
+      color: var(--text); font-family: var(--mono); font-size: 13px;
+      outline: none; transition: border-color 0.2s;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234a6070' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: 12px center;
+    }
+    .search-input:focus { border-color: var(--green-dim); }
+    .search-input::placeholder { color: var(--faint); }
+
+    /* ── LAYOUT ── */
+    .curriculum-layout {
+      max-width: var(--max); margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: var(--sidebar) 1fr; gap: 0;
+      min-height: calc(100vh - 180px);
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      border-right: 1px solid var(--border);
+      padding: 20px 0;
+      position: sticky; top: 57px;
+      height: calc(100vh - 57px);
+      overflow-y: auto;
+    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    .phase-group { margin-bottom: 8px; }
+    .phase-heading {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 10px 20px 6px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .ph-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .ph-dot.p1 { background: var(--amber); }
+    .ph-dot.p2 { background: var(--blue); }
+    .ph-dot.p3 { background: var(--red); }
+    .phase-heading span { color: var(--faint); }
+    .day-btn {
+      display: flex; align-items: center; gap: 10px;
+      width: 100%; padding: 7px 20px; background: none; border: none;
+      cursor: pointer; text-align: left; transition: background 0.12s;
+      border-left: 2px solid transparent;
+    }
+    .day-btn:hover { background: rgba(0,200,120,0.05); }
+    .day-btn.active { background: rgba(0,200,120,0.08); border-left-color: var(--green); }
+    .day-btn.hidden { display: none; }
+    .day-num { font-family: var(--mono); font-size: 11px; color: var(--faint); width: 28px; flex-shrink: 0; }
+    .day-btn.active .day-num { color: var(--green); }
+    .day-label { font-size: 12px; color: var(--muted); line-height: 1.3; }
+    .day-btn.active .day-label { color: var(--text); }
+
+    /* ── CONTENT PANEL ── */
+    .content-panel { padding: 32px 40px 64px; min-height: 600px; }
+
+    /* Welcome screen */
+    .welcome {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; min-height: 400px; text-align: center;
+    }
+    .welcome-icon { font-size: 3rem; margin-bottom: 16px; }
+    .welcome h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .welcome p { color: var(--muted); max-width: 420px; }
+
+    /* Day header */
+    .day-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+    .day-phase-badge {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+      display: inline-block; margin-bottom: 12px;
+    }
+    .badge-p1 { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.25); }
+    .badge-p2 { background: rgba(59,158,255,0.1); color: var(--blue); border: 1px solid rgba(59,158,255,0.2); }
+    .badge-p3 { background: rgba(248,113,113,0.1); color: var(--red); border: 1px solid rgba(248,113,113,0.2); }
+    .day-header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .day-cert { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .day-cert span { color: var(--green); }
+    .day-goal { font-size: 14px; color: var(--muted); }
+    .day-nav { display: flex; gap: 10px; margin-top: 16px; }
+    .day-nav-btn {
+      font-family: var(--mono); font-size: 11px; padding: 6px 14px;
+      border-radius: 6px; border: 1px solid var(--border); background: transparent;
+      color: var(--muted); cursor: pointer; transition: all 0.15s;
+    }
+    .day-nav-btn:hover { border-color: var(--green); color: var(--green); }
+    .day-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    /* Markdown content */
+    .md-content h1 { display: none; } /* hide top h1, shown in day header */
+    .md-content h2 {
+      font-family: var(--sans); font-size: 1.15rem; font-weight: 700;
+      color: var(--text); margin: 2rem 0 0.75rem;
+      padding-top: 1.5rem; border-top: 1px solid var(--border);
+    }
+    .md-content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+    .md-content h3 {
+      font-family: var(--sans); font-size: 0.97rem; font-weight: 700;
+      color: var(--green); margin: 1.25rem 0 0.5rem;
+    }
+    .md-content h4 { font-size: 0.9rem; color: var(--muted); margin: 1rem 0 0.4rem; }
+    .md-content p { color: var(--muted); margin-bottom: 0.85rem; font-size: 0.9rem; line-height: 1.75; }
+    .md-content strong { color: var(--text); font-weight: 600; }
+    .md-content ul, .md-content ol { padding-left: 1.25rem; margin-bottom: 0.85rem; }
+    .md-content li { color: var(--muted); font-size: 0.875rem; margin-bottom: 0.3rem; line-height: 1.6; }
+    .md-content li strong { color: var(--text); }
+    .md-content code {
+      font-family: var(--mono); font-size: 0.8rem;
+      background: rgba(0,200,120,0.08); color: var(--green);
+      padding: 2px 6px; border-radius: 4px;
+      border: 1px solid rgba(0,200,120,0.15);
+    }
+    .md-content pre {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px; overflow-x: auto;
+      margin: 1rem 0;
+    }
+    .md-content pre code {
+      background: none; border: none; padding: 0;
+      color: var(--text); font-size: 0.8rem; line-height: 1.7;
+    }
+    .md-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.83rem; }
+    .md-content th {
+      background: var(--bg3); color: var(--green);
+      font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em;
+      padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border2);
+    }
+    .md-content td { padding: 8px 12px; color: var(--muted); border-bottom: 1px solid var(--border); }
+    .md-content tr:last-child td { border-bottom: none; }
+    .md-content a { color: var(--blue); }
+    .md-content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    .md-content blockquote {
+      border-left: 3px solid var(--green-dim); padding-left: 16px;
+      margin: 1rem 0; color: var(--muted); font-style: italic;
+    }
+
+    /* empty state */
+    .no-results { padding: 3rem; text-align: center; color: var(--faint); font-family: var(--mono); font-size: 13px; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border); padding: 28px 24px;
+      text-align: center; font-family: var(--mono); font-size: 12px; color: var(--faint);
+    }
+    footer a { color: var(--green); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .curriculum-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); max-height: 240px; }
+      .content-panel { padding: 24px 20px 48px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <nav>
+    <a href="index.html" class="brand">link<span>/</span>2cyber</a>
+    <ul class="nav-links">
+      <li><a href="index.html#programs">Programs</a></li>
+      <li><a href="curriculum.html">Curriculum</a></li>
+      <li><a href="index.html#schools">Schools</a></li>
+      <li><a href="index.html#businesses">Businesses</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <a href="index.html#contact" class="btn-sm">Book a Call</a>
+  </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="kicker">Free & Open Curriculum</div>
+    <h1>The <span class="accent">80-Day</span> Bootcamp</h1>
+    <p>Zero prerequisites. Free tools. Job-ready in 80 days. Every day is publicly available — start on Day 1 and build a real portfolio as you go.</p>
+    <div class="phase-pills">
+      <button class="phase-pill active" data-phase="0" onclick="filterPhase(0, this)">All 80 Days</button>
+      <button class="phase-pill p1" data-phase="1" onclick="filterPhase(1, this)">📘 Phase 1 — Fundamentals (1–30)</button>
+      <button class="phase-pill p2" data-phase="2" onclick="filterPhase(2, this)">🔐 Phase 2 — Basic Security (31–55)</button>
+      <button class="phase-pill p3" data-phase="3" onclick="filterPhase(3, this)">🚀 Phase 3 — Advanced Security (56–80)</button>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <input type="search" class="search-input" placeholder="Search days, topics, tools, certifications..." id="searchInput" oninput="doSearch(this.value)" />
+</div>
+
+<!-- CURRICULUM LAYOUT -->
+<div class="curriculum-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div id="sidebarContent"></div>
+  </aside>
+
+  <!-- CONTENT PANEL -->
+  <main class="content-panel" id="contentPanel">
+    <div class="welcome" id="welcomeScreen">
+      <div class="welcome-icon">🛡️</div>
+      <h2>Pick a day to begin</h2>
+      <p>Select any day from the sidebar to view the full curriculum. Start with Day 01 or jump to wherever you are.</p>
+    </div>
+    <div id="dayContent" style="display:none;">
+      <div class="day-header">
+        <div class="day-phase-badge" id="dayBadge"></div>
+        <h1 id="dayTitle"></h1>
+        <div class="day-cert" id="dayCert"></div>
+        <div class="day-goal" id="dayGoal"></div>
+        <div class="day-nav">
+          <button class="day-nav-btn" id="prevBtn" onclick="navDay(-1)">← Previous</button>
+          <button class="day-nav-btn" id="nextBtn" onclick="navDay(1)">Next →</button>
+        </div>
+      </div>
+      <div class="md-content" id="mdContent"></div>
+    </div>
+  </main>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© <span id="yr"></span> Link2Cyber · Built by <a href="index.html#about">Ben Linkous</a> · NRV / SW Virginia · <a href="index.html#contact">Contact</a></p>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ── CURRICULUM DATA ──────────────────────────────────────────
+const DAYS = [
+  {n:1,phase:1,cert:"ITF+, A+, Security+, Linux+",goal:"Set up LinksOS environment and begin Linux CLI basics",content:`# Link2Cyber Bootcamp — Day 01\n**Phase:** Fundamentals · **Certs:** ITF+, A+, Security+, Linux+\n\n## Modules & Activities\n\n### 1. System Orientation & Cyber Foundations\n- Set up LinksOS VM or base system and Obsidian vault\n- **Objectives**: ITF+ 1.1, 2.1 | A+ 220-1101 1.1 | Linux+ 1.1, 1.2\n- **Tools**: neofetch, inxi, bash, sudo\n\n### 2. Linux CLI Basics\n- Navigate file system using \`ls\`, \`cd\`, \`mkdir\`, \`rm\`, \`mv\`, \`touch\`\n- **Lab**: TryHackMe – Linux Fundamentals Part 1\n- **Objectives**: ITF+ 2.1 | A+ 220-1102 1.6 | Linux+ 1.1, 1.2, 2.1\n- **Tools**: bash, nano, grep\n\n### 3. System Identity + Markdown Notes\n- Run neofetch/inxi and document results\n- **Lab**: TryHackMe – Intro to Cybersecurity\n- **Objectives**: ITF+ 1.1 | A+ 1.3 | Linux+ 1.1\n- **Tools**: neofetch, inxi, git\n\n### 4. Networking Intro\n- Use \`ip\`, \`traceroute\`, \`dig\`, \`ping\` to explore local networking\n- **Lab**: TryHackMe – Network Security 101\n- **Objectives**: ITF+ 2.3 | A+ 220-1101 2.2 | Security+ 1.1 | Linux+ 2.2\n- **Tools**: ip, traceroute, dig, ping\n\n### 5. Project: Create System Report Script\n- Automate neofetch/inxi output to markdown with \`date\` stamp\n- **Objectives**: Linux+ 1.3, 2.2, 3.2 | ITF+ 4.2\n- **Tools**: bash, nano, grep, neofetch, inxi, date\n\n### 6. End-of-Day Wrap-Up\n- Commit notes to Git, update Obsidian vault\n- **Objectives**: ITF+ 1.1, 4.1 | A+ 1.1 | Linux+ 3.3\n- **Tools**: git, markdown, Obsidian\n\n## Documentation Checklist\n- [ ] System report script committed to Git\n- [ ] TryHackMe rooms completed\n- [ ] Obsidian vault initialized\n\n\`\`\`bash\ngit add . && git commit -m "Day 01 – System Orientation and Linux CLI Basics" && git push origin main\n\`\`\``},
+];
+
+// Generate remaining days programmatically since embedding all 80 is too large
+// We'll build them dynamically with phase/cert info
+const PHASE_INFO = {
+  1: {label:"📘 Phase 1 — Fundamentals", color:"amber", certs:["ITF+","A+","Security+","Linux+"]},
+  2: {label:"🔐 Phase 2 — Basic Security", color:"blue", certs:["CySA+","Network+","PenTest+","Linux+"]},
+  3: {label:"🚀 Phase 3 — Advanced Security", color:"red", certs:["SecurityX","CAS-005"]}
+};
+
+const CERT_BY_DAY = {
+  1:"ITF+, A+, Security+, Linux+", 2:"ITF+, A+, Security+, Linux+", 3:"ITF+, A+, Security+, Linux+",
+  4:"ITF+, A+, Security+, Linux+", 5:"A+, Tech+, Security+, Linux+", 6:"A+, Tech+, Security+, Linux+",
+  7:"A+, Tech+, Security+, Linux+", 8:"A+, Tech+, Security+, Linux+", 9:"A+, Tech+, Security+, Linux+",
+  10:"A+, Tech+, Security+, Linux+", 11:"A+, Tech+, Security+, Linux+", 12:"A+, Tech+, Security+, Linux+",
+  13:"A+, Tech+, Security+, Linux+", 14:"A+, Tech+, Security+, Linux+", 15:"A+, Tech+, Security+, Linux+",
+  16:"A+, Tech+, Security+, Linux+", 17:"A+, Tech+, Security+, Linux+", 18:"A+, Tech+, Security+, Linux+",
+  19:"A+, Tech+, Security+, Linux+", 20:"A+, Tech+, Security+, Linux+", 21:"A+ 220-1102, Tech+",
+  22:"A+ 220-1102, Tech+", 23:"A+ 220-1102, Tech+", 24:"A+ 220-1102, Tech+", 25:"A+ 220-1102, Tech+",
+  26:"Security+ SY0-601", 27:"Security+ SY0-601", 28:"Security+ SY0-601", 29:"Security+ SY0-601", 30:"Security+ SY0-601",
+  31:"CySA+ CS0-003, Linux+", 32:"CySA+ CS0-003, Linux+", 33:"CySA+ CS0-003, Linux+", 34:"CySA+ CS0-003, Linux+",
+  35:"CySA+ CS0-003, Linux+", 36:"CySA+ CS0-003, Linux+", 37:"CySA+ CS0-003, Linux+", 38:"CySA+ CS0-003, Linux+",
+  39:"CySA+ CS0-003, Linux+", 40:"CySA+ CS0-003, Linux+", 41:"Network+ N10-008, Linux+", 42:"Network+ N10-008, Linux+",
+  43:"Network+ N10-008, Linux+", 44:"Network+ N10-008, Linux+", 45:"PenTest+ PT0-002, Linux+",
+  46:"PenTest+ PT0-002, Linux+", 47:"PenTest+ PT0-002, Linux+", 48:"PenTest+ PT0-002, Linux+",
+  49:"PenTest+ PT0-002, Linux+", 50:"PenTest+ PT0-002, Linux+",
+  51:"Linux+ XK0-005", 52:"Linux+ XK0-005", 53:"Linux+ XK0-005", 54:"Linux+ XK0-005", 55:"Linux+ XK0-005",
+  56:"Linux+ XK0-005", 57:"Linux+ XK0-005", 58:"Linux+ XK0-005", 59:"Linux+ XK0-005", 60:"Linux+ XK0-005",
+  61:"SecurityX CAS-005", 62:"SecurityX CAS-005", 63:"SecurityX CAS-005", 64:"SecurityX CAS-005", 65:"SecurityX CAS-005",
+  66:"SecurityX CAS-005", 67:"SecurityX CAS-005", 68:"SecurityX CAS-005", 69:"SecurityX CAS-005", 70:"SecurityX CAS-005",
+  71:"SecurityX CAS-005", 72:"SecurityX CAS-005", 73:"SecurityX CAS-005", 74:"SecurityX CAS-005", 75:"SecurityX CAS-005",
+  76:"SecurityX CAS-005", 77:"SecurityX CAS-005", 78:"SecurityX CAS-005", 79:"SecurityX CAS-005", 80:"SecurityX CAS-005"
+};
+
+const TOPIC_BY_DAY = {
+  1:"System Orientation, Linux CLI Basics", 2:"File Management, Permissions", 3:"Process Management, Package Manager",
+  4:"Disk Management, Backup Script", 5:"Hardware Troubleshooting, Social Engineering", 6:"OS Installation, Boot Process",
+  7:"Filesystem Management, Malware Detection", 8:"Secure Protocols, Package Management", 9:"Operational Procedures, Risk Management",
+  10:"Remote Access, SSH Hardening", 11:"Mobile Security, File Permissions", 12:"Systemd Services, Host Hardening",
+  13:"DNS Configuration, Secure Web Access", 14:"Virtualization, VM Security", 15:"Backup & Recovery, rsync",
+  16:"Account Management, Sudo Hardening", 17:"Malware Detection, Threat Response", 18:"File Encryption, GPG, Hashing",
+  19:"Mobile Device Management, BYOD", 20:"Cloud Models, IAM Basics", 21:"A+ Readiness, Tech+ Review",
+  22:"Support Simulation, Secure Configuration", 23:"Flashcard Mastery, Troubleshooting Drill", 24:"Full Mock Exam, CLI Drill",
+  25:"Cert Readiness, Final Reflection", 26:"Threat Categories, Misconfigurations", 27:"Network Security, Secure Protocols",
+  28:"Risk Management, Security Policies", 29:"Cryptography, PKI Basics", 30:"Incident Response, Security+ Readiness",
+  31:"Threat Detection, Log Analysis", 32:"Vulnerability Scanning, System Hardening", 33:"Host-Based Security, SIEM Logs",
+  34:"Incident Response Phases, Recovery", 35:"Anomaly Detection, Baselines", 36:"Threat Hunting, IOC Identification",
+  37:"IAM Models, Access Control", 38:"System Hardening, Audit Controls", 39:"NIDS with Suricata, Fail2ban",
+  40:"CySA+ Final Review, Exam Readiness", 41:"Network Fundamentals, OSI Model", 42:"Network Devices, Cable Types",
+  43:"IP Addressing, Subnetting", 44:"DHCP, DNS, Wireless, NAT", 45:"PenTest Planning, Legal Scope",
+  46:"Active Recon, Nmap Scanning", 47:"Vulnerability Chains, ExploitDB", 48:"Privilege Escalation, Post-Exploitation",
+  49:"Web App Attacks, OWASP Top 10", 50:"PenTest+ Final Review", 51:"User/Group Management, ACLs",
+  52:"Partitions, Filesystem Setup", 53:"Process Management, Systemd", 54:"Network Config, Firewall Rules",
+  55:"Package Management, Log Analysis", 56:"Multi-Domain Lab, Health Dashboard", 57:"Troubleshooting, Disaster Recovery",
+  58:"PAM, SELinux/AppArmor", 59:"Backup, Cron Jobs", 60:"Linux+ Final Review, Portfolio",
+  61:"Governance, Risk Frameworks", 62:"Control Types, Asset Classification", 63:"Vulnerability Management, Patch Cycles",
+  64:"Secure SDLC, DevSecOps", 65:"Cryptography, PKI Infrastructure", 66:"Incident Response, Playbooks",
+  67:"Digital Forensics, Evidence Handling", 68:"SIEM Architecture, Alert Tuning", 69:"EDR, Host Hardening",
+  70:"Zero Trust Architecture, IAM Federation", 71:"Business Continuity, Disaster Recovery", 72:"Threat Intelligence, MITRE ATT&CK",
+  73:"Cloud Security, IAM", 74:"Container Security, Docker Hardening", 75:"Secure SDLC, Code Review",
+  76:"API Security, OWASP API Top 10", 77:"Data Classification, DLP", 78:"Vendor Risk, SLA Security",
+  79:"Security Governance, KPIs", 80:"SecurityX Final Review, Capstone"
+};
+
+// Build full day list
+const allDays = [];
+for (let i = 1; i <= 80; i++) {
+  const phase = i <= 30 ? 1 : i <= 55 ? 2 : 3;
+  allDays.push({
+    n: i,
+    phase,
+    cert: CERT_BY_DAY[i] || "",
+    topic: TOPIC_BY_DAY[i] || `Day ${i}`,
+    goal: TOPIC_BY_DAY[i] || ""
+  });
+}
+
+let currentDay = null;
+let currentFilter = 0;
+let currentSearch = "";
+
+// ── SIDEBAR RENDER ────────────────────────────────────────────
+function renderSidebar(days) {
+  const container = document.getElementById('sidebarContent');
+  const phases = [1,2,3];
+  const phaseLabels = {
+    1: {dot:"p1", label:"Phase 1 — Fundamentals", range:"Days 1–30"},
+    2: {dot:"p2", label:"Phase 2 — Basic Security", range:"Days 31–55"},
+    3: {dot:"p3", label:"Phase 3 — Advanced", range:"Days 56–80"}
+  };
+  let html = '';
+  for (const ph of phases) {
+    const pDays = days.filter(d => d.phase === ph);
+    if (pDays.length === 0) continue;
+    const info = phaseLabels[ph];
+    html += `<div class="phase-group">
+      <div class="phase-heading">
+        <span class="ph-dot ${info.dot}"></span>
+        <span>${info.range}</span>
+      </div>`;
+    for (const d of pDays) {
+      const active = currentDay === d.n ? 'active' : '';
+      html += `<button class="day-btn ${active}" onclick="showDay(${d.n})" id="btn-${d.n}">
+        <span class="day-num">${String(d.n).padStart(2,'0')}</span>
+        <span class="day-label">${d.topic}</span>
+      </button>`;
+    }
+    html += '</div>';
+  }
+  if (!html) html = `<div class="no-results">No days match</div>`;
+  container.innerHTML = html;
+}
+
+// ── FILTER ────────────────────────────────────────────────────
+function filterPhase(ph, btn) {
+  currentFilter = ph;
+  document.querySelectorAll('.phase-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function doSearch(val) {
+  currentSearch = val.toLowerCase();
+  applyFilters();
+}
+
+function applyFilters() {
+  let filtered = allDays;
+  if (currentFilter > 0) filtered = filtered.filter(d => d.phase === currentFilter);
+  if (currentSearch) filtered = filtered.filter(d =>
+    d.topic.toLowerCase().includes(currentSearch) ||
+    d.cert.toLowerCase().includes(currentSearch) ||
+    String(d.n).includes(currentSearch)
+  );
+  renderSidebar(filtered);
+}
+
+// ── SHOW DAY ──────────────────────────────────────────────────
+function showDay(n) {
+  currentDay = n;
+  const d = allDays.find(x => x.n === n);
+  if (!d) return;
+
+  // Update sidebar active state
+  document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById(`btn-${n}`);
+  if (btn) { btn.classList.add('active'); btn.scrollIntoView({block:'nearest'}); }
+
+  // Hide welcome, show content
+  document.getElementById('welcomeScreen').style.display = 'none';
+  document.getElementById('dayContent').style.display = 'block';
+
+  // Badge
+  const phaseNames = {1:'📘 Phase 1 · Fundamentals', 2:'🔐 Phase 2 · Basic Security', 3:'🚀 Phase 3 · Advanced Security'};
+  const badgeClasses = {1:'badge-p1', 2:'badge-p2', 3:'badge-p3'};
+  const badge = document.getElementById('dayBadge');
+  badge.textContent = phaseNames[d.phase];
+  badge.className = `day-phase-badge ${badgeClasses[d.phase]}`;
+
+  document.getElementById('dayTitle').textContent = `Day ${String(n).padStart(2,'0')}`;
+  document.getElementById('dayCert').innerHTML = d.cert ? `<span>Cert Focus:</span> ${d.cert}` : '';
+  document.getElementById('dayGoal').textContent = d.goal ? `Goal: ${d.goal}` : '';
+
+  // Nav buttons
+  document.getElementById('prevBtn').disabled = n <= 1;
+  document.getElementById('nextBtn').disabled = n >= 80;
+
+  // Render markdown content
+  const content = buildDayContent(n, d);
+  document.getElementById('mdContent').innerHTML = marked.parse(content);
+
+  // Scroll to top of content
+  document.getElementById('contentPanel').scrollTo({top: 0});
+  window.scrollTo({top: 0});
+}
+
+function buildDayContent(n, d) {
+  // Build structured content for each day
+  const ph = d.phase;
+  const phaseContext = {
+    1: "This phase covers **Tech+, A+, and Security+** fundamentals. Focus on building Linux CLI skills, understanding hardware/software concepts, and preparing for core CompTIA certifications.",
+    2: "This phase covers **CySA+, Network+, PenTest+, and Linux+**. You'll dive into security operations, network analysis, penetration testing methodology, and Linux system administration.",
+    3: "This phase covers **SecurityX (CAS-005)**. This is the advanced sprint covering enterprise security architecture, governance, incident response, forensics, and security leadership."
+  };
+
+  const tools = {
+    1: "TryHackMe, Bash, Git, Obsidian, neofetch, inxi, ufw, gpg, rsync",
+    2: "TryHackMe, HackTheBox, Nmap, Wireshark, Suricata, Metasploit, Burp Suite",
+    3: "HackTheBox, Wazuh, SIEM, OpenSSL, Docker, Trivy, Postman, MITRE ATT&CK"
+  };
+
+  return `## Day ${n} — ${d.topic}
+
+${phaseContext[ph]}
+
+### Today's Certification Focus
+**${d.cert}**
+
+### Today's Topic
+${d.topic}
+
+### What You'll Do Today
+- Study the core concepts mapped to today's certification objectives
+- Complete hands-on labs using TryHackMe or Hack The Box
+- Build documentation in your Obsidian vault and commit to GitHub
+- Complete the project of the day and add it to your portfolio
+
+### Tools & Platforms
+\`\`\`
+${tools[ph]}
+\`\`\`
+
+### Documentation Checklist
+- [ ] Study notes committed to Git
+- [ ] Lab completed and screenshots saved
+- [ ] Project of the day documented
+- [ ] Obsidian vault updated
+
+\`\`\`bash
+git add . && git commit -m "Day ${String(n).padStart(2,'0')} – ${d.topic}" && git push origin main
+\`\`\`
+
+---
+
+> **Note:** Full detailed day files including specific lab links, task breakdowns, and project specs are in the [GitHub repository](https://github.com/benlinkous/link2cyber.com). Clone the repo to get the complete curriculum locally.
+
+### Ready for Day ${n < 80 ? n+1 : n}?
+${n < 80 ? `Move to [Day ${n+1}](#) when you've completed all tasks, committed your documentation, and feel confident with today's material.` : `🎉 **You've completed all 80 days!** You now have a complete cybersecurity portfolio and are ready to sit for SecurityX. Congratulations.`}`;
+}
+
+function navDay(dir) {
+  if (currentDay) showDay(currentDay + dir);
+}
+
+// ── INIT ──────────────────────────────────────────────────────
+renderSidebar(allDays);
+
+// Auto-open Day 1 on load
+showDay(1);
+
+// Handle URL hash
+if (window.location.hash) {
+  const n = parseInt(window.location.hash.replace('#day-',''));
+  if (n >= 1 && n <= 80) showDay(n);
+}
+</script>
+</body>
+</html>

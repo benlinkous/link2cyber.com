@@ -678,6 +678,37 @@
     }
 
     /* ─── RESPONSIVE ─── */
+
+    /* Mobile nav toggle */
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+    .mobile-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+    }
+    .navlinks.mobile-open {
+      display: flex !important;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: rgba(8,13,18,0.98);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      gap: 12px;
+    }
+
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
@@ -689,6 +720,7 @@
       .stat:nth-child(even) { border-bottom: none; }
       .contact-wrapper { grid-template-columns: 1fr; padding: 32px; }
       .navlinks { display: none; }
+      .mobile-toggle { display: flex; }
       .footer-inner { flex-direction: column; text-align: center; }
       .programs-header { flex-direction: column; align-items: flex-start; gap: 16px; }
     }
@@ -740,9 +772,13 @@
 <header>
   <nav>
     <a href="#" class="brand">link<span>/</span>2cyber</a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="navlinks">
       <li><a href="#programs">Programs</a></li>
       <li><a href="#bootcamp">80-Day Bootcamp</a></li>
+      <li><a href="curriculum.html">Full Curriculum</a></li>
       <li><a href="#schools">Schools</a></li>
       <li><a href="#businesses">Businesses</a></li>
       <li><a href="#about">About</a></li>
@@ -1132,7 +1168,7 @@
             <div class="contact-icon">✉</div>
             <div>
               <div class="contact-text">Email</div>
-              <div class="contact-val">you@yourdomain.com</div>
+              <div class="contact-val">benlinkous@link2cyber.com</div>
             </div>
           </div>
           <div class="contact-item">
@@ -1187,7 +1223,7 @@
           <label class="form-label">Your message</label>
           <textarea class="form-textarea" placeholder="Any other details — format preference, group size, budget, etc."></textarea>
         </div>
-        <a href="mailto:you@yourdomain.com?subject=Link2Cyber%20Inquiry" class="btn btn-primary" style="width:100%; justify-content:center;">Send Inquiry →</a>
+        <a href="mailto:benlinkous@link2cyber.com?subject=Link2Cyber%20Inquiry" class="btn btn-primary" style="width:100%; justify-content:center;">Send Inquiry →</a>
       </div>
     </div>
   </div>
@@ -1225,6 +1261,12 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Mobile nav
+  const toggle = document.getElementById('mobileToggle');
+  const navlinks = document.querySelector('.navlinks');
+  if (toggle) toggle.addEventListener('click', () => navlinks.classList.toggle('mobile-open'));
+
 </script>
 </body>
 </html>
