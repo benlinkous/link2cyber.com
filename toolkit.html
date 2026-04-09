@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Toolkit — Technology for Everyone | Link2Cyber</title>
+  <meta name="description" content="AI-assisted coding, web development, app development, AI integration, AI for business, and tech repair. Technology is no longer locked behind a CS degree — Link2Cyber IT Toolkit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #08090c; --surface: #0f1117; --surface2: #141820; --surface3: #1a2030;
+      --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.12);
+      --text: #eef0f4; --muted: #7a8499; --faint: #3a4055;
+      --accent: #00d4ff; --accent-dim: rgba(0,212,255,0.12);
+      --accent2: #7c3aed; --accent2-dim: rgba(124,58,237,0.12);
+      --green: #00c896; --green-dim: rgba(0,200,150,0.12);
+      --amber: #f59e0b; --amber-dim: rgba(245,158,11,0.12);
+      --coral: #f43f5e; --coral-dim: rgba(244,63,94,0.12);
+      --sans: 'Space Grotesk', sans-serif;
+      --mono: 'Space Mono', monospace;
+      --display: 'Syne', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.65; overflow-x: hidden; }
+    body::after { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.025; pointer-events: none; z-index: 999; }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2.5rem; background: rgba(8,9,12,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--display); font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-back { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+    .nav-back:hover { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--accent); color: var(--bg) !important; padding: 0.5rem 1.1rem; font-weight: 700 !important; transition: opacity 0.2s !important; }
+    .nav-cta:hover { opacity: 0.85 !important; }
+    .nav-toggle { display: none; background: none; border: 1px solid var(--border2); padding: 0.45rem 0.6rem; cursor: pointer; }
+    .nav-toggle span { display: block; width: 18px; height: 1px; background: var(--text); margin: 3px 0; }
+    @media(max-width:720px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 0; background: rgba(10,11,16,0.98); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; }
+    }
+
+    /* HERO */
+    .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding: 6rem 2.5rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 80% 20%, rgba(0,212,255,0.07) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 10% 80%, rgba(124,58,237,0.07) 0%, transparent 60%); }
+    .hero-inner { max-width: 800px; position: relative; z-index: 1; }
+    .hero-prompt { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .prompt-cursor { display: inline-block; width: 8px; height: 14px; background: var(--accent); animation: blink 1.2s step-end infinite; vertical-align: text-bottom; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero h1 { font-family: var(--display); font-size: clamp(2.6rem, 6.5vw, 5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.0; margin-bottom: 1.25rem; }
+    .hero h1 .a1 { color: var(--accent); }
+    .hero h1 .a2 { color: var(--accent2); }
+    .hero-sub { font-size: 1.1rem; font-weight: 300; color: var(--muted); max-width: 580px; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-sub strong { color: var(--text); font-weight: 500; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .btn-p { display: inline-block; background: var(--accent); color: var(--bg); font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; padding: 0.85rem 1.75rem; transition: opacity 0.15s; }
+    .btn-p:hover { opacity: 0.85; }
+    .btn-o { display: inline-block; background: transparent; color: var(--text); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.05em; padding: 0.85rem 1.75rem; border: 1px solid var(--border2); transition: border-color 0.2s; }
+    .btn-o:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-stats { display: flex; gap: 3rem; flex-wrap: wrap; border-top: 1px solid var(--border); padding-top: 2rem; }
+    .stat-num { font-family: var(--display); font-size: 2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .stat-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; color: var(--muted); margin-top: 0.25rem; }
+
+    /* TRUTH BAND */
+    .truth-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2.5rem; text-align: center; }
+    .truth-band p { font-family: var(--display); font-size: clamp(1.05rem, 2.2vw, 1.45rem); font-weight: 700; letter-spacing: -0.02em; color: var(--text); max-width: 800px; margin: 0 auto; line-height: 1.5; }
+    .truth-band p em { color: var(--accent); font-style: normal; }
+
+    /* SECTIONS */
+    .section-wrap { padding: 5rem 2.5rem; max-width: 1140px; margin: 0 auto; }
+    .section-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: '//'; color: var(--faint); }
+    .section-title { font-family: var(--display); font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; line-height: 1.1; }
+    .section-sub { color: var(--muted); font-size: 1rem; max-width: 520px; line-height: 1.75; margin-bottom: 3rem; }
+
+    /* PILLARS */
+    .pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); }
+    .pillar { background: var(--surface); padding: 2rem; transition: background 0.2s; position: relative; overflow: hidden; }
+    .pillar::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+    .pillar:hover { background: var(--surface2); }
+    .p1::before { background: var(--accent); }
+    .p2::before { background: var(--accent2); }
+    .p3::before { background: var(--green); }
+    .p4::before { background: var(--amber); }
+    .p5::before { background: var(--coral); }
+    .p6::before { background: var(--accent); }
+    .pillar-num { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--faint); margin-bottom: 1rem; }
+    .pillar-icon { font-size: 1.75rem; margin-bottom: 1rem; display: block; }
+    .pillar h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+    .pillar p { font-size: 0.875rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+    .pillar-tag { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.12em; padding: 0.25rem 0.6rem; display: inline-block; }
+    .tag-accent { background: var(--accent-dim); color: var(--accent); }
+    .tag-purple { background: var(--accent2-dim); color: #a78bfa; }
+    .tag-green { background: var(--green-dim); color: var(--green); }
+    .tag-amber { background: var(--amber-dim); color: var(--amber); }
+    .tag-coral { background: var(--coral-dim); color: #fb7185; }
+
+    /* STORY */
+    .story-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 2.5rem; }
+    .story-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .story-text p { font-size: 1rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
+    .story-text p strong { color: var(--text); }
+    .story-text a { color: var(--accent); }
+    .story-terminal { background: var(--bg); border: 1px solid var(--border2); overflow: hidden; }
+    .term-bar { background: var(--surface2); padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border); }
+    .term-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .td-r { background: #ff5f57; } .td-y { background: #febc2e; } .td-g { background: #28c840; }
+    .term-title { font-family: var(--mono); font-size: 0.6rem; color: var(--faint); margin-left: 0.5rem; }
+    .term-body { padding: 1.25rem; font-family: var(--mono); font-size: 0.75rem; line-height: 2; }
+    .t-p { color: var(--accent); } .t-c { color: var(--text); } .t-o { color: var(--muted); } .t-s { color: var(--green); }
+    .t-cur { display: inline-block; width: 7px; height: 13px; background: var(--accent); vertical-align: text-bottom; animation: blink 1.2s step-end infinite; }
+
+    /* WHO */
+    .who-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 2rem; }
+    .who-card { background: var(--surface); border: 1px solid var(--border); padding: 1.75rem; transition: border-color 0.2s; }
+    .who-card:hover { border-color: var(--border2); }
+    .who-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+    .who-card h3 { font-family: var(--display); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .who-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+
+    /* NETWORK */
+    .network-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 2.5rem; }
+    .network-inner { max-width: 1140px; margin: 0 auto; }
+    .network-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); margin-top: 2rem; }
+    .network-item { background: var(--bg); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; transition: background 0.15s; text-decoration: none; color: inherit; }
+    .network-item:hover { background: var(--surface2); }
+    .network-domain { font-family: var(--mono); font-size: 0.8rem; font-weight: 700; color: var(--accent); }
+    .network-desc { font-size: 0.82rem; color: var(--muted); flex: 1; }
+    .network-badge { font-family: var(--mono); font-size: 0.6rem; padding: 2px 7px; background: var(--accent-dim); color: var(--accent); white-space: nowrap; }
+
+    /* CTA */
+    .cta-section { background: var(--surface2); border-top: 1px solid var(--border); padding: 5rem 2.5rem; text-align: center; }
+    .cta-inner { max-width: 600px; margin: 0 auto; }
+    .cta-inner h2 { font-family: var(--display); font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .cta-inner p { color: var(--muted); font-size: 1rem; line-height: 1.75; margin-bottom: 2rem; }
+    .contact-row { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .contact-item { display: flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.05em; color: var(--muted); transition: color 0.15s; }
+    .contact-item:hover { color: var(--text); }
+    .contact-dot { color: var(--accent); }
+
+    /* FOOTER */
+    footer { padding: 2rem 2.5rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .footer-brand { font-family: var(--display); font-size: 1rem; font-weight: 800; letter-spacing: -0.02em; }
+    .footer-brand em { color: var(--accent); font-style: normal; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.08em; color: var(--faint); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; color: var(--faint); }
+
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s, transform 0.6s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media(max-width:900px) {
+      .hero { padding: 5rem 1.5rem 4rem; }
+      .section-wrap { padding: 3.5rem 1.5rem; }
+      .pillars-grid, .who-grid { grid-template-columns: 1fr; }
+      .story-section { padding: 3.5rem 1.5rem; }
+      .story-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cta-section { padding: 3.5rem 1.5rem; }
+      footer { flex-direction: column; text-align: center; padding: 1.75rem 1.5rem; }
+      .footer-links { justify-content: center; }
+      .hero-stats { gap: 2rem; }
+      .network-item { flex-direction: column; align-items: flex-start; gap: 4px; }
+    }
+    @media(max-width:560px) { .pillars-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← link2cyber.com</a>
+  <div class="nav-logo"><em>Link2</em>IT Toolkit</div>
+  <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#pillars">What We Cover</a></li>
+    <li><a href="#story">The Idea</a></li>
+    <li><a href="#who">Who This Is For</a></li>
+    <li><a href="#network">Network</a></li>
+    <li><a href="projects.html" class="nav-cta">100 Projects →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-prompt">
+      <span>$ link2it --init</span><span class="prompt-cursor"></span>
+    </div>
+    <h1>You don't have to be<br>a <span class="a1">programmer</span><br>to build <span class="a2">remarkable</span> things.</h1>
+    <p class="hero-sub"><strong>AI changed the rules.</strong> Web development, app development, coding, tech repair, and business automation are no longer locked behind a computer science degree. They never had to be.</p>
+    <div class="hero-actions">
+      <a href="#pillars" class="btn-p">Explore the Possibilities</a>
+      <a href="projects.html" class="btn-o">100 Projects Bootcamp →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">22</div>
+        <div class="stat-label">Sites built by a non-developer</div>
+      </div>
+      <div>
+        <div class="stat-num">6</div>
+        <div class="stat-label">Tech pillars anyone can learn</div>
+      </div>
+      <div>
+        <div class="stat-num">0</div>
+        <div class="stat-label">CS degrees required</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUTH BAND -->
+<div class="truth-band">
+  <p>AI didn't just make coding easier. It made technology <em>accessible</em> — to veterans, career changers, small business owners, and anyone willing to learn how to ask the right questions.</p>
+</div>
+
+<!-- PILLARS -->
+<section class="section-wrap" id="pillars">
+  <div class="section-label">What We Cover</div>
+  <h2 class="section-title">Six Pillars. Zero Prerequisites.</h2>
+  <p class="section-sub">From fixing a laptop to shipping an app — here's what becomes possible when you stop waiting to feel ready.</p>
+  <div class="pillars-grid reveal">
+    <div class="pillar p1">
+      <div class="pillar-num">01</div>
+      <span class="pillar-icon">🔧</span>
+      <h3>Tech Repair</h3>
+      <p>Diagnosing hardware issues, fixing software problems, and maintaining the devices that businesses and individuals depend on. No tools — just knowledge and method. Connects directly to the A+ 220-1201/1202 curriculum in the bootcamp.</p>
+      <span class="pillar-tag tag-accent">Hands-On</span>
+    </div>
+    <div class="pillar p2">
+      <div class="pillar-num">02</div>
+      <span class="pillar-icon">🤖</span>
+      <h3>AI-Assisted Coding</h3>
+      <p>Writing real, working code with AI as your co-pilot. You bring the problem and the intent — AI helps with the syntax. The results are indistinguishable from a developer's work when you understand what you're asking for.</p>
+      <span class="pillar-tag tag-purple">AI-Powered</span>
+    </div>
+    <div class="pillar p3">
+      <div class="pillar-num">03</div>
+      <span class="pillar-icon">🌐</span>
+      <h3>Web Development</h3>
+      <p>Building professional websites from scratch — landing pages, portfolios, business sites. HTML, CSS, GitHub Pages, and modern deployment workflows. No agency required. The 22-site LINKS network was built exactly this way.</p>
+      <span class="pillar-tag tag-green">Build It</span>
+    </div>
+    <div class="pillar p4">
+      <div class="pillar-num">04</div>
+      <span class="pillar-icon">📱</span>
+      <h3>App Development</h3>
+      <p>What's possible in app development when AI handles the heavy lifting. From simple tools to functional prototypes — without a CS degree or a dev team. Proof: everything on this network was built without either.</p>
+      <span class="pillar-tag tag-amber">Create</span>
+    </div>
+    <div class="pillar p5">
+      <div class="pillar-num">05</div>
+      <span class="pillar-icon">⚡</span>
+      <h3>AI Integration</h3>
+      <p>Adding AI to existing workflows, tools, and systems. Automation, content generation, data analysis, and intelligent assistants — built by non-developers, for real use cases. This is the skillset that matters right now.</p>
+      <span class="pillar-tag tag-coral">Automate</span>
+    </div>
+    <div class="pillar p6">
+      <div class="pillar-num">06</div>
+      <span class="pillar-icon">💼</span>
+      <h3>AI for Business</h3>
+      <p>Practical AI adoption for small businesses, nonprofits, and organizations. What it actually looks like to run a smarter operation using tools available right now — no IT department required. Connects to NRV Managed IT.</p>
+      <span class="pillar-tag tag-accent">For Business</span>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<div class="story-section" id="story">
+  <div class="story-inner">
+    <div class="story-text reveal">
+      <div class="section-label">The Idea</div>
+      <h2 class="section-title">Proof That It Works</h2>
+      <p>Everything on this network — 22 websites, custom layouts, Git workflows, deployment pipelines, CSS design systems, and a 100-project cybersecurity bootcamp — was built by a <strong>retired Army Master Sergeant</strong> with no formal computer science training.</p>
+      <p>Not because he's exceptional. Because the tools changed. <strong>AI made it possible</strong> to move from idea to execution without years of prior experience getting in the way.</p>
+      <p>The IT Toolkit documents that process honestly — what works, what doesn't, and what becomes possible when you stop waiting to feel qualified and just start building.</p>
+      <p>The cybersecurity path is at <a href="projects.html">the 100 Projects bootcamp</a>. This covers everything else.</p>
+    </div>
+    <div class="story-terminal reveal">
+      <div class="term-bar">
+        <div class="term-dot td-r"></div>
+        <div class="term-dot td-y"></div>
+        <div class="term-dot td-g"></div>
+        <span class="term-title">link2it — what-became-possible.sh</span>
+      </div>
+      <div class="term-body">
+        <div><span class="t-p">$</span> <span class="t-c">./what-i-built.sh</span></div>
+        <div><span class="t-s">✓</span> <span class="t-o">22 websites designed and deployed</span></div>
+        <div><span class="t-s">✓</span> <span class="t-o">Custom HTML/CSS layouts from scratch</span></div>
+        <div><span class="t-s">✓</span> <span class="t-o">Git workflows and SSH authentication</span></div>
+        <div><span class="t-s">✓</span> <span class="t-o">CSS design systems across a portfolio</span></div>
+        <div><span class="t-s">✓</span> <span class="t-o">100-project cybersecurity bootcamp browser</span></div>
+        <div><span class="t-s">✓</span> <span class="t-o">AI-assisted code — zero CS degree</span></div>
+        <div style="margin-top:8px;"><span class="t-p">$</span> <span class="t-c">echo "prerequisites"</span></div>
+        <div><span class="t-o">→ willingness to learn</span></div>
+        <div><span class="t-o">→ patience with the process</span></div>
+        <div><span class="t-o">→ AI as a co-pilot, not a crutch</span></div>
+        <div style="margin-top:8px;"><span class="t-p">$</span> <span class="t-cur"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO -->
+<section class="section-wrap" id="who">
+  <div class="section-label">Who This Is For</div>
+  <h2 class="section-title" style="font-size:clamp(1.4rem,2.8vw,2rem);">You Don't Need a Degree. You Need a Direction.</h2>
+  <p class="section-sub">The IT Toolkit is for people who have been told technology isn't for them. It is.</p>
+  <div class="who-grid reveal">
+    <div class="who-card">
+      <span class="who-icon">🎖️</span>
+      <h3>Veterans in Transition</h3>
+      <p>You spent years solving complex problems under pressure. The technical skills are learnable. The discipline you already have is the hard part — and you've got it.</p>
+    </div>
+    <div class="who-card">
+      <span class="who-icon">🏪</span>
+      <h3>Small Business Owners</h3>
+      <p>You don't need a full IT department. You need to understand what AI and technology can do for your operation — and what it costs not to pay attention to both.</p>
+    </div>
+    <div class="who-card">
+      <span class="who-icon">🔄</span>
+      <h3>Career Changers</h3>
+      <p>Moving into tech without a CS background is harder than it should be — but not impossible. This documents a real path, not a theoretical one.</p>
+    </div>
+    <div class="who-card">
+      <span class="who-icon">🏫</span>
+      <h3>Educators &amp; Students</h3>
+      <p>Technology literacy is becoming as fundamental as reading. Understanding what's possible with AI — and how to use it responsibly — matters at every level.</p>
+    </div>
+    <div class="who-card">
+      <span class="who-icon">🤲</span>
+      <h3>Nonprofits &amp; Organizations</h3>
+      <p>Limited budgets don't have to mean limited capability. AI tools and modern web technology level the playing field for organizations doing good work.</p>
+    </div>
+    <div class="who-card">
+      <span class="who-icon">💡</span>
+      <h3>The Curious</h3>
+      <p>You don't need a specific career goal. If you're curious about what technology can do and want to understand it better — you belong here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LINKS NETWORK -->
+<div class="network-section" id="network">
+  <div class="network-inner">
+    <div class="section-label">Part of the LINKS Network</div>
+    <h2 class="section-title" style="font-size:clamp(1.4rem,3vw,2rem); margin-bottom:0.5rem;">Connected sites worth knowing.</h2>
+    <p style="color:var(--muted); font-size:0.9rem; max-width:500px; line-height:1.7;">The IT Toolkit is the technology literacy layer of a broader network built around learning, community, and getting things done in the New River Valley and beyond.</p>
+    <div class="network-list reveal">
+      <a href="https://link2cyber.com" target="_blank" rel="noopener" class="network-item">
+        <div class="network-domain">link2cyber.com</div>
+        <div class="network-desc">Free 100-project cybersecurity bootcamp — zero to CompTIA SecurityX (CAS-005)</div>
+        <span class="network-badge">Live</span>
+      </a>
+      <a href="https://linksos.org" target="_blank" rel="noopener" class="network-item">
+        <div class="network-domain">linksos.org</div>
+        <div class="network-desc">Structured Debian Linux learning environment — the LinksOS approach to building Linux from the ground up</div>
+        <span class="network-badge">Live</span>
+      </a>
+      <a href="https://link2linux.com" target="_blank" rel="noopener" class="network-item">
+        <div class="network-domain">link2linux.com</div>
+        <div class="network-desc">Linux distro reviews, Linux+ XK0-006 cert prep, and hands-on Linux guides</div>
+        <span class="network-badge">Live</span>
+      </a>
+      <a href="https://linksllc.net" target="_blank" rel="noopener" class="network-item">
+        <div class="network-domain">linksllc.net</div>
+        <div class="network-desc">The LINKS LLC business home — connecting the network's professional services</div>
+        <span class="network-badge">Live</span>
+      </a>
+      <a href="https://callmelink.org" target="_blank" rel="noopener" class="network-item">
+        <div class="network-domain">callmelink.org</div>
+        <div class="network-desc">Ben Linkous — retired Army MSgt, Pulaski VA, Planning Commission member, and builder of the LINKS network</div>
+        <span class="network-badge">Live</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section" id="contact">
+  <div class="cta-inner">
+    <h2>Ready to start building?</h2>
+    <p>Whether you want to learn, collaborate, or just understand what's possible — reach out. No gatekeeping. No prerequisites. Just a conversation about what you want to do next.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="mailto:benlinkous@linksllc.net" class="btn-p">Get in Touch</a>
+      <a href="projects.html" class="btn-o">100 Projects Bootcamp →</a>
+    </div>
+    <div class="contact-row">
+      <a href="https://callmelink.org" target="_blank" rel="noopener" class="contact-item"><span class="contact-dot">→</span> callmelink.org</a>
+      <a href="https://linksos.org" target="_blank" rel="noopener" class="contact-item"><span class="contact-dot">→</span> linksos.org</a>
+      <a href="https://ko-fi.com/allthingslink" target="_blank" rel="noopener" class="contact-item"><span class="contact-dot">→</span> ko-fi.com/allthingslink</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand"><em>Link2</em>IT Toolkit</div>
+  <ul class="footer-links">
+    <li><a href="index.html">link2cyber.com</a></li>
+    <li><a href="projects.html">100 Projects</a></li>
+    <li><a href="https://linksos.org" target="_blank">linksos.org</a></li>
+    <li><a href="https://link2linux.com" target="_blank">link2linux.com</a></li>
+    <li><a href="https://linksllc.net" target="_blank">linksllc.net</a></li>
+    <li><a href="https://callmelink.org" target="_blank">callmelink.org</a></li>
+    <li><a href="https://ko-fi.com/allthingslink" target="_blank">Store</a></li>
+  </ul>
+  <div class="footer-copy">© <span id="yr"></span> Ben Linkous · Pulaski, Virginia · <a href="mailto:benlinkous@linksllc.net" style="color:var(--faint);">benlinkous@linksllc.net</a></div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('navToggle').addEventListener('click', function() {
+  const n = document.getElementById('navLinks');
+  n.classList.toggle('open');
+});
+const obs = new IntersectionObserver((e) => {
+  e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('visible'); obs.unobserve(x.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

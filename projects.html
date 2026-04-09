@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100 Projects — Link2Cyber Bootcamp</title>
+  <meta name="description" content="100 hands-on cybersecurity projects — zero to CompTIA SecurityX. Each project maps to real exam objectives, TryHackMe labs, Professor Messer, and Jason Dion resources." />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080d12; --bg2: #0d1520; --bg3: #111d2e;
+      --border: rgba(0,200,120,0.15); --border2: rgba(0,200,120,0.28);
+      --green: #00e07a; --green-dim: #00b360; --green-glow: rgba(0,224,122,0.1);
+      --amber: #f5a623; --blue: #3b9eff; --red: #f87171; --purple: #c084fc;
+      --text: #e4eef8; --muted: #7a9ab8; --faint: #4a6070;
+      --mono: 'JetBrains Mono', monospace; --sans: 'Syne', sans-serif;
+      --max: 1200px; --sidebar: 280px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; overflow-x: hidden; }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    header { position: sticky; top: 0; z-index: 200; border-bottom: 1px solid var(--border); background: rgba(8,13,18,0.94); backdrop-filter: blur(14px); }
+    nav { max-width: var(--max); margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-family: var(--mono); font-weight: 700; font-size: 17px; color: var(--green); text-decoration: none; }
+    .brand span { color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-links a { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.05em; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--green); text-decoration: none; }
+    .btn-sm { display: inline-block; padding: 8px 16px; border-radius: 6px; font-family: var(--mono); font-size: 12px; font-weight: 600; background: var(--green); color: #050a0e; text-decoration: none; transition: opacity 0.15s; }
+    .btn-sm:hover { opacity: 0.88; text-decoration: none; }
+
+    /* PAGE HEADER */
+    .page-header { border-bottom: 1px solid var(--border); padding: 40px 24px 28px; background: linear-gradient(180deg, rgba(0,224,122,0.04) 0%, transparent 100%); }
+    .page-header-inner { max-width: var(--max); margin: 0 auto; }
+    .kicker { font-family: var(--mono); font-size: 11px; color: var(--green); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .kicker::before { content: ''; width: 20px; height: 1px; background: var(--green); display: block; }
+    .page-header h1 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 10px; }
+    .page-header h1 .accent { color: var(--green); }
+    .page-header p { color: var(--muted); font-size: 15px; max-width: 600px; margin-bottom: 20px; }
+
+    /* PHASE FILTER PILLS */
+    .phase-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+    .phase-pill { font-family: var(--mono); font-size: 11px; padding: 5px 13px; border-radius: 6px; border: 1px solid var(--border); cursor: pointer; transition: all 0.15s; color: var(--muted); background: transparent; }
+    .phase-pill:hover, .phase-pill.active { border-color: var(--green); color: var(--green); background: var(--green-glow); }
+    .phase-pill.p1.active { border-color: var(--amber); color: var(--amber); background: rgba(245,166,35,0.08); }
+    .phase-pill.p2.active { border-color: var(--blue); color: var(--blue); background: rgba(59,158,255,0.08); }
+    .phase-pill.p3.active { border-color: var(--purple); color: var(--purple); background: rgba(192,132,252,0.08); }
+    .phase-pill.p4.active { border-color: var(--green); color: var(--green); background: var(--green-glow); }
+    .phase-pill.p5.active { border-color: var(--red); color: var(--red); background: rgba(248,113,113,0.08); }
+
+    /* SEARCH */
+    .search-wrap { max-width: var(--max); margin: 0 auto; padding: 14px 24px; border-bottom: 1px solid var(--border); }
+    .search-input { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px 10px 40px; color: var(--text); font-family: var(--mono); font-size: 13px; outline: none; transition: border-color 0.2s; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234a6070' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: 12px center; }
+    .search-input:focus { border-color: var(--green-dim); }
+    .search-input::placeholder { color: var(--faint); }
+
+    /* LAYOUT */
+    .curriculum-layout { max-width: var(--max); margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: var(--sidebar) 1fr; gap: 0; min-height: calc(100vh - 180px); }
+
+    /* SIDEBAR */
+    .sidebar { border-right: 1px solid var(--border); padding: 16px 0; position: sticky; top: 57px; height: calc(100vh - 57px); overflow-y: auto; }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    .phase-group { margin-bottom: 6px; }
+    .phase-heading { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 20px 4px; display: flex; align-items: center; gap: 8px; }
+    .ph-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .ph-dot.p1 { background: var(--amber); }
+    .ph-dot.p2 { background: var(--blue); }
+    .ph-dot.p3 { background: var(--purple); }
+    .ph-dot.p4 { background: var(--green); }
+    .ph-dot.p5 { background: var(--red); }
+    .phase-heading span { color: var(--faint); }
+    .proj-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 6px 20px; background: none; border: none; cursor: pointer; text-align: left; transition: background 0.12s; border-left: 2px solid transparent; }
+    .proj-btn:hover { background: rgba(0,200,120,0.05); }
+    .proj-btn.active { background: rgba(0,200,120,0.08); border-left-color: var(--green); }
+    .proj-btn.hidden { display: none; }
+    .proj-num { font-family: var(--mono); font-size: 11px; color: var(--faint); width: 28px; flex-shrink: 0; }
+    .proj-btn.active .proj-num { color: var(--green); }
+    .proj-label { font-size: 12px; color: var(--muted); line-height: 1.3; }
+    .proj-btn.active .proj-label { color: var(--text); }
+
+    /* CONTENT PANEL */
+    .content-panel { padding: 28px 36px 64px; min-height: 600px; overflow-y: auto; }
+
+    /* WELCOME */
+    .welcome { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; text-align: center; }
+    .welcome-icon { font-size: 3rem; margin-bottom: 16px; }
+    .welcome h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .welcome p { color: var(--muted); max-width: 440px; font-size: 14px; margin-bottom: 20px; }
+
+    /* STORE CARD */
+    .store-card { background: var(--bg2); border: 1px solid rgba(0,200,120,0.25); border-radius: 10px; padding: 18px 20px; margin-top: 20px; display: flex; align-items: center; gap: 16px; max-width: 480px; }
+    .store-card .store-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .store-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .store-card a { color: var(--green); font-weight: 600; }
+
+    /* PROJECT HEADER */
+    .proj-header { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+    .proj-phase-badge { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+    .badge-p1 { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.25); }
+    .badge-p2 { background: rgba(59,158,255,0.1); color: var(--blue); border: 1px solid rgba(59,158,255,0.2); }
+    .badge-p3 { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.2); }
+    .badge-p4 { background: rgba(0,224,122,0.1); color: var(--green); border: 1px solid rgba(0,224,122,0.2); }
+    .badge-p5 { background: rgba(248,113,113,0.1); color: var(--red); border: 1px solid rgba(248,113,113,0.2); }
+    .proj-header h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .proj-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 6px; }
+    .proj-meta-item { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .proj-meta-item span { color: var(--green); }
+    .proj-nav { display: flex; gap: 10px; margin-top: 14px; }
+    .proj-nav-btn { font-family: var(--mono); font-size: 11px; padding: 6px 14px; border-radius: 6px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; }
+    .proj-nav-btn:hover { border-color: var(--green); color: var(--green); }
+    .proj-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+    /* MARKDOWN CONTENT */
+    .md-content h2 { font-family: var(--sans); font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 1.75rem 0 0.65rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+    .md-content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+    .md-content h3 { font-family: var(--sans); font-size: 0.92rem; font-weight: 700; color: var(--green); margin: 1.1rem 0 0.45rem; }
+    .md-content h4 { font-size: 0.875rem; color: var(--muted); margin: 0.9rem 0 0.35rem; }
+    .md-content p { color: var(--muted); margin-bottom: 0.8rem; font-size: 0.875rem; line-height: 1.75; }
+    .md-content strong { color: var(--text); font-weight: 600; }
+    .md-content ul, .md-content ol { padding-left: 1.25rem; margin-bottom: 0.8rem; }
+    .md-content li { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.35rem; line-height: 1.65; }
+    .md-content li strong { color: var(--text); }
+    .md-content code { font-family: var(--mono); font-size: 0.78rem; background: rgba(0,200,120,0.08); color: var(--green); padding: 2px 6px; border-radius: 4px; border: 1px solid rgba(0,200,120,0.15); }
+    .md-content pre { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px; overflow-x: auto; margin: 1rem 0; }
+    .md-content pre code { background: none; border: none; padding: 0; font-size: 0.78rem; color: var(--green); }
+    .md-content a { color: var(--green); }
+    .md-content blockquote { border-left: 3px solid var(--border2); padding-left: 1rem; margin: 1rem 0; }
+    .md-content blockquote p { color: var(--faint); font-size: 0.82rem; }
+    .md-content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+    /* RESOURCE PILLS */
+    .resource-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .resource-pill { font-family: var(--mono); font-size: 11px; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border); color: var(--muted); background: var(--bg2); text-decoration: none; transition: all 0.15s; }
+    .resource-pill:hover { border-color: var(--green); color: var(--green); text-decoration: none; }
+    .pill-thm { border-color: rgba(0,200,120,0.3); color: var(--green-dim); }
+    .pill-messer { border-color: rgba(59,158,255,0.3); color: var(--blue); }
+    .pill-dion { border-color: rgba(245,166,35,0.3); color: var(--amber); }
+    .pill-kofi { border-color: rgba(192,132,252,0.3); color: var(--purple); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 24px; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-inner p { font-family: var(--mono); font-size: 12px; color: var(--faint); }
+    .footer-inner a { color: var(--muted); }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-links a { font-family: var(--mono); font-size: 11px; color: var(--faint); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--green); text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .curriculum-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+      .content-panel { padding: 20px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="brand">link<span>/</span>2cyber</a>
+    <ul class="nav-links">
+      <li><a href="index.html#bootcamp">Bootcamp</a></li>
+      <li><a href="toolkit.html">IT Toolkit</a></li>
+      <li><a href="index.html#network">LINKS Network</a></li>
+      <li><a href="https://linksos.org" target="_blank">LinksOS</a></li>
+      <li><a href="https://link2linux.com" target="_blank">link2linux</a></li>
+    </ul>
+    <a href="https://ko-fi.com/allthingslink" target="_blank" rel="noopener" class="btn-sm">☕ Store</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="kicker">Free · Open · Portfolio-Based</div>
+    <h1>100 <span class="accent">Projects.</span> 8 Certs. Zero Cost.</h1>
+    <p>Every project is hands-on, outcome-based, and mapped to CompTIA exam objectives. Complete each one, commit the deliverable to GitHub, and build a real cybersecurity portfolio along the way.</p>
+    <div class="phase-pills">
+      <button class="phase-pill active" data-phase="0" onclick="filterPhase(0,this)">All 100 Projects</button>
+      <button class="phase-pill p1" data-phase="1" onclick="filterPhase(1,this)">📘 Phase 1 — Foundations (01–20)</button>
+      <button class="phase-pill p2" data-phase="2" onclick="filterPhase(2,this)">🔐 Phase 2 — Core Security (21–40)</button>
+      <button class="phase-pill p3" data-phase="3" onclick="filterPhase(3,this)">⚙️ Phase 3 — Operations (41–70)</button>
+      <button class="phase-pill p4" data-phase="4" onclick="filterPhase(4,this)">🐧 Phase 4 — Linux Mastery (71–85)</button>
+      <button class="phase-pill p5" data-phase="5" onclick="filterPhase(5,this)">🚀 Phase 5 — Advanced Security (86–100)</button>
+    </div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <input class="search-input" type="text" placeholder="Search projects, certs, tools (e.g. nmap, Security+, forensics)..." oninput="doSearch(this.value)" />
+</div>
+
+<div class="curriculum-layout">
+  <div class="sidebar" id="sidebar"></div>
+  <div class="content-panel" id="contentPanel">
+    <div class="welcome" id="welcomeScreen">
+      <div class="welcome-icon">🛡️</div>
+      <h2>Pick a project to start.</h2>
+      <p>Select any project from the sidebar. Work through them in order or jump to any phase — each project stands on its own with clear objectives and deliverables.</p>
+      <div class="store-card">
+        <div class="store-icon">☕</div>
+        <p>This bootcamp is free. Study guides, project notes, and cert prep PDFs are at the store. <a href="https://ko-fi.com/allthingslink" target="_blank" rel="noopener">ko-fi.com/allthingslink →</a></p>
+      </div>
+    </div>
+    <div id="projectContent" style="display:none;">
+      <div class="proj-header">
+        <div class="proj-phase-badge" id="projBadge"></div>
+        <h1 id="projTitle"></h1>
+        <div class="proj-meta">
+          <div class="proj-meta-item">Cert: <span id="projCert"></span></div>
+          <div class="proj-meta-item">Level: <span id="projLevel"></span></div>
+          <div class="proj-meta-item">Est. time: <span id="projHours"></span></div>
+        </div>
+        <div class="proj-nav">
+          <button class="proj-nav-btn" id="prevBtn" onclick="navProject(-1)">← Previous</button>
+          <button class="proj-nav-btn" id="nextBtn" onclick="navProject(1)">Next →</button>
+        </div>
+      </div>
+      <div class="md-content" id="mdContent"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>© <span id="yr"></span> <strong style="color:var(--green)">link2cyber</strong> · <a href="index.html#about">Ben Linkous</a> · Pulaski, VA · <a href="mailto:benlinkous@linksllc.net">benlinkous@linksllc.net</a></p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="toolkit.html">IT Toolkit</a>
+      <a href="https://linksos.org" target="_blank">LinksOS</a>
+      <a href="https://link2linux.com" target="_blank">link2linux</a>
+      <a href="https://ko-fi.com/allthingslink" target="_blank">Store</a>
+      <a href="https://github.com/benlinkous/link2cyber.com" target="_blank">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── PROJECT DATA ──────────────────────────────────────────────
+
+const PROJECTS = [
+  // PHASE 1 — FOUNDATIONS
+  {n:1,phase:1,title:"System Orientation",cert:"ITF+ 1.1",level:"Foundational",hours:2,
+   tasks:["Download and install LinksOS or a Debian-based VM using VirtualBox or VMware","Run `neofetch` and `inxi -Fxz` — document your system profile in Obsidian","Set up your GitHub repo: `link2cyber-portfolio` — this holds all 100 project deliverables","Create your folder structure: `/projects/01-system-orientation/`","Watch Professor Messer: ITF+ 1.1 — Intro to IT","Write a one-page system orientation report in Markdown and commit to GitHub"],
+   deliverable:"system-report.md committed to GitHub",
+   thm:[{name:"Intro to Cybersecurity",url:"https://tryhackme.com/room/introtooffensivesecurity"}],
+   messer:"ITF+ Section 1 — Introduction to IT",dion:"ITF+ practice questions"},
+
+  {n:2,phase:1,title:"Linux CLI Basics",cert:"ITF+ 2.1 / Linux+ XK0-006 1.1",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: ITF+ 2.1 — Using Linux","Practice core commands: `ls`, `cd`, `mkdir`, `rm`, `mv`, `cp`, `touch`, `cat`, `less`, `man`","TryHackMe: Linux Fundamentals Part 1 — complete and screenshot results","TryHackMe: Linux Fundamentals Part 2 — complete and screenshot results","Write a CLI reference cheat sheet in Markdown covering all commands practiced","Build a simple directory structure for a fictional company using only CLI"],
+   deliverable:"cli-cheatsheet.md + company-structure/ committed to GitHub",
+   thm:[{name:"Linux Fundamentals Part 1",url:"https://tryhackme.com/room/linuxfundamentalspart1"},{name:"Linux Fundamentals Part 2",url:"https://tryhackme.com/room/linuxfundamentalspart2"}],
+   messer:"ITF+ 2.1 — Using Linux",dion:"ITF+ Linux practice questions"},
+
+  {n:3,phase:1,title:"File System Navigation",cert:"ITF+ 2.1 / A+ 220-1202 1.6",level:"Foundational",hours:2,
+   tasks:["Watch Professor Messer: A+ 220-1202 1.6 — Linux File System","Study the Linux directory tree: `/etc`, `/var`, `/home`, `/usr`, `/tmp`, `/proc`, `/sys`","TryHackMe: Linux Fundamentals Part 3 — complete and screenshot results","Practice `find`, `locate`, `which`, `whereis`, `grep` across the file system","Document the purpose of each top-level directory in Obsidian","Write a script that maps and outputs your full directory tree to a file"],
+   deliverable:"filesystem-map.md + tree-script.sh committed to GitHub",
+   thm:[{name:"Linux Fundamentals Part 3",url:"https://tryhackme.com/room/linuxfundamentalspart3"}],
+   messer:"A+ 220-1202 1.6 — Linux File System",dion:"A+ 220-1202 file system practice questions"},
+
+  {n:4,phase:1,title:"User and Permission Management",cert:"A+ 220-1202 1.6 / Linux+ XK0-006 2.1",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Users and Groups","Practice `useradd`, `usermod`, `userdel`, `groupadd`, `passwd`, `whoami`, `id`","Study permission notation: `rwxr-xr-x`, octal (`chmod 755`), and `chown`","TryHackMe: Linux PrivEsc — complete the user/permission section","Create three test users with different permission levels and document the results","Jason Dion: attempt 10 A+ 220-1202 practice questions on user management"],
+   deliverable:"permissions-lab.md documenting users, groups, and permission tests committed to GitHub",
+   thm:[{name:"Linux PrivEsc",url:"https://tryhackme.com/room/linuxprivesc"}],
+   messer:"A+ 220-1202 — Users and Groups",dion:"A+ 220-1202 user management practice questions"},
+
+  {n:5,phase:1,title:"Hardware Identification",cert:"A+ 220-1201 1.1",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1201 — Section 1 (Motherboards, CPUs, RAM, Storage)","Use `lscpu`, `lsblk`, `lspci`, `lsusb`, `dmidecode` to identify your system hardware","Complete written lab scenario: identify and document all components in a described system","Jason Dion: attempt 15 A+ 220-1201 hardware practice questions","Document each hardware component — purpose, specs, and form factors — in Obsidian","Research and document the POST process and what beep codes indicate"],
+   deliverable:"hardware-inventory.md + written lab scenario response committed to GitHub",
+   thm:[],messer:"A+ 220-1201 Section 1 — Hardware",dion:"A+ 220-1201 hardware practice questions",
+   note:"No TryHackMe for this project — hardware focus. Professor Messer + written lab scenario replace the lab component."},
+
+  {n:6,phase:1,title:"Hardware Troubleshooting",cert:"A+ 220-1201 5.1",level:"Foundational",hours:4,
+   tasks:["Watch Professor Messer: A+ 220-1201 — Troubleshooting Hardware","Study the CompTIA troubleshooting methodology: identify, research, establish theory, test, implement, verify, document","Complete written lab scenario: work through three hardware failure scenarios using the methodology","Jason Dion: attempt 20 A+ 220-1201 troubleshooting practice questions","Document common failure symptoms and their likely causes in a reference table","Build a hardware troubleshooting flowchart in Markdown"],
+   deliverable:"troubleshooting-flowchart.md + three scenario writeups committed to GitHub",
+   thm:[],messer:"A+ 220-1201 — Troubleshooting Hardware",dion:"A+ 220-1201 troubleshooting practice questions",
+   note:"No TryHackMe for this project — hardware focus. Professor Messer + written lab scenario replace the lab component."},
+
+  {n:7,phase:1,title:"Operating System Installation",cert:"A+ 220-1202 1.1",level:"Foundational",hours:4,
+   tasks:["Watch Professor Messer: A+ 220-1202 1.1 — Installing Operating Systems","Install a fresh Debian VM from ISO — document every step with screenshots","TryHackMe: Windows Fundamentals 1 — complete and screenshot results","Compare installation processes: Windows vs Linux — document key differences","Jason Dion: attempt 15 A+ 220-1202 OS installation practice questions","Document partition schemes, file systems (NTFS, ext4, FAT32), and their use cases"],
+   deliverable:"os-install-lab.md with step-by-step documentation committed to GitHub",
+   thm:[{name:"Windows Fundamentals 1",url:"https://tryhackme.com/room/windowsfundamentals1xbx"}],
+   messer:"A+ 220-1202 1.1 — Installing Operating Systems",dion:"A+ 220-1202 OS installation practice questions"},
+
+  {n:8,phase:1,title:"Boot Process and Troubleshooting",cert:"A+ 220-1202 1.6",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Boot Sequence and Troubleshooting","Study the Linux boot process: BIOS/UEFI → GRUB → kernel → init/systemd","TryHackMe: Linux Fundamentals Part 3 — systemd section","Practice `systemctl`, `journalctl`, `dmesg` — document what each reveals","Jason Dion: attempt 15 A+ 220-1202 boot process practice questions","Complete written lab scenario: diagnose three boot failure scenarios"],
+   deliverable:"boot-process-guide.md + scenario responses committed to GitHub",
+   thm:[{name:"Linux Fundamentals Part 3",url:"https://tryhackme.com/room/linuxfundamentalspart3"}],
+   messer:"A+ 220-1202 — Boot Sequence",dion:"A+ 220-1202 boot process practice questions"},
+
+  {n:9,phase:1,title:"Networking Fundamentals",cert:"ITF+ 2.3 / A+ 220-1201 2.1",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1201 — Networking Overview","Study the OSI model — all 7 layers, protocols, and devices at each layer","TryHackMe: Intro to Networking — complete and screenshot results","Practice `ip`, `ping`, `traceroute`, `dig`, `nslookup`, `netstat`, `ss`","Jason Dion: attempt 15 A+ 220-1201 networking practice questions","Document the OSI model with real protocol examples at each layer"],
+   deliverable:"networking-fundamentals.md + OSI reference table committed to GitHub",
+   thm:[{name:"Intro to Networking",url:"https://tryhackme.com/room/introtonetworking"}],
+   messer:"A+ 220-1201 — Networking Overview",dion:"A+ 220-1201 networking practice questions"},
+
+  {n:10,phase:1,title:"Network Connectivity Troubleshooting",cert:"A+ 220-1201 2.8",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1201 — Network Troubleshooting","Study common connectivity issues: IP conflicts, DNS failures, gateway problems, cable faults","TryHackMe: Network Services — complete and screenshot results","Practice the CompTIA troubleshooting methodology applied to three network scenarios","Jason Dion: attempt 15 A+ 220-1201 network troubleshooting practice questions","Complete written lab scenario: diagnose and resolve three documented network failures"],
+   deliverable:"network-troubleshooting-lab.md committed to GitHub",
+   thm:[{name:"Network Services",url:"https://tryhackme.com/room/networkservices"}],
+   messer:"A+ 220-1201 — Network Troubleshooting",dion:"A+ 220-1201 network troubleshooting practice questions"},
+
+  {n:11,phase:1,title:"Remote Access and SSH",cert:"A+ 220-1202 1.6 / Linux+ XK0-006 2.2",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Remote Access Technologies","Generate an SSH key pair using `ssh-keygen` — document the process","TryHackMe: SSH room — complete and screenshot results","Configure SSH on your LinksOS VM: disable root login, change default port, enable key-only auth","Connect from host to VM using SSH key authentication — screenshot the session","Jason Dion: attempt 10 A+ 220-1202 remote access practice questions"],
+   deliverable:"ssh-hardening-lab.md with config changes and screenshots committed to GitHub",
+   thm:[{name:"Protocols and Servers",url:"https://tryhackme.com/room/protocolsandservers"}],
+   messer:"A+ 220-1202 — Remote Access Technologies",dion:"A+ 220-1202 remote access practice questions"},
+
+  {n:12,phase:1,title:"Package Management",cert:"A+ 220-1202 1.6 / Linux+ XK0-006 1.2",level:"Foundational",hours:2,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Linux Software Management","Practice `apt update`, `apt upgrade`, `apt install`, `apt remove`, `dpkg -l`","TryHackMe: Linux Fundamentals Part 2 — package management section","Install five security tools using apt: `nmap`, `ufw`, `fail2ban`, `htop`, `git`","Document the package management workflow and the difference between apt and dpkg","Jason Dion: attempt 10 A+ 220-1202 Linux software practice questions"],
+   deliverable:"package-management-guide.md committed to GitHub",
+   thm:[{name:"Linux Fundamentals Part 2",url:"https://tryhackme.com/room/linuxfundamentalspart2"}],
+   messer:"A+ 220-1202 — Linux Software Management",dion:"A+ 220-1202 Linux software practice questions"},
+
+  {n:13,phase:1,title:"System Services and Processes",cert:"A+ 220-1202 1.6 / Linux+ XK0-006 1.3",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Managing Services","Practice `ps`, `top`, `htop`, `kill`, `nice`, `renice`, `bg`, `fg`, `jobs`","TryHackMe: Linux Process Analysis — complete and screenshot results","Use `systemctl` to start, stop, enable, disable, and check status of three services","Jason Dion: attempt 10 A+ 220-1202 services and processes practice questions","Write a script that lists all running services and outputs to a timestamped log file"],
+   deliverable:"services-lab.md + service-monitor.sh committed to GitHub",
+   thm:[{name:"Linux Fundamentals Part 3",url:"https://tryhackme.com/room/linuxfundamentalspart3"}],
+   messer:"A+ 220-1202 — Managing Services",dion:"A+ 220-1202 services practice questions"},
+
+  {n:14,phase:1,title:"Disk and Storage Management",cert:"A+ 220-1201 3.1 / Linux+ XK0-006 1.4",level:"Foundational",hours:4,
+   tasks:["Watch Professor Messer: A+ 220-1201 — Storage Devices and RAID","Practice `lsblk`, `fdisk`, `mkfs`, `mount`, `umount`, `df`, `du`","TryHackMe: Linux Strength Training — storage section","Create a new partition on a practice disk, format it ext4, and mount it persistently via `/etc/fstab`","Jason Dion: attempt 15 A+ 220-1201 storage practice questions","Document RAID levels 0, 1, 5, and 10 — use cases, redundancy, and performance trade-offs"],
+   deliverable:"storage-lab.md + fstab configuration documented and committed to GitHub",
+   thm:[{name:"Linux Strength Training",url:"https://tryhackme.com/room/linuxstrengthtraining"}],
+   messer:"A+ 220-1201 — Storage Devices and RAID",dion:"A+ 220-1201 storage practice questions"},
+
+  {n:15,phase:1,title:"Backup and Recovery",cert:"A+ 220-1202 4.1 / Linux+ XK0-006 3.3",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Backup and Recovery","Study backup types: full, incremental, differential — document trade-offs","TryHackMe: Linux Fundamentals Part 3 — file operations section","Build a Bash backup script using `rsync` with timestamped output directories","Test recovery by restoring a file from your backup — document the process","Jason Dion: attempt 10 A+ 220-1202 backup and recovery practice questions"],
+   deliverable:"backup-script.sh + backup-recovery-lab.md committed to GitHub",
+   thm:[{name:"Linux Fundamentals Part 3",url:"https://tryhackme.com/room/linuxfundamentalspart3"}],
+   messer:"A+ 220-1202 — Backup and Recovery",dion:"A+ 220-1202 backup practice questions"},
+
+  {n:16,phase:1,title:"Security Awareness Fundamentals",cert:"ITF+ 6.1 / A+ 220-1202 2.1",level:"Foundational",hours:2,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Security Fundamentals","Study attack types: phishing, vishing, smishing, tailgating, shoulder surfing","TryHackMe: Phishing Emails in Action — complete and screenshot results","Write a one-page security awareness brief suitable for a small business audience","Jason Dion: attempt 10 A+ 220-1202 security awareness practice questions","Document five real-world social engineering examples and their defenses"],
+   deliverable:"security-awareness-brief.md committed to GitHub",
+   thm:[{name:"Phishing Emails in Action",url:"https://tryhackme.com/room/phishingemails2rytmuv"}],
+   messer:"A+ 220-1202 — Security Fundamentals",dion:"A+ 220-1202 security awareness practice questions"},
+
+  {n:17,phase:1,title:"Malware Identification and Response",cert:"A+ 220-1202 2.4",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Malware","Study malware types: virus, worm, trojan, ransomware, spyware, rootkit, keylogger","TryHackMe: Malware Introductory — complete and screenshot results","Document the A+ malware removal procedure — all six steps in detail","Jason Dion: attempt 15 A+ 220-1202 malware practice questions","Research one real ransomware incident — document the attack vector, impact, and response"],
+   deliverable:"malware-reference.md + ransomware case study committed to GitHub",
+   thm:[{name:"Malware Introductory",url:"https://tryhackme.com/room/malmalintroductory"}],
+   messer:"A+ 220-1202 — Malware",dion:"A+ 220-1202 malware practice questions"},
+
+  {n:18,phase:1,title:"Account Security and MFA",cert:"A+ 220-1202 2.1 / Security+ SY0-701 2.4",level:"Foundational",hours:3,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Securing Accounts","Study authentication factors: something you know, have, are, somewhere you are","TryHackMe: Intro to Defensive Security — authentication section","Enable MFA on three accounts you own — document the process for each","Configure password complexity requirements on your LinksOS VM using PAM","Jason Dion: attempt 10 A+ 220-1202 account security practice questions"],
+   deliverable:"account-security-lab.md + PAM configuration documented and committed to GitHub",
+   thm:[{name:"Intro to Defensive Security",url:"https://tryhackme.com/room/introtodefensivesecurity"}],
+   messer:"A+ 220-1202 — Securing Accounts",dion:"A+ 220-1202 account security practice questions"},
+
+  {n:19,phase:1,title:"Virtualization and VM Setup",cert:"A+ 220-1202 1.7",level:"Foundational",hours:4,
+   tasks:["Watch Professor Messer: A+ 220-1202 — Virtualization","Study virtualization concepts: hypervisor types 1 and 2, VMs vs containers, snapshots","TryHackMe: Intro to Virtualisation — complete and screenshot results","Create two VMs — one Debian, one another distro of your choice — document the process","Take and restore a snapshot — document what snapshots protect against","Jason Dion: attempt 10 A+ 220-1202 virtualization practice questions"],
+   deliverable:"virtualization-lab.md with VM configs and snapshot documentation committed to GitHub",
+   thm:[{name:"Intro to Virtualisation",url:"https://tryhackme.com/room/introtovirtalisation"}],
+   messer:"A+ 220-1202 — Virtualization",dion:"A+ 220-1202 virtualization practice questions"},
+
+  {n:20,phase:1,title:"A+ Readiness and Portfolio Review",cert:"A+ 220-1201 / 220-1202",level:"Foundational",hours:4,
+   tasks:["Review all CompTIA A+ exam objectives for both 220-1201 and 220-1202","Complete a full Jason Dion A+ practice exam — record your score per domain","Identify weak domains — revisit Professor Messer videos for those areas","Review your GitHub portfolio: Projects 01–19 — confirm all deliverables are committed","Schedule your A+ exam if scoring above 80% consistently on practice tests"],
+   deliverable:"a-plus-readiness-report.md with practice scores and weak areas documented",
+   thm:[],messer:"A+ 220-1201/1202 full review",dion:"Full Jason Dion A+ 220-1201/1202 practice exam",
+   readiness:true},
+
+  // PHASE 2 — CORE SECURITY
+  {n:21,phase:2,title:"Threat Landscape Overview",cert:"Security+ SY0-701 1.1",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Security+ SY0-701 1.1 — Threat Actors and Threat Intelligence","TryHackMe: Intro to Offensive Security — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 Domain 1 practice questions","Document threat actor types, motivations, and TTPs in Obsidian","Map three real threat actors to MITRE ATT&CK techniques"],
+   deliverable:"threat-landscape.md — threat actor types, motivations, and TTPs",
+   thm:[{name:"Intro to Offensive Security",url:"https://tryhackme.com/room/introtooffensivesecurity"}],
+   messer:"Security+ SY0-701 1.1 — Threat Actors",dion:"Security+ SY0-701 Domain 1 practice questions"},
+
+  {n:22,phase:2,title:"Social Engineering Defense",cert:"Security+ SY0-701 1.1",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Social Engineering Techniques","TryHackMe: Phishing Emails in Action — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 social engineering practice questions","Document attack types and countermeasures in a reference table","Write a phishing awareness guide for a non-technical audience"],
+   deliverable:"social-engineering-defense.md — attack types and countermeasures",
+   thm:[{name:"Phishing Emails in Action",url:"https://tryhackme.com/room/phishingemails2rytmuv"}],
+   messer:"Security+ SY0-701 — Social Engineering",dion:"Security+ SY0-701 social engineering practice questions"},
+
+  {n:23,phase:2,title:"Malware Types and Analysis",cert:"Security+ SY0-701 1.2",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 1.2 — Malware","TryHackMe: Malware Introductory — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 malware practice questions","Document malware types, indicators of compromise, and sandbox analysis notes","Research one current malware campaign using open-source threat intel"],
+   deliverable:"malware-analysis-lab.md — types, IOCs, and analysis notes",
+   thm:[{name:"Malware Introductory",url:"https://tryhackme.com/room/malmalintroductory"}],
+   messer:"Security+ SY0-701 1.2 — Malware",dion:"Security+ SY0-701 malware practice questions"},
+
+  {n:24,phase:2,title:"Network Attack Recognition",cert:"Security+ SY0-701 1.4",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Network Attacks","TryHackMe: Network Security — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 network attack practice questions","Document attack types, signatures, and defenses in a reference table","Capture and analyze a packet sample using Wireshark"],
+   deliverable:"network-attacks-reference.md — attack types, signatures, and defenses",
+   thm:[{name:"Network Security",url:"https://tryhackme.com/room/networksecurityprotocols"}],
+   messer:"Security+ SY0-701 — Network Attacks",dion:"Security+ SY0-701 network attack practice questions"},
+
+  {n:25,phase:2,title:"Vulnerability Scanning Basics",cert:"Security+ SY0-701 1.7",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Vulnerability Scanning","TryHackMe: OpenVAS — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 vulnerability practice questions","Run an Nmap scan against your LinksOS VM and document findings","Document scan results, findings, and remediation notes"],
+   deliverable:"vuln-scan-lab.md — scan results, findings, and remediation notes",
+   thm:[{name:"OpenVAS",url:"https://tryhackme.com/room/openvas"}],
+   messer:"Security+ SY0-701 — Vulnerability Scanning",dion:"Security+ SY0-701 vulnerability practice questions"},
+
+  {n:26,phase:2,title:"Firewall Configuration",cert:"Security+ SY0-701 2.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Firewalls","TryHackMe: Firewalls room — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 firewall practice questions","Configure ufw on LinksOS: set default policies, allow SSH, HTTP, HTTPS","Test rule set with nmap from another host — document results"],
+   deliverable:"firewall-config-lab.md — rule sets, policies, and test results",
+   thm:[{name:"Firewalls",url:"https://tryhackme.com/room/redteamfirewalls"}],
+   messer:"Security+ SY0-701 — Firewalls",dion:"Security+ SY0-701 firewall practice questions"},
+
+  {n:27,phase:2,title:"Network Segmentation and VLANs",cert:"Security+ SY0-701 2.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Network Segmentation","TryHackMe: Extending Your Network — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 segmentation practice questions","Document VLAN design, DMZ concepts, and draw a segmented network diagram","Explain how segmentation limits lateral movement in a breach"],
+   deliverable:"segmentation-lab.md — VLAN design, DMZ concepts, and network diagram",
+   thm:[{name:"Extending Your Network",url:"https://tryhackme.com/room/extendingyournetwork"}],
+   messer:"Security+ SY0-701 — Network Segmentation",dion:"Security+ SY0-701 segmentation practice questions"},
+
+  {n:28,phase:2,title:"Secure Network Protocols",cert:"Security+ SY0-701 2.1",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Secure Protocols","TryHackMe: Protocols and Servers 2 — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 protocol practice questions","Build a protocol comparison table: insecure vs secure alternatives with ports","Document why TLS, SFTP, HTTPS, SSH replace their insecure counterparts"],
+   deliverable:"secure-protocols-reference.md — protocol comparison table with ports and use cases",
+   thm:[{name:"Protocols and Servers 2",url:"https://tryhackme.com/room/protocolsandservers2"}],
+   messer:"Security+ SY0-701 — Secure Protocols",dion:"Security+ SY0-701 protocol practice questions"},
+
+  {n:29,phase:2,title:"PKI and Certificate Management",cert:"Security+ SY0-701 2.4",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — PKI and Certificates","TryHackMe: PKI room — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 PKI practice questions","Use OpenSSL to generate a self-signed certificate — document the process","Document CA hierarchy, certificate lifecycle, and common certificate types"],
+   deliverable:"pki-lab.md — CA hierarchy, certificate lifecycle, and OpenSSL commands",
+   thm:[{name:"PKI",url:"https://tryhackme.com/room/pki"}],
+   messer:"Security+ SY0-701 — PKI and Certificates",dion:"Security+ SY0-701 PKI practice questions"},
+
+  {n:30,phase:2,title:"Cryptography Fundamentals",cert:"Security+ SY0-701 2.3",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Cryptography","TryHackMe: Encryption — Crypto 101 — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 cryptography practice questions","Document symmetric vs asymmetric encryption, hashing algorithms, and use cases","Practice file encryption with GPG on LinksOS"],
+   deliverable:"cryptography-reference.md — symmetric vs asymmetric, hashing, and use cases",
+   thm:[{name:"Encryption — Crypto 101",url:"https://tryhackme.com/room/encryptioncrypto101"}],
+   messer:"Security+ SY0-701 — Cryptography",dion:"Security+ SY0-701 cryptography practice questions"},
+
+  {n:31,phase:2,title:"Identity and Access Management",cert:"Security+ SY0-701 2.4",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Identity and Access Management","TryHackMe: Active Directory Basics — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 IAM practice questions","Document access control models: DAC, MAC, RBAC, ABAC","Explain SSO, MFA, and federation in a one-page reference guide"],
+   deliverable:"iam-lab.md — access control models, MFA, SSO, and directory services",
+   thm:[{name:"Active Directory Basics",url:"https://tryhackme.com/room/winadbasics"}],
+   messer:"Security+ SY0-701 — Identity and Access Management",dion:"Security+ SY0-701 IAM practice questions"},
+
+  {n:32,phase:2,title:"Endpoint Hardening",cert:"Security+ SY0-701 2.2",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Endpoint Security","TryHackMe: Linux System Hardening — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 endpoint practice questions","Apply a hardening checklist to your LinksOS VM — document each step","Verify hardening with a baseline scan before and after"],
+   deliverable:"endpoint-hardening-checklist.md — hardening steps applied and documented",
+   thm:[{name:"Linux System Hardening",url:"https://tryhackme.com/room/linuxsystemhardening"}],
+   messer:"Security+ SY0-701 — Endpoint Security",dion:"Security+ SY0-701 endpoint practice questions"},
+
+  {n:33,phase:2,title:"Cloud Security Basics",cert:"Security+ SY0-701 2.2",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Cloud Security","TryHackMe: Cloud Security Basics — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 cloud practice questions","Document the shared responsibility model for AWS, Azure, and GCP","Explain cloud threats: misconfigurations, insecure APIs, and data exposure"],
+   deliverable:"cloud-security-basics.md — shared responsibility model, IAM, and cloud threats",
+   thm:[{name:"Cloud Security Basics",url:"https://tryhackme.com/room/cloudsecuritybasics"}],
+   messer:"Security+ SY0-701 — Cloud Security",dion:"Security+ SY0-701 cloud practice questions"},
+
+  {n:34,phase:2,title:"Risk Management Framework",cert:"Security+ SY0-701 5.1",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Risk Management","TryHackMe: Governance and Regulation — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 risk management practice questions","Build a risk register with five risks: likelihood, impact, and mitigations","Document NIST RMF steps and how they apply to a small organization"],
+   deliverable:"risk-management-framework.md — risk register with likelihood, impact, and mitigations",
+   thm:[{name:"Governance and Regulation",url:"https://tryhackme.com/room/governanceandregulation"}],
+   messer:"Security+ SY0-701 — Risk Management",dion:"Security+ SY0-701 risk management practice questions"},
+
+  {n:35,phase:2,title:"Security Policies and Compliance",cert:"Security+ SY0-701 5.1",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Regulations and Standards","TryHackMe: Cyber Governance and Regulation — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 compliance practice questions","Write three policy templates: acceptable use, password, and incident response","Map policies to NIST CSF functions: Identify, Protect, Detect, Respond, Recover"],
+   deliverable:"security-policy-template.md — acceptable use, password, and incident response policies",
+   thm:[{name:"Cyber Governance and Regulation",url:"https://tryhackme.com/room/cybergovernanceregulation"}],
+   messer:"Security+ SY0-701 — Regulations and Standards",dion:"Security+ SY0-701 compliance practice questions"},
+
+  {n:36,phase:2,title:"Incident Response Introduction",cert:"Security+ SY0-701 4.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Incident Response","TryHackMe: Incident Response room — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 incident response practice questions","Document the six IR phases: Prepare, Identify, Contain, Eradicate, Recover, Lessons Learned","Build an IR plan with roles, communications, and escalation procedures"],
+   deliverable:"incident-response-plan.md — six-phase IR plan with roles and procedures",
+   thm:[{name:"Incident Response",url:"https://tryhackme.com/room/incidentresponse"}],
+   messer:"Security+ SY0-701 — Incident Response",dion:"Security+ SY0-701 incident response practice questions"},
+
+  {n:37,phase:2,title:"Digital Forensics Basics",cert:"Security+ SY0-701 4.2",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Digital Forensics","TryHackMe: Intro to Digital Forensics — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 forensics practice questions","Document evidence handling, chain of custody, and order of volatility","Practice basic file recovery and hash verification on LinksOS"],
+   deliverable:"forensics-basics-lab.md — evidence handling, chain of custody, and tool notes",
+   thm:[{name:"Intro to Digital Forensics",url:"https://tryhackme.com/room/introductoryroomdfirmodule"}],
+   messer:"Security+ SY0-701 — Digital Forensics",dion:"Security+ SY0-701 forensics practice questions"},
+
+  {n:38,phase:2,title:"Log Analysis and Monitoring",cert:"Security+ SY0-701 4.3",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Security+ SY0-701 — Monitoring and Logging","TryHackMe: Windows Event Logs — complete and screenshot results","Jason Dion: 10 Security+ SY0-701 monitoring practice questions","Review a sample log set — identify three suspicious events with evidence","Document log sources, retention policies, and SIEM integration concepts"],
+   deliverable:"log-analysis-lab.md — sample log review with findings documented",
+   thm:[{name:"Windows Event Logs",url:"https://tryhackme.com/room/windowseventlogs"}],
+   messer:"Security+ SY0-701 — Monitoring and Logging",dion:"Security+ SY0-701 monitoring practice questions"},
+
+  {n:39,phase:2,title:"Security+ Domain Review",cert:"Security+ SY0-701 All",level:"Intermediate",hours:4,
+   tasks:["Review all Security+ SY0-701 exam objectives across all five domains","Complete a full Jason Dion Security+ SY0-701 practice exam — record score per domain","Identify weak domains — revisit Professor Messer SY0-701 videos for those areas","Review GitHub portfolio: Projects 21–38 — confirm all deliverables committed"],
+   deliverable:"securityplus-review-notes.md with domain scores and study gaps",
+   thm:[],messer:"Security+ SY0-701 full domain review",dion:"Full Jason Dion Security+ SY0-701 practice exam",readiness:true},
+
+  {n:40,phase:2,title:"Security+ Readiness Assessment",cert:"Security+ SY0-701 All",level:"Intermediate",hours:4,
+   tasks:["Review all Security+ SY0-701 exam objectives across all five domains","Complete a full Jason Dion Security+ SY0-701 practice exam — record score per domain","Identify weak domains — revisit Professor Messer SY0-701 videos for those areas","Review GitHub portfolio: Projects 21–39 — confirm all deliverables committed","Schedule your Security+ exam if scoring above 80% consistently"],
+   deliverable:"securityplus-readiness-report.md with practice scores and exam date",
+   thm:[],messer:"Security+ SY0-701 full review",dion:"Full Jason Dion Security+ SY0-701 practice exam",readiness:true},
+
+  // PHASE 3 — SECURITY OPERATIONS
+  {n:41,phase:3,title:"Threat Intelligence Fundamentals",cert:"CySA+ CS0-003 1.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — Threat Intelligence","TryHackMe: Threat Intelligence Tools — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 threat intelligence practice questions","Document STIX, TAXII, IOCs, and threat feed sources in Obsidian","Map a threat actor to MITRE ATT&CK techniques"],
+   deliverable:"threat-intel-fundamentals.md — STIX, TAXII, IOCs, and feed sources",
+   thm:[{name:"Threat Intelligence Tools",url:"https://tryhackme.com/room/threatinteltools"}],
+   messer:"CySA+ CS0-003 — Threat Intelligence",dion:"CySA+ CS0-003 threat intelligence practice questions"},
+
+  {n:42,phase:3,title:"OSINT and Threat Feeds",cert:"CySA+ CS0-003 1.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — OSINT","TryHackMe: MITRE room — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 OSINT practice questions","Use OSINT tools to profile a test target — document tools used and findings","Build a MITRE ATT&CK navigator layer for a documented threat actor"],
+   deliverable:"osint-lab.md — OSINT tools used, findings documented, MITRE mapping",
+   thm:[{name:"MITRE",url:"https://tryhackme.com/room/mitre"}],
+   messer:"CySA+ CS0-003 — OSINT",dion:"CySA+ CS0-003 OSINT practice questions"},
+
+  {n:43,phase:3,title:"Vulnerability Management Program",cert:"CySA+ CS0-003 1.3",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — Vulnerability Management","TryHackMe: OpenVAS — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 vulnerability management practice questions","Design a vulnerability management policy with scan schedules, severity ratings, and remediation SLAs","Run a vulnerability scan and triage the results by CVSS score"],
+   deliverable:"vuln-management-program.md — scan policy, severity ratings, and remediation workflow",
+   thm:[{name:"OpenVAS",url:"https://tryhackme.com/room/openvas"}],
+   messer:"CySA+ CS0-003 — Vulnerability Management",dion:"CySA+ CS0-003 vulnerability management practice questions"},
+
+  {n:44,phase:3,title:"SIEM Setup and Configuration",cert:"CySA+ CS0-003 1.4",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — SIEM","TryHackMe: Splunk 101 — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 SIEM practice questions","Configure a SIEM instance and ingest sample log data","Create three detection rules and document the alert logic"],
+   deliverable:"siem-setup-lab.md — SIEM configured, dashboards documented, alerts created",
+   thm:[{name:"Splunk 101",url:"https://tryhackme.com/room/splunk101"}],
+   messer:"CySA+ CS0-003 — SIEM",dion:"CySA+ CS0-003 SIEM practice questions"},
+
+  {n:45,phase:3,title:"Alert Triage and Investigation",cert:"CySA+ CS0-003 1.4",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — Alert Analysis","TryHackMe: Investigating with ELK — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 alert triage practice questions","Triage three sample alerts — document disposition, evidence, and escalation decision","Write an investigation report for one confirmed true positive"],
+   deliverable:"alert-triage-lab.md — three alerts triaged with disposition and evidence documented",
+   thm:[{name:"Investigating with ELK",url:"https://tryhackme.com/room/investigatingwinevtlogs"}],
+   messer:"CySA+ CS0-003 — Alert Analysis",dion:"CySA+ CS0-003 alert triage practice questions"},
+
+  {n:46,phase:3,title:"Threat Hunting Methodology",cert:"CySA+ CS0-003 1.5",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — Threat Hunting","TryHackMe: Threat Hunting room — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 threat hunting practice questions","Develop a hunt hypothesis and document the hunt steps","Write a threat hunt report: hypothesis, evidence examined, findings, and recommendations"],
+   deliverable:"threat-hunt-report.md — hypothesis, hunt steps, and findings",
+   thm:[{name:"Threat Hunting",url:"https://tryhackme.com/room/threathunting"}],
+   messer:"CySA+ CS0-003 — Threat Hunting",dion:"CySA+ CS0-003 threat hunting practice questions"},
+
+  {n:47,phase:3,title:"Incident Response Planning",cert:"CySA+ CS0-003 2.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — Incident Response","TryHackMe: Incident Response room — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 IR practice questions","Expand your IR plan from Project 36 with playbooks for three scenario types","Include communication templates, escalation matrix, and evidence collection procedures"],
+   deliverable:"ir-plan-v2.md — expanded IR plan with playbooks for three scenario types",
+   thm:[{name:"Incident Response",url:"https://tryhackme.com/room/incidentresponse"}],
+   messer:"CySA+ CS0-003 — Incident Response",dion:"CySA+ CS0-003 IR practice questions"},
+
+  {n:48,phase:3,title:"Incident Containment and Recovery",cert:"CySA+ CS0-003 2.2",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — Containment and Recovery","TryHackMe: DFIR Intro — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 containment practice questions","Simulate an incident: document containment steps, evidence preservation, and recovery actions","Write a post-incident lessons-learned report"],
+   deliverable:"containment-recovery-lab.md — simulated incident with containment steps documented",
+   thm:[{name:"DFIR Intro",url:"https://tryhackme.com/room/introductoryroomdfirmodule"}],
+   messer:"CySA+ CS0-003 — Containment and Recovery",dion:"CySA+ CS0-003 containment practice questions"},
+
+  {n:49,phase:3,title:"Malware Analysis Lab",cert:"CySA+ CS0-003 2.3",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: CySA+ CS0-003 — Malware Analysis","TryHackMe: Malware Analysis room — complete and screenshot results","Jason Dion: 10 CySA+ CS0-003 malware analysis practice questions","Perform static analysis on a benign sample: strings, hashes, file headers","Document indicators, behavior, and recommended defensive actions"],
+   deliverable:"malware-analysis-report.md — static and dynamic analysis notes on a sample",
+   thm:[{name:"Malware Introductory",url:"https://tryhackme.com/room/malmalintroductory"}],
+   messer:"CySA+ CS0-003 — Malware Analysis",dion:"CySA+ CS0-003 malware analysis practice questions"},
+
+  {n:50,phase:3,title:"CySA+ Readiness Assessment",cert:"CySA+ CS0-003 All",level:"Intermediate",hours:4,
+   tasks:["Review all CySA+ CS0-003 exam objectives across all domains","Complete a full Jason Dion CySA+ CS0-003 practice exam — record score per domain","Identify weak domains — revisit Professor Messer CS0-003 videos for those areas","Review GitHub portfolio: Projects 41–49 — confirm all deliverables committed","Schedule your CySA+ exam if scoring above 80% consistently"],
+   deliverable:"cysa-readiness-report.md with practice scores and exam date",
+   thm:[],messer:"CySA+ CS0-003 full review",dion:"Full Jason Dion CySA+ CS0-003 practice exam",readiness:true},
+
+  {n:51,phase:3,title:"OSI Model and Protocol Stack",cert:"Network+ N10-009 1.1",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Network+ N10-009 — OSI Model","TryHackMe: OSI Model room — complete and screenshot results","Jason Dion: 10 Network+ N10-009 OSI practice questions","Build a full layer breakdown with protocols, devices, and data units","Explain how a web request traverses all 7 layers with a real example"],
+   deliverable:"osi-protocol-reference.md — full layer breakdown with protocols and devices",
+   thm:[{name:"OSI Model",url:"https://tryhackme.com/room/osimodelzi"}],
+   messer:"Network+ N10-009 — OSI Model",dion:"Network+ N10-009 OSI practice questions"},
+
+  {n:52,phase:3,title:"IP Addressing and Subnetting",cert:"Network+ N10-009 1.4",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: Network+ N10-009 — Subnetting","TryHackMe: Subnetting room — complete and screenshot results","Jason Dion: 10 Network+ N10-009 subnetting practice questions","Solve 10 subnetting problems showing all work — CIDR and host calculations","Practice with ipcalc and manual calculation until both methods are fluent"],
+   deliverable:"subnetting-lab.md — 10 subnetting problems solved and documented with work shown",
+   thm:[{name:"Subnetting",url:"https://tryhackme.com/room/subnetfun"}],
+   messer:"Network+ N10-009 — Subnetting",dion:"Network+ N10-009 subnetting practice questions"},
+
+  {n:53,phase:3,title:"Routing and Switching",cert:"Network+ N10-009 2.1",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: Network+ N10-009 — Routing and Switching","TryHackMe: Extending Your Network — complete and screenshot results","Jason Dion: 10 Network+ N10-009 routing practice questions","Document static vs dynamic routing: RIP, OSPF, BGP use cases","Analyze a routing table and explain the path selection logic"],
+   deliverable:"routing-switching-lab.md — routing table analysis and switching concepts documented",
+   thm:[{name:"Extending Your Network",url:"https://tryhackme.com/room/extendingyournetwork"}],
+   messer:"Network+ N10-009 — Routing and Switching",dion:"Network+ N10-009 routing practice questions"},
+
+  {n:54,phase:3,title:"Wireless Networking and Security",cert:"Network+ N10-009 2.3",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Network+ N10-009 — Wireless Networks","TryHackMe: Wireless Security room — complete and screenshot results","Jason Dion: 10 Network+ N10-009 wireless practice questions","Document 802.11 standards, encryption types (WEP/WPA2/WPA3), and attack vectors","Explain evil twin, deauthentication, and KRACK attacks and their mitigations"],
+   deliverable:"wireless-security-lab.md — standards, encryption types, and attack vectors documented",
+   thm:[{name:"Wireless Networking",url:"https://tryhackme.com/room/introtonetworking"}],
+   messer:"Network+ N10-009 — Wireless Networks",dion:"Network+ N10-009 wireless practice questions"},
+
+  {n:55,phase:3,title:"Network Services — DNS, DHCP, NAT",cert:"Network+ N10-009 1.6",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Network+ N10-009 — Network Services","TryHackMe: DNS in Detail — complete and screenshot results","Jason Dion: 10 Network+ N10-009 services practice questions","Configure DNS resolution and test with dig/nslookup on LinksOS","Document DHCP lease process, DNS record types, and NAT translation types"],
+   deliverable:"network-services-lab.md — DNS, DHCP, and NAT configured and documented",
+   thm:[{name:"DNS in Detail",url:"https://tryhackme.com/room/dnsindetail"}],
+   messer:"Network+ N10-009 — Network Services",dion:"Network+ N10-009 services practice questions"},
+
+  {n:56,phase:3,title:"Network Monitoring and Diagnostics",cert:"Network+ N10-009 3.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Network+ N10-009 — Network Monitoring","TryHackMe: Wireshark: The Basics — complete and screenshot results","Jason Dion: 10 Network+ N10-009 monitoring practice questions","Capture traffic with Wireshark and identify three protocol conversations","Document baseline metrics and anomaly detection thresholds"],
+   deliverable:"network-monitoring-lab.md — packet capture analyzed and findings documented",
+   thm:[{name:"Wireshark: The Basics",url:"https://tryhackme.com/room/wiresharkthebasics"}],
+   messer:"Network+ N10-009 — Network Monitoring",dion:"Network+ N10-009 monitoring practice questions"},
+
+  {n:57,phase:3,title:"Network Hardening and Defense",cert:"Network+ N10-009 4.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Network+ N10-009 — Network Security","TryHackMe: Network Security Protocols — complete and screenshot results","Jason Dion: 10 Network+ N10-009 hardening practice questions","Apply a network hardening checklist: disable unused services, enable logging, segment traffic","Document each hardening step and verify with a follow-up scan"],
+   deliverable:"network-hardening-checklist.md — hardening steps applied and verified",
+   thm:[{name:"Network Security",url:"https://tryhackme.com/room/networksecurityprotocols"}],
+   messer:"Network+ N10-009 — Network Security",dion:"Network+ N10-009 hardening practice questions"},
+
+  {n:58,phase:3,title:"Network+ Readiness Assessment",cert:"Network+ N10-009 All",level:"Intermediate",hours:4,
+   tasks:["Review all Network+ N10-009 exam objectives across all domains","Complete a full Jason Dion Network+ N10-009 practice exam — record score per domain","Identify weak domains — revisit Professor Messer N10-009 videos for those areas","Review GitHub portfolio: Projects 51–57 — confirm all deliverables committed","Schedule your Network+ exam if scoring above 80% consistently"],
+   deliverable:"netplus-readiness-report.md with practice scores and exam date",
+   thm:[],messer:"Network+ N10-009 full review",dion:"Full Jason Dion Network+ N10-009 practice exam",readiness:true},
+
+  {n:59,phase:3,title:"Penetration Testing Methodology",cert:"PenTest+ PT0-003 1.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Penetration Testing Overview","TryHackMe: Pentesting Fundamentals — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 methodology practice questions","Document the engagement lifecycle: scope, rules of engagement, authorization, reporting","Write a statement of work and rules of engagement for a simulated engagement"],
+   deliverable:"pentest-methodology.md — engagement lifecycle, rules of engagement, and scope documentation",
+   thm:[{name:"Pentesting Fundamentals",url:"https://tryhackme.com/room/pentestingfundamentals"}],
+   messer:"PenTest+ PT0-003 — Penetration Testing Overview",dion:"PenTest+ PT0-003 methodology practice questions"},
+
+  {n:60,phase:3,title:"Passive Reconnaissance",cert:"PenTest+ PT0-003 1.3",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Passive Reconnaissance","TryHackMe: Passive Recon — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 recon practice questions","Use WHOIS, Shodan, and Google dorking to profile a test target","Document all findings and sources — practice OPSEC during recon"],
+   deliverable:"passive-recon-lab.md — OSINT tools used and target profile documented",
+   thm:[{name:"Passive Recon",url:"https://tryhackme.com/room/passiverecon"}],
+   messer:"PenTest+ PT0-003 — Passive Reconnaissance",dion:"PenTest+ PT0-003 recon practice questions"},
+
+  {n:61,phase:3,title:"Active Reconnaissance and Scanning",cert:"PenTest+ PT0-003 1.4",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Active Reconnaissance","TryHackMe: Active Recon — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 scanning practice questions","Run Nmap scans: ping sweep, port scan, service detection, OS fingerprinting","Document scan results with service enumeration and version detection"],
+   deliverable:"active-recon-lab.md — Nmap scan results documented with service enumeration",
+   thm:[{name:"Active Recon",url:"https://tryhackme.com/room/activerecon"}],
+   messer:"PenTest+ PT0-003 — Active Reconnaissance",dion:"PenTest+ PT0-003 scanning practice questions"},
+
+  {n:62,phase:3,title:"Exploitation Fundamentals",cert:"PenTest+ PT0-003 2.1",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Exploitation","TryHackMe: Vulnversity — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 exploitation practice questions","Use Metasploit to exploit a vulnerable VM in a controlled lab environment","Document the vulnerability, exploit used, and access gained"],
+   deliverable:"exploitation-lab.md — vulnerability identified, exploited, and documented",
+   thm:[{name:"Vulnversity",url:"https://tryhackme.com/room/vulnversity"}],
+   messer:"PenTest+ PT0-003 — Exploitation",dion:"PenTest+ PT0-003 exploitation practice questions"},
+
+  {n:63,phase:3,title:"Post-Exploitation and Pivoting",cert:"PenTest+ PT0-003 2.2",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Post-Exploitation","TryHackMe: Post-Exploitation Basics — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 post-exploitation practice questions","Practice privilege escalation techniques on a vulnerable VM","Document lateral movement, persistence, and data exfiltration concepts"],
+   deliverable:"post-exploitation-lab.md — privilege escalation and lateral movement documented",
+   thm:[{name:"Post-Exploitation Basics",url:"https://tryhackme.com/room/postexploit"}],
+   messer:"PenTest+ PT0-003 — Post-Exploitation",dion:"PenTest+ PT0-003 post-exploitation practice questions"},
+
+  {n:64,phase:3,title:"Web Application Attacks",cert:"PenTest+ PT0-003 2.3",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Web Application Attacks","TryHackMe: OWASP Top 10 — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 web app practice questions","Test for SQLi, XSS, and IDOR on a vulnerable web app (DVWA or similar)","Document each vulnerability: type, impact, evidence, and remediation"],
+   deliverable:"web-app-attacks-lab.md — OWASP Top 10 vulnerabilities tested and documented",
+   thm:[{name:"OWASP Top 10",url:"https://tryhackme.com/room/owasptop10"}],
+   messer:"PenTest+ PT0-003 — Web Application Attacks",dion:"PenTest+ PT0-003 web app practice questions"},
+
+  {n:65,phase:3,title:"Wireless and Social Engineering Attacks",cert:"PenTest+ PT0-003 2.4",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Wireless and Social Engineering","TryHackMe: Wireless Security room — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 wireless practice questions","Document wireless attack types: evil twin, deauth, KRACK, WPS attacks","Design a social engineering scenario and document the methodology"],
+   deliverable:"wireless-social-engineering-lab.md — attack types and simulated scenarios documented",
+   thm:[{name:"Wireless Hacking Intro",url:"https://tryhackme.com/room/wifihacking101"}],
+   messer:"PenTest+ PT0-003 — Wireless and Social Engineering",dion:"PenTest+ PT0-003 wireless practice questions"},
+
+  {n:66,phase:3,title:"Scripting for Pentesters",cert:"PenTest+ PT0-003 3.1",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Scripting and Automation","TryHackMe: Bash Scripting — complete and screenshot results","Jason Dion: 10 PenTest+ PT0-003 scripting practice questions","Write a Bash recon script: runs Nmap, formats output, saves timestamped report","Write a Python script to parse Nmap output and highlight open ports","Write a Bash script to enumerate users, services, and SUID files on a target"],
+   deliverable:"Three working scripts committed to GitHub — Bash recon, Python parser, Bash enumerator",
+   thm:[{name:"Bash Scripting",url:"https://tryhackme.com/room/bashscripting"}],
+   messer:"PenTest+ PT0-003 — Scripting and Automation",dion:"PenTest+ PT0-003 scripting practice questions"},
+
+  {n:67,phase:3,title:"Reporting and Documentation",cert:"PenTest+ PT0-003 4.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: PenTest+ PT0-003 — Reporting","TryHackMe: Pentesting Fundamentals — reporting section","Jason Dion: 10 PenTest+ PT0-003 reporting practice questions","Write a professional pentest report for a simulated engagement using your lab findings","Include: executive summary, methodology, findings, risk ratings, and remediation recommendations"],
+   deliverable:"pentest-report-template.md — full professional pentest report for a simulated engagement",
+   thm:[{name:"Pentesting Fundamentals",url:"https://tryhackme.com/room/pentestingfundamentals"}],
+   messer:"PenTest+ PT0-003 — Reporting",dion:"PenTest+ PT0-003 reporting practice questions"},
+
+  {n:68,phase:3,title:"PenTest+ Readiness Assessment",cert:"PenTest+ PT0-003 All",level:"Intermediate",hours:4,
+   tasks:["Review all PenTest+ PT0-003 exam objectives across all domains","Complete a full Jason Dion PenTest+ PT0-003 practice exam — record score per domain","Identify weak domains — revisit Professor Messer PT0-003 videos for those areas","Review GitHub portfolio: Projects 59–67 — confirm all deliverables committed","Schedule your PenTest+ exam if scoring above 80% consistently"],
+   deliverable:"pentest-readiness-report.md with practice scores and exam date",
+   thm:[],messer:"PenTest+ PT0-003 full review",dion:"Full Jason Dion PenTest+ PT0-003 practice exam",readiness:true},
+
+  {n:69,phase:3,title:"Operations Phase Portfolio Review",cert:"CySA+ CS0-003 / Network+ N10-009 / PenTest+ PT0-003",level:"Intermediate",hours:4,
+   tasks:["Review all deliverables from Projects 41–68","Identify any gaps and complete missing documentation","Write a phase summary: what you learned, tools mastered, and certs targeted","Update your GitHub portfolio README with Phase 3 completion"],
+   deliverable:"phase3-portfolio-review.md committed to GitHub",
+   thm:[],messer:"Phase 3 full review",dion:"Mixed CySA+/Network+/PenTest+ practice questions"},
+
+  {n:70,phase:3,title:"Capture the Flag Challenge",cert:"All Phase 3",level:"Intermediate",hours:6,
+   tasks:["Select a TryHackMe or Hack The Box CTF room at intermediate level","Complete the CTF independently — document every step","Write a full CTF writeup: enumeration, exploitation, flags captured, and lessons learned","Post the writeup to your GitHub portfolio"],
+   deliverable:"ctf-writeup-[room-name].md committed to GitHub",
+   thm:[{name:"Hack The Box",url:"https://app.hackthebox.com"},{name:"TryHackMe CTF",url:"https://tryhackme.com/r/hacktivities"}],
+   messer:"Review weak areas from Phase 3",dion:"Mixed Phase 3 practice questions"},
+
+  // PHASE 4 — LINUX MASTERY
+  {n:71,phase:4,title:"Linux System Architecture",cert:"Linux+ XK0-006 1.1",level:"Intermediate",hours:3,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Linux Architecture","TryHackMe: Linux Fundamentals Part 1 — review and screenshot results","Jason Dion: 10 Linux+ XK0-006 architecture practice questions","Document kernel, shell, init systems, and system components in Obsidian","Explain the boot process end to end from BIOS to shell prompt"],
+   deliverable:"linux-architecture.md — kernel, shell, and system components documented",
+   thm:[{name:"Linux Fundamentals Part 1",url:"https://tryhackme.com/room/linuxfundamentalspart1"}],
+   messer:"Linux+ XK0-006 — Linux Architecture",dion:"Linux+ XK0-006 architecture practice questions"},
+
+  {n:72,phase:4,title:"Advanced File System Management",cert:"Linux+ XK0-006 1.2",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — File Systems","TryHackMe: Linux Strength Training — complete and screenshot results","Jason Dion: 10 Linux+ XK0-006 file system practice questions","Configure LVM: create physical volumes, volume groups, and logical volumes","Set up disk quotas for users and document the configuration"],
+   deliverable:"advanced-filesystem-lab.md — LVM, quotas, and permissions documented",
+   thm:[{name:"Linux Strength Training",url:"https://tryhackme.com/room/linuxstrengthtraining"}],
+   messer:"Linux+ XK0-006 — File Systems",dion:"Linux+ XK0-006 file system practice questions"},
+
+  {n:73,phase:4,title:"User, Group and ACL Management",cert:"Linux+ XK0-006 1.3",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — User Management","TryHackMe: Linux PrivEsc — complete and screenshot results","Jason Dion: 10 Linux+ XK0-006 user management practice questions","Configure ACLs with setfacl and getfacl — document a multi-user permission scenario","Build a user hierarchy for a fictional org with appropriate group permissions"],
+   deliverable:"user-group-acl-lab.md — ACL configuration and user hierarchy documented",
+   thm:[{name:"Linux PrivEsc",url:"https://tryhackme.com/room/linuxprivesc"}],
+   messer:"Linux+ XK0-006 — User Management",dion:"Linux+ XK0-006 user management practice questions"},
+
+  {n:74,phase:4,title:"Process and Job Management",cert:"Linux+ XK0-006 1.4",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Process Management","TryHackMe: Linux Process Analysis — complete and screenshot results","Jason Dion: 10 Linux+ XK0-006 process management practice questions","Practice process priorities with nice/renice, signals with kill, and job control","Write a script that monitors a process and restarts it if it dies"],
+   deliverable:"process-management-lab.md — process priorities, signals, and job control documented",
+   thm:[{name:"Linux Fundamentals Part 3",url:"https://tryhackme.com/room/linuxfundamentalspart3"}],
+   messer:"Linux+ XK0-006 — Process Management",dion:"Linux+ XK0-006 process management practice questions"},
+
+  {n:75,phase:4,title:"Network Configuration and Diagnostics",cert:"Linux+ XK0-006 2.1",level:"Intermediate",hours:4,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Network Configuration","TryHackMe: Network Services — complete and screenshot results","Jason Dion: 10 Linux+ XK0-006 networking practice questions","Configure a static IP on LinksOS using nmcli and /etc/network/interfaces","Test connectivity, trace routes, and document all diagnostic commands used"],
+   deliverable:"network-config-lab.md — static IP, routing, and diagnostics documented",
+   thm:[{name:"Network Services",url:"https://tryhackme.com/room/networkservices"}],
+   messer:"Linux+ XK0-006 — Network Configuration",dion:"Linux+ XK0-006 networking practice questions"},
+
+  {n:76,phase:4,title:"Firewall and Security Controls",cert:"Linux+ XK0-006 2.2",level:"Intermediate",hours:5,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Linux Security","TryHackMe: Linux System Hardening — complete and screenshot results","Jason Dion: 10 Linux+ XK0-006 security practice questions","Configure ufw with custom rules, configure fail2ban for SSH protection","Test and verify all rules — document the before/after security posture"],
+   deliverable:"firewall-security-controls-lab.md — ufw, iptables, and fail2ban configured and documented",
+   thm:[{name:"Linux System Hardening",url:"https://tryhackme.com/room/linuxsystemhardening"}],
+   messer:"Linux+ XK0-006 — Linux Security",dion:"Linux+ XK0-006 security practice questions"},
+
+  {n:77,phase:4,title:"PAM, SELinux and AppArmor",cert:"Linux+ XK0-006 2.3",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Access Controls","TryHackMe: Linux System Hardening — PAM section","Jason Dion: 10 Linux+ XK0-006 access control practice questions","Configure PAM rules for password complexity and account lockout","Enable and configure AppArmor profiles — document enforce vs complain mode"],
+   deliverable:"pam-selinux-apparmor-lab.md — PAM rules and MAC policy documented",
+   thm:[{name:"Linux System Hardening",url:"https://tryhackme.com/room/linuxsystemhardening"}],
+   messer:"Linux+ XK0-006 — Access Controls",dion:"Linux+ XK0-006 access control practice questions"},
+
+  {n:78,phase:4,title:"Bash Scripting and Automation",cert:"Linux+ XK0-006 3.1",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Shell Scripting and Automation","TryHackMe: Bash Scripting — complete and screenshot results","Practice basic Python scripting: variables, loops, file I/O, and subprocess calls","Introduction to Ansible: write a simple playbook to automate a system configuration task","Jason Dion: 10 Linux+ XK0-006 scripting practice questions"],
+   deliverable:"Five scripts committed to GitHub — three Bash (backup, service monitor, log parser), one Python, one Ansible playbook",
+   thm:[{name:"Bash Scripting",url:"https://tryhackme.com/room/bashscripting"}],
+   messer:"Linux+ XK0-006 — Shell Scripting and Automation",dion:"Linux+ XK0-006 scripting practice questions"},
+
+  {n:79,phase:4,title:"Containers and Docker",cert:"Linux+ XK0-006 3.2",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Containers and Virtualization","TryHackMe: Intro to Docker — complete and screenshot results","Practice Docker: build, run, stop, remove containers; write a Dockerfile","Introduction to Podman as a Docker alternative — document key differences","Jason Dion: 10 Linux+ XK0-006 container practice questions"],
+   deliverable:"docker-podman-lab.md + working Dockerfile committed to GitHub",
+   thm:[{name:"Intro to Docker",url:"https://tryhackme.com/room/introtodockerk8pdqk"}],
+   messer:"Linux+ XK0-006 — Containers and Virtualization",dion:"Linux+ XK0-006 container practice questions"},
+
+  {n:80,phase:4,title:"Git and Version Control",cert:"Linux+ XK0-006 3.3",level:"Advanced",hours:4,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Version Control","TryHackMe: Git and Version Control room — complete and screenshot results","Practice core Git workflow: init, add, commit, push, pull, branch, merge, rebase","Practice AI-assisted code generation: use an AI tool to generate a script, review and commit it","Jason Dion: 10 Linux+ XK0-006 version control practice questions"],
+   deliverable:"git-workflow-guide.md + branching diagram + AI-assisted script committed to GitHub",
+   thm:[{name:"Git and Version Control",url:"https://tryhackme.com/room/githappens"}],
+   messer:"Linux+ XK0-006 — Version Control",dion:"Linux+ XK0-006 version control practice questions"},
+
+  {n:81,phase:4,title:"System Logging and Monitoring",cert:"Linux+ XK0-006 4.1",level:"Advanced",hours:4,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — System Logging","TryHackMe: Investigating with ELK — complete and screenshot results","Jason Dion: 10 Linux+ XK0-006 logging practice questions","Configure rsyslog to forward logs to a central location","Set up logrotate and document the rotation policy"],
+   deliverable:"logging-monitoring-lab.md — rsyslog, journald, and logrotate configured and documented",
+   thm:[{name:"Investigating with ELK",url:"https://tryhackme.com/room/investigatingwinevtlogs"}],
+   messer:"Linux+ XK0-006 — System Logging",dion:"Linux+ XK0-006 logging practice questions"},
+
+  {n:82,phase:4,title:"Performance Tuning and Troubleshooting",cert:"Linux+ XK0-006 4.2",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — System Troubleshooting","TryHackMe: Linux Strength Training — complete and screenshot results","Jason Dion: 10 Linux+ XK0-006 performance practice questions","Use vmstat, iostat, sar, and top to identify a simulated bottleneck","Document the diagnosis steps, root cause, and resolution"],
+   deliverable:"performance-tuning-lab.md — bottleneck identified and resolved with tools documented",
+   thm:[{name:"Linux Strength Training",url:"https://tryhackme.com/room/linuxstrengthtraining"}],
+   messer:"Linux+ XK0-006 — System Troubleshooting",dion:"Linux+ XK0-006 performance practice questions"},
+
+  {n:83,phase:4,title:"Disaster Recovery and Backup",cert:"Linux+ XK0-006 4.3",level:"Advanced",hours:4,
+   tasks:["Watch Professor Messer: Linux+ XK0-006 — Disaster Recovery","TryHackMe: Linux Fundamentals Part 3 — review relevant sections","Jason Dion: 10 Linux+ XK0-006 disaster recovery practice questions","Design a full backup and recovery strategy for a Linux server","Test the recovery process — restore from backup and verify data integrity"],
+   deliverable:"disaster-recovery-plan.md — backup strategy, recovery steps, and test results documented",
+   thm:[{name:"Linux Fundamentals Part 3",url:"https://tryhackme.com/room/linuxfundamentalspart3"}],
+   messer:"Linux+ XK0-006 — Disaster Recovery",dion:"Linux+ XK0-006 disaster recovery practice questions"},
+
+  {n:84,phase:4,title:"Linux+ Domain Review",cert:"Linux+ XK0-006 All",level:"Advanced",hours:4,
+   tasks:["Review all Linux+ XK0-006 exam objectives across all domains","Complete a full Jason Dion Linux+ XK0-006 practice exam — record score per domain","Identify weak domains — revisit Professor Messer XK0-006 videos for those areas","Review GitHub portfolio: Projects 71–83 — confirm all deliverables committed"],
+   deliverable:"linuxplus-review-notes.md with domain scores and study gaps",
+   thm:[],messer:"Linux+ XK0-006 full domain review",dion:"Full Jason Dion Linux+ XK0-006 practice exam",readiness:true},
+
+  {n:85,phase:4,title:"Linux+ Readiness Assessment",cert:"Linux+ XK0-006 All",level:"Advanced",hours:4,
+   tasks:["Review all Linux+ XK0-006 exam objectives across all domains","Complete a full Jason Dion Linux+ XK0-006 practice exam — record score per domain","Identify weak domains — revisit Professor Messer XK0-006 videos for those areas","Review GitHub portfolio: Projects 71–84 — confirm all deliverables committed","Schedule your Linux+ exam if scoring above 80% consistently"],
+   deliverable:"linuxplus-readiness-report.md with practice scores and exam date",
+   thm:[],messer:"Linux+ XK0-006 full review",dion:"Full Jason Dion Linux+ XK0-006 practice exam",readiness:true},
+
+  // PHASE 5 — ADVANCED SECURITY
+  {n:86,phase:5,title:"Security Architecture Principles",cert:"SecurityX CAS-005 1.1",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Security Architecture","TryHackMe: Intro to Security Architecture — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 architecture practice questions","Document defense in depth, secure by design, and resilience concepts","Design a layered security architecture for a fictional small enterprise"],
+   deliverable:"security-architecture-principles.md — defense in depth, secure by design, and resilience concepts",
+   thm:[{name:"Intro to Security Architecture",url:"https://tryhackme.com/room/introtosecurityarchitecture"}],
+   messer:"SecurityX CAS-005 — Security Architecture",dion:"SecurityX CAS-005 architecture practice questions"},
+
+  {n:87,phase:5,title:"Zero Trust Architecture",cert:"SecurityX CAS-005 1.2",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Zero Trust","TryHackMe: Zero Trust room — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 Zero Trust practice questions","Document ZTA principles: verify explicitly, least privilege, assume breach","Design a Zero Trust implementation roadmap for a mid-sized organization"],
+   deliverable:"zero-trust-design.md — ZTA principles, implementation roadmap, and policy framework",
+   thm:[{name:"Zero Trust",url:"https://tryhackme.com/room/zerotrust"}],
+   messer:"SecurityX CAS-005 — Zero Trust",dion:"SecurityX CAS-005 Zero Trust practice questions"},
+
+  {n:88,phase:5,title:"Cloud Security Architecture",cert:"SecurityX CAS-005 1.3",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Cloud Security","TryHackMe: Cloud Security Basics — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 cloud practice questions","Compare CSP security models: AWS, Azure, GCP shared responsibility matrices","Document CASB, cloud-native controls, and SASE concepts"],
+   deliverable:"cloud-security-architecture.md — CSP comparison, shared responsibility, and controls documented",
+   thm:[{name:"Cloud Security Basics",url:"https://tryhackme.com/room/cloudsecuritybasics"}],
+   messer:"SecurityX CAS-005 — Cloud Security",dion:"SecurityX CAS-005 cloud practice questions"},
+
+  {n:89,phase:5,title:"Cryptographic Engineering",cert:"SecurityX CAS-005 1.4",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Cryptography","TryHackMe: Encryption — Crypto 101 — review and screenshot results","Jason Dion: 10 SecurityX CAS-005 cryptography practice questions","Use OpenSSL to generate keys, sign data, and verify signatures","Document PKI design, key escrow, and crypto agility concepts"],
+   deliverable:"cryptographic-engineering-lab.md — OpenSSL commands, key management, and PKI design",
+   thm:[{name:"Encryption — Crypto 101",url:"https://tryhackme.com/room/encryptioncrypto101"}],
+   messer:"SecurityX CAS-005 — Cryptography",dion:"SecurityX CAS-005 cryptography practice questions"},
+
+  {n:90,phase:5,title:"Enterprise IAM and Federation",cert:"SecurityX CAS-005 2.1",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Identity Management","TryHackMe: Active Directory Hardening — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 IAM practice questions","Document SAML, OAuth 2.0, and OIDC federation flows","Design an enterprise IAM architecture with MFA, SSO, and directory federation"],
+   deliverable:"enterprise-iam-lab.md — federation, SAML, OAuth, and directory services documented",
+   thm:[{name:"Active Directory Hardening",url:"https://tryhackme.com/room/activedirectoryhardening"}],
+   messer:"SecurityX CAS-005 — Identity Management",dion:"SecurityX CAS-005 IAM practice questions"},
+
+  {n:91,phase:5,title:"Advanced Threat Intelligence",cert:"SecurityX CAS-005 2.2",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Threat Intelligence","TryHackMe: MITRE ATT&CK room — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 threat intelligence practice questions","Build a threat actor profile using the MITRE ATT&CK framework","Map TTPs to detection rules and defensive controls"],
+   deliverable:"advanced-threat-intel-report.md — threat actor profile using MITRE ATT&CK framework",
+   thm:[{name:"MITRE",url:"https://tryhackme.com/room/mitre"}],
+   messer:"SecurityX CAS-005 — Threat Intelligence",dion:"SecurityX CAS-005 threat intelligence practice questions"},
+
+  {n:92,phase:5,title:"Advanced Incident Response",cert:"SecurityX CAS-005 2.3",level:"Advanced",hours:6,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Incident Response","TryHackMe: Incident Response room — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 IR practice questions","Build enterprise IR playbooks for three threat scenarios: ransomware, insider threat, APT","Include communication plans, legal considerations, and regulatory notification requirements"],
+   deliverable:"advanced-ir-playbook.md — enterprise IR playbook for three threat scenarios",
+   thm:[{name:"Incident Response",url:"https://tryhackme.com/room/incidentresponse"}],
+   messer:"SecurityX CAS-005 — Incident Response",dion:"SecurityX CAS-005 IR practice questions"},
+
+  {n:93,phase:5,title:"Digital Forensics and eDiscovery",cert:"SecurityX CAS-005 2.4",level:"Advanced",hours:6,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Forensics","TryHackMe: Intro to Digital Forensics — review and screenshot results","Jason Dion: 10 SecurityX CAS-005 forensics practice questions","Practice evidence acquisition with dd and document chain of custody","Document eDiscovery process, legal holds, and forensic reporting standards"],
+   deliverable:"forensics-ediscovery-lab.md — evidence acquisition, preservation, and analysis documented",
+   thm:[{name:"Intro to Digital Forensics",url:"https://tryhackme.com/room/introductoryroomdfirmodule"}],
+   messer:"SecurityX CAS-005 — Forensics",dion:"SecurityX CAS-005 forensics practice questions"},
+
+  {n:94,phase:5,title:"Vulnerability Research and CVE Analysis",cert:"SecurityX CAS-005 2.5",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Vulnerability Management","TryHackMe: OpenVAS — review and screenshot results","Jason Dion: 10 SecurityX CAS-005 vulnerability practice questions","Research three CVEs: analyze CVSS score, attack vector, and patch status","Document remediation recommendations and detection opportunities for each CVE"],
+   deliverable:"cve-analysis-report.md — three CVEs researched, scored, and remediation documented",
+   thm:[{name:"OpenVAS",url:"https://tryhackme.com/room/openvas"}],
+   messer:"SecurityX CAS-005 — Vulnerability Management",dion:"SecurityX CAS-005 vulnerability practice questions"},
+
+  {n:95,phase:5,title:"Security Automation and Orchestration",cert:"SecurityX CAS-005 3.1",level:"Advanced",hours:6,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Automation","TryHackMe: Wazuh — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 automation practice questions","Design a SOAR playbook for automated alert triage and response","Document IaC security concepts: Terraform, Ansible, and pipeline security"],
+   deliverable:"soar-automation-lab.md — automated alert response workflow designed and documented",
+   thm:[{name:"Wazuh",url:"https://tryhackme.com/room/wazuhct"}],
+   messer:"SecurityX CAS-005 — Automation",dion:"SecurityX CAS-005 automation practice questions"},
+
+  {n:96,phase:5,title:"DevSecOps and Secure SDLC",cert:"SecurityX CAS-005 3.2",level:"Advanced",hours:6,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — DevSecOps","TryHackMe: SSDLC room — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 DevSecOps practice questions","Design a secure CI/CD pipeline with SAST, DAST, and dependency scanning","Document shift-left security principles and secure code review practices"],
+   deliverable:"devsecops-lab.md — secure pipeline design with SAST, DAST, and dependency scanning documented",
+   thm:[{name:"SSDLC",url:"https://tryhackme.com/room/securesdlc"}],
+   messer:"SecurityX CAS-005 — DevSecOps",dion:"SecurityX CAS-005 DevSecOps practice questions"},
+
+  {n:97,phase:5,title:"Governance, Risk and Compliance",cert:"SecurityX CAS-005 4.1",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — GRC","TryHackMe: Governance and Regulation — review and screenshot results","Jason Dion: 10 SecurityX CAS-005 GRC practice questions","Build a risk register mapped to NIST CSF controls","Conduct a compliance gap analysis against a chosen framework (NIST, ISO 27001, or CIS)"],
+   deliverable:"grc-framework.md — risk register, control mapping to NIST CSF, and compliance gap analysis",
+   thm:[{name:"Governance and Regulation",url:"https://tryhackme.com/room/governanceandregulation"}],
+   messer:"SecurityX CAS-005 — GRC",dion:"SecurityX CAS-005 GRC practice questions"},
+
+  {n:98,phase:5,title:"Security Program Leadership",cert:"SecurityX CAS-005 4.2",level:"Advanced",hours:5,
+   tasks:["Watch Professor Messer: SecurityX CAS-005 — Security Program Management","TryHackMe: Cyber Governance room — complete and screenshot results","Jason Dion: 10 SecurityX CAS-005 leadership practice questions","Write an executive security program proposal with budget justification","Document KPIs, metrics, and reporting cadence for a security program"],
+   deliverable:"security-program-brief.md — executive security program proposal with metrics and KPIs",
+   thm:[{name:"Cyber Governance",url:"https://tryhackme.com/room/cybergovernanceregulation"}],
+   messer:"SecurityX CAS-005 — Security Program Management",dion:"SecurityX CAS-005 leadership practice questions"},
+
+  {n:99,phase:5,title:"SecurityX Domain Review and Capstone",cert:"SecurityX CAS-005 All",level:"Advanced",hours:6,
+   tasks:["Review all SecurityX CAS-005 exam objectives across all domains","Complete a full Jason Dion SecurityX CAS-005 practice exam — record score per domain","Identify weak domains — revisit Professor Messer CAS-005 videos for those areas","Review GitHub portfolio: Projects 86–98 — confirm all deliverables committed"],
+   deliverable:"securityx-review-notes.md with domain scores and study gaps",
+   thm:[],messer:"SecurityX CAS-005 full domain review",dion:"Full Jason Dion SecurityX CAS-005 practice exam",readiness:true},
+
+  {n:100,phase:5,title:"Portfolio Completion and Certification Readiness",cert:"All Certs",level:"Advanced",hours:6,
+   tasks:["Review all SecurityX CAS-005 exam objectives across all domains","Complete a full Jason Dion SecurityX CAS-005 practice exam — record score per domain","Identify weak domains — revisit Professor Messer CAS-005 videos for those areas","Review your complete GitHub portfolio: all 100 projects — confirm every deliverable is committed","Write your portfolio README: professional summary of all 100 projects, tools mastered, and certs earned","Schedule your SecurityX exam if scoring above 80% consistently"],
+   deliverable:"Complete GitHub portfolio with README · securityx-readiness-report.md · Exam scheduled",
+   thm:[],messer:"SecurityX CAS-005 final review",dion:"Full Jason Dion SecurityX CAS-005 practice exam",
+   readiness:true,final:true}
+];
+
+// ── PHASE CONFIG ──────────────────────────────────────────────
+const PHASE_CONFIG = {
+  1: {label:"📘 Phase 1 · Foundations", badgeClass:"badge-p1", dotClass:"ph-dot p1",
+      certs:"ITF+ · A+ 220-1201/1202"},
+  2: {label:"🔐 Phase 2 · Core Security", badgeClass:"badge-p2", dotClass:"ph-dot p2",
+      certs:"Security+ SY0-701"},
+  3: {label:"⚙️ Phase 3 · Security Operations", badgeClass:"badge-p3", dotClass:"ph-dot p3",
+      certs:"CySA+ CS0-003 · Network+ N10-009 · PenTest+ PT0-003"},
+  4: {label:"🐧 Phase 4 · Linux Mastery", badgeClass:"badge-p4", dotClass:"ph-dot p4",
+      certs:"Linux+ XK0-006"},
+  5: {label:"🚀 Phase 5 · Advanced Security", badgeClass:"badge-p5", dotClass:"ph-dot p5",
+      certs:"SecurityX CAS-005"}
+};
+
+const PHASE_LABELS = {
+  1:"📘 Foundations (01–20)",2:"🔐 Core Security (21–40)",
+  3:"⚙️ Operations (41–70)",4:"🐧 Linux Mastery (71–85)",5:"🚀 Advanced Security (86–100)"
+};
+
+let currentProject = null;
+let currentFilter = 0;
+let currentSearch = "";
+
+// ── SIDEBAR RENDER ────────────────────────────────────────────
+function renderSidebar(projects) {
+  const container = document.getElementById('sidebar');
+  let html = '';
+  [1,2,3,4,5].forEach(ph => {
+    const pProjects = projects.filter(p => p.phase === ph);
+    if (!pProjects.length) return;
+    const cfg = PHASE_CONFIG[ph];
+    html += `<div class="phase-group">
+      <div class="phase-heading">
+        <div class="${cfg.dotClass}"></div>
+        <span>${PHASE_LABELS[ph]}</span>
+      </div>`;
+    pProjects.forEach(p => {
+      const active = currentProject && currentProject.n === p.n ? 'active' : '';
+      html += `<button class="proj-btn ${active}" onclick="showProject(${p.n})" id="btn-${p.n}">
+        <span class="proj-num">${String(p.n).padStart(2,'0')}</span>
+        <span class="proj-label">${p.title}</span>
+      </button>`;
+    });
+    html += '</div>';
+  });
+  container.innerHTML = html;
+}
+
+// ── FILTER ────────────────────────────────────────────────────
+function filterPhase(ph, btn) {
+  currentFilter = ph;
+  document.querySelectorAll('.phase-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function doSearch(val) {
+  currentSearch = val.toLowerCase();
+  applyFilters();
+}
+
+function applyFilters() {
+  let filtered = PROJECTS;
+  if (currentFilter > 0) filtered = filtered.filter(p => p.phase === currentFilter);
+  if (currentSearch) filtered = filtered.filter(p =>
+    p.title.toLowerCase().includes(currentSearch) ||
+    p.cert.toLowerCase().includes(currentSearch) ||
+    (p.tasks && p.tasks.some(t => t.toLowerCase().includes(currentSearch))) ||
+    String(p.n).includes(currentSearch)
+  );
+  renderSidebar(filtered);
+}
+
+// ── SHOW PROJECT ──────────────────────────────────────────────
+function showProject(n) {
+  const p = PROJECTS.find(x => x.n === n);
+  if (!p) return;
+  currentProject = p;
+
+  document.getElementById('welcomeScreen').style.display = 'none';
+  document.getElementById('projectContent').style.display = 'block';
+
+  const cfg = PHASE_CONFIG[p.phase];
+  const badge = document.getElementById('projBadge');
+  badge.textContent = cfg.label;
+  badge.className = `proj-phase-badge ${cfg.badgeClass}`;
+
+  document.getElementById('projTitle').textContent = `Project ${String(p.n).padStart(2,'0')}: ${p.title}`;
+  document.getElementById('projCert').textContent = p.cert;
+  document.getElementById('projLevel').textContent = p.level;
+  document.getElementById('projHours').textContent = `~${p.hours} hours`;
+
+  document.getElementById('prevBtn').disabled = p.n <= 1;
+  document.getElementById('nextBtn').disabled = p.n >= 100;
+
+  document.getElementById('mdContent').innerHTML = buildProjectContent(p);
+
+  document.getElementById('contentPanel').scrollTo({top:0});
+  window.scrollTo({top:0});
+  window.location.hash = `project-${p.n}`;
+
+  // Update sidebar active state
+  document.querySelectorAll('.proj-btn').forEach(b => b.classList.remove('active'));
+  const activeBtn = document.getElementById(`btn-${p.n}`);
+  if (activeBtn) activeBtn.classList.add('active');
+}
+
+// ── BUILD PROJECT CONTENT ─────────────────────────────────────
+function buildProjectContent(p) {
+  const taskList = p.tasks.map(t => `- [ ] ${t}`).join('\n');
+
+  const thmSection = p.thm && p.thm.length
+    ? p.thm.map(r => `- [${r.name}](${r.url})`).join('\n')
+    : '- Search [TryHackMe](https://tryhackme.com) for rooms matching this topic';
+
+  const noteSection = p.note ? `\n> **Note:** ${p.note}\n` : '';
+
+  const readinessBlock = p.readiness ? `\n## 📊 Readiness Standard\nAim for **80% or above** on Jason Dion practice exams before scheduling the real exam. If below 80%, revisit Professor Messer videos for weak domains, then retest.\n` : '';
+
+  const storeBlock = (p.n % 20 === 0 || p.final) ? `\n---\n\n## ☕ Support the Project\nThis bootcamp is free. Study guides, project notes, and cert prep PDFs for each phase are available at the store.\n\n**[ko-fi.com/allthingslink →](https://ko-fi.com/allthingslink)**\n` : '';
+
+  const nextBlock = p.n < 100
+    ? `\n## ➡️ Up Next\n**Project ${String(p.n+1).padStart(2,'0')}: ${PROJECTS[p.n].title}** · ${PROJECTS[p.n].cert}\n\nMove to the next project when all tasks are complete and your deliverable is committed to GitHub.`
+    : `\n## 🎉 Bootcamp Complete!\nYou've finished all 100 projects. You have a complete cybersecurity portfolio mapped to 8 CompTIA certifications. Schedule your SecurityX exam, publish your GitHub portfolio, and keep building.\n\n**[ko-fi.com/allthingslink →](https://ko-fi.com/allthingslink)**`;
+
+  return marked.parse(`## Tasks
+${noteSection}
+${taskList}
+
+## 🔬 TryHackMe Labs
+${thmSection}
+
+## 📚 Study Resources
+- **Professor Messer:** ${p.messer} — [professormesser.com](https://www.professormesser.com) (Free)
+- **Jason Dion:** ${p.dion} — [udemy.com](https://www.udemy.com/user/jason-dion/) (Paid — usually ~$15 on sale)
+- **CompTIA Objectives:** Download the official exam objectives PDF from [comptia.org](https://www.comptia.org/certifications)
+${readinessBlock}
+## 📁 Deliverable
+\`\`\`
+${p.deliverable}
+\`\`\`
+
+\`\`\`bash
+git add . && git commit -m "Project ${String(p.n).padStart(2,'0')} – ${p.title} complete" && git push origin main
+\`\`\`
+
+---
+
+> 📂 Full project notes, lab files, and study guides available at **[ko-fi.com/allthingslink](https://ko-fi.com/allthingslink)**
+${storeBlock}${nextBlock}`);
+}
+
+function navProject(dir) {
+  if (currentProject) showProject(currentProject.n + dir);
+}
+
+// ── INIT ──────────────────────────────────────────────────────
+document.getElementById('yr').textContent = new Date().getFullYear();
+renderSidebar(PROJECTS);
+
+// Handle URL hash
+if (window.location.hash) {
+  const n = parseInt(window.location.hash.replace('#project-',''));
+  if (n >= 1 && n <= 100) showProject(n);
+} else {
+  showProject(1);
+}
+
+// Handle ?phase= param
+const urlParams = new URLSearchParams(window.location.search);
+const phaseParam = parseInt(urlParams.get('phase'));
+if (phaseParam >= 1 && phaseParam <= 5) {
+  currentFilter = phaseParam;
+  const pill = document.querySelector(`.phase-pill[data-phase="${phaseParam}"]`);
+  if (pill) {
+    document.querySelectorAll('.phase-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+  }
+  applyFilters();
+  const firstInPhase = PROJECTS.find(p => p.phase === phaseParam);
+  if (firstInPhase) showProject(firstInPhase.n);
+}
+</script>
+</body>
+</html>
